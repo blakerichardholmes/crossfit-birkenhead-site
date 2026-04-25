@@ -1,0 +1,2040 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>CrossFit Birkenhead | The Gym For You In Birkenhead</title>
+<meta name="description" content="CrossFit Birkenhead is more than just a gym. Join a strong community of like-minded individuals in Birkenhead, Auckland." />
+<meta property="og:title" content="CrossFit Birkenhead | The Gym For You" />
+<meta property="og:description" content="Join Birkenhead's best fitness community. Expert coaching, group classes, and comprehensive wellness." />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https: blob:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com; connect-src 'self' https://streamfit-proxy.blakerichardholmes.workers.dev https://go.streamfit.com https://stream-fitness-app-uploads.s3.amazonaws.com; frame-src https://www.google.com https://go.streamfit.com; form-action 'self' mailto:; object-src 'none'; base-uri 'self'; upgrade-insecure-requests" />
+
+<link rel="icon" type="image/png" href="img/CFB-Logo_REV-B.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;600;700;800;900&family=Montserrat:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        bg: '#000000',
+        'bg-alt': '#000000',
+        'bg-card': '#141414',
+        text: '#FFFFFF',
+        'text-muted': '#999999',
+        accent: '#e87823',
+        amber: '#e87823',
+        border: '#222222',
+      },
+      fontFamily: {
+        display: ['Kanit', 'sans-serif'],
+        body: ['Montserrat', 'sans-serif'],
+        mono: ['Space Mono', 'monospace'],
+      }
+    }
+  }
+}
+</script>
+<style>
+/* ══════ BASE RESET ══════ */
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+body{background:#000000;color:#FFFFFF;font-family:'Montserrat',sans-serif;overflow-x:hidden}
+/* ══════ CUSTOM SCROLLBAR ══════ */
+::-webkit-scrollbar{width:5px}
+::-webkit-scrollbar-track{background:#000000}
+::-webkit-scrollbar-thumb{background:#222222;border-radius:10px}
+::-webkit-scrollbar-thumb:hover{background:#444}
+
+/* ══════ GRAIN OVERLAY ══════ */
+body::before{content:'';position:fixed;top:0;left:0;width:100%;height:100%;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");pointer-events:none;z-index:9998}
+
+/* ══════ 2. CURSOR ══════ */
+
+/* ══════ 3. SCROLL REVEAL ══════ */
+.sr{opacity:0;transform:translateY(50px);transition:opacity 900ms cubic-bezier(0.16,1,0.3,1),transform 900ms cubic-bezier(0.16,1,0.3,1)}
+.sr.visible{opacity:1;transform:translateY(0) translateX(0)}
+/* Directional variants */
+.sr-left{opacity:0;transform:translateX(-60px);transition:opacity 900ms cubic-bezier(0.16,1,0.3,1),transform 900ms cubic-bezier(0.16,1,0.3,1)}
+.sr-left.visible{opacity:1;transform:translateX(0)}
+.sr-right{opacity:0;transform:translateX(60px);transition:opacity 900ms cubic-bezier(0.16,1,0.3,1),transform 900ms cubic-bezier(0.16,1,0.3,1)}
+.sr-right.visible{opacity:1;transform:translateX(0)}
+.sr-scale{opacity:0;transform:scale(0.9);transition:opacity 900ms cubic-bezier(0.16,1,0.3,1),transform 900ms cubic-bezier(0.16,1,0.3,1)}
+.sr-scale.visible{opacity:1;transform:scale(1)}
+
+/* Image reveal */
+.img-reveal{overflow:hidden}
+.img-reveal img,.img-reveal .img-placeholder{clip-path:inset(0 0 100% 0);transform:scale(1.15);filter:blur(10px);transition:clip-path 900ms cubic-bezier(0.76,0,0.24,1),transform 1200ms cubic-bezier(0.16,1,0.3,1),filter 800ms ease-out}
+.img-reveal.visible img,.img-reveal.visible .img-placeholder{clip-path:inset(0);transform:scale(1);filter:blur(0)}
+
+/* ══════ 4. GLASSMORPHISM CARDS ══════ */
+.glass{background:rgba(255,255,255,0.03);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid rgba(232,120,35,0.15);border-radius:16px;padding:32px;box-shadow:0 0 30px rgba(232,120,35,0.06);transition:background .3s cubic-bezier(0.16,1,0.3,1),border-color .3s cubic-bezier(0.16,1,0.3,1),box-shadow .3s cubic-bezier(0.16,1,0.3,1),transform .3s cubic-bezier(0.16,1,0.3,1)}
+.glass:hover{background:rgba(255,255,255,0.05);border-color:rgba(232,120,35,0.3);box-shadow:0 0 40px rgba(232,120,35,0.1);transform:translateY(-2px)}
+
+/* ══════ HERO WORD CYCLER ══════ */
+.word-cycler{position:relative;display:inline-block;height:1.15em;overflow:hidden;vertical-align:bottom}
+.word-cycler .word{display:block;animation:cycleWords 12.5s infinite;position:absolute;left:0;width:100%;opacity:0;transform:translateY(100%)}
+.word-cycler .word:nth-child(1){animation-delay:0s}
+.word-cycler .word:nth-child(2){animation-delay:2.5s}
+.word-cycler .word:nth-child(3){animation-delay:5s}
+.word-cycler .word:nth-child(4){animation-delay:7.5s}
+.word-cycler .word:nth-child(5){animation-delay:10s}
+@keyframes cycleWords{0%{opacity:0;transform:translateY(100%)}2%{opacity:1;transform:translateY(0)}18%{opacity:1;transform:translateY(0)}20%{opacity:0;transform:translateY(-100%)}100%{opacity:0;transform:translateY(-100%)}}
+
+/* ══════ MARQUEE ══════ */
+.marquee-track{display:flex;animation:marquee 45s linear infinite;width:max-content}
+.marquee-track-reverse{display:flex;animation:marquee-reverse 50s linear infinite;width:max-content}
+.marquee-track:hover,.marquee-track-reverse:hover{animation-play-state:paused}
+@keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+@keyframes marquee-reverse{0%{transform:translateX(-50%)}100%{transform:translateX(0)}}
+
+/* ══════ 7. NAV ══════ */
+.nav-link{position:relative}
+.nav-link::after{content:'';position:absolute;bottom:-2px;left:0;width:0;height:1px;background:#e87823;transition:width .2s ease}
+.nav-link:hover::after{width:100%}
+
+/* Mobile nav overlay */
+.mobile-nav{transform:translateX(100%);transition:transform .5s cubic-bezier(0.16,1,0.3,1)}
+.mobile-nav.open{transform:translateX(0)}
+.mobile-nav a{opacity:0;transform:translateX(40px)}
+.mobile-nav.open a{opacity:1;transform:translateX(0);transition:opacity .4s ease,transform .4s ease}
+.mobile-nav.open a:nth-child(1){transition-delay:.06s}
+.mobile-nav.open a:nth-child(2){transition-delay:.12s}
+.mobile-nav.open a:nth-child(3){transition-delay:.18s}
+.mobile-nav.open a:nth-child(4){transition-delay:.24s}
+.mobile-nav.open a:nth-child(5){transition-delay:.30s}
+.mobile-nav.open a:nth-child(6){transition-delay:.36s}
+.mobile-nav.open a:nth-child(7){transition-delay:.42s}
+.mobile-nav.open a:nth-child(8){transition-delay:.48s}
+
+/* ══════ 8. BUTTONS ══════ */
+.btn-primary{display:inline-flex;align-items:center;gap:8px;border-radius:100px;padding:14px 32px;background:#e87823;color:#FFFFFF;font-family:'Kanit',sans-serif;font-size:14px;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;cursor:pointer;border:none;transition:transform .2s ease-out,filter .2s ease-out}
+.btn-primary:hover{transform:scale(1.03);filter:brightness(1.1)}
+.btn-ghost{display:inline-flex;align-items:center;gap:8px;border-radius:100px;padding:14px 32px;background:transparent;color:#FFFFFF;font-family:'Kanit',sans-serif;font-size:14px;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;cursor:pointer;border:1px solid rgba(240,237,232,.2);transition:transform .2s ease-out,filter .2s ease-out,border-color .2s ease}
+.btn-ghost:hover{transform:scale(1.03);filter:brightness(1.15);border-color:rgba(232,120,35,.4)}
+
+/* ══════ 9. FORM INPUTS ══════ */
+.form-input{width:100%;height:60px;background:transparent;border:none;border-bottom:1px solid #2a2a2a;color:#FFFFFF;font-family:'Montserrat',sans-serif;font-size:16px;outline:none;transition:border-color .2s ease}
+.form-input:focus{border-bottom-color:#e87823}
+.form-input::placeholder{color:#555}
+textarea.form-input{height:auto;padding-top:8px;padding-bottom:8px}
+
+/* ══════ FORM SUCCESS ══════ */
+@keyframes successPop{0%{transform:scale(0);opacity:0}60%{transform:scale(1.2)}100%{transform:scale(1);opacity:1}}
+
+/* ══════ 11. FAQ ACCORDION ══════ */
+.faq-item{border-bottom:1px solid #2a2a2a}
+.faq-question{display:flex;justify-content:space-between;align-items:center;padding:24px 0;cursor:pointer;user-select:none}
+.faq-icon{transition:transform .3s ease;font-size:24px;color:#999999;flex-shrink:0}
+.faq-item.open .faq-icon{transform:rotate(45deg);color:#e87823}
+.faq-answer{max-height:0;overflow:hidden;transition:max-height .4s cubic-bezier(0.16,1,0.3,1),padding .4s cubic-bezier(0.16,1,0.3,1)}
+.faq-item.open .faq-answer{max-height:300px;padding-bottom:24px}
+
+/* ══════ CROSSHAIR DECORATIONS ══════ */
+.crosshair{position:absolute;font-family:'Space Mono',monospace;font-size:14px;color:rgba(232,120,35,.15);user-select:none;pointer-events:none}
+
+/* ══════ AMBIENT PULSE ══════ */
+.pulse-glow{animation:pulseGlow 4s ease-in-out infinite}
+@keyframes pulseGlow{0%,100%{opacity:.03}50%{opacity:.08}}
+
+
+/* ══════ SECTION HEADING OPACITY (scroll-linked) ══════ */
+.heading-fade{opacity:.1;transition:opacity .1s linear}
+
+/* ══════ ACCENT BREAK ══════ */
+.accent-break-img{position:absolute;border-radius:12px;box-shadow:0 20px 60px rgba(0,0,0,.5);overflow:hidden}
+
+/* ══════ SERVICE CAROUSEL ══════ */
+.svc-carousel-wrap{position:relative;width:100%;overflow:visible}
+.svc-carousel{display:flex;gap:20px;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;cursor:grab;padding:0 clamp(24px, 4vw, 80px)}
+.svc-carousel::-webkit-scrollbar{display:none}
+.svc-carousel.dragging{cursor:grabbing;scroll-snap-type:none}
+.svc-carousel.dragging .svc-card{pointer-events:none}
+.svc-card{position:relative;min-width:380px;max-width:420px;aspect-ratio:3/4;overflow:hidden;cursor:pointer;border-radius:16px;scroll-snap-align:start;flex-shrink:0;transition:transform 0.5s cubic-bezier(0.16,1,0.3,1),opacity 0.5s ease}
+.svc-card img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(0.16,1,0.3,1),filter 0.8s ease;filter:saturate(0.7) brightness(0.65)}
+.svc-card:hover img{transform:scale(1.08);filter:saturate(1) brightness(0.35)}
+.svc-card-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.85) 0%,rgba(0,0,0,0.2) 50%,transparent 100%);z-index:1;transition:background 0.6s ease}
+.svc-card:hover .svc-card-overlay{background:linear-gradient(to top,rgba(0,0,0,0.92) 0%,rgba(0,0,0,0.5) 60%,rgba(0,0,0,0.3) 100%)}
+.svc-card-content{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:28px;z-index:2}
+.svc-card-tag{font-family:'Space Mono',monospace;font-size:0.6rem;font-weight:400;letter-spacing:0.15em;text-transform:uppercase;color:#e87823;margin-bottom:8px}
+.svc-card h3{font-family:'Kanit',sans-serif;font-size:1.4rem;font-weight:600;color:#fff;text-transform:uppercase;letter-spacing:0.05em;transition:transform 0.6s cubic-bezier(0.16,1,0.3,1)}
+.svc-card:hover h3{transform:translateY(-8px)}
+.svc-card-name{font-family:'Space Mono',monospace;font-size:0.65rem;color:#e87823;letter-spacing:0.1em;margin-top:4px;transition:transform 0.6s cubic-bezier(0.16,1,0.3,1)}
+.svc-card:hover .svc-card-name{transform:translateY(-8px)}
+.svc-card-detail{font-family:'Montserrat',sans-serif;font-size:0.8rem;color:rgba(255,255,255,0.7);max-height:0;overflow:hidden;transition:all 0.6s cubic-bezier(0.16,1,0.3,1);opacity:0;margin-top:0;line-height:1.65}
+.svc-card:hover .svc-card-detail{max-height:120px;opacity:1;margin-top:14px}
+.svc-card-cta{font-family:'Space Mono',monospace;font-size:0.65rem;color:#e87823;text-decoration:none;letter-spacing:0.08em;max-height:0;overflow:hidden;opacity:0;transition:all 0.5s cubic-bezier(0.16,1,0.3,1) 0.1s;display:inline-block}
+.svc-card:hover .svc-card-cta{max-height:30px;opacity:1;margin-top:10px}
+.svc-card-cta:hover{text-decoration:underline}
+/* Progress track */
+.svc-progress{display:flex;align-items:center;gap:16px;margin-top:40px}
+.svc-progress-track{flex:1;height:1px;background:rgba(255,255,255,0.1);position:relative;border-radius:1px}
+.svc-progress-fill{height:100%;background:linear-gradient(90deg,#e87823,#ff9f4a);border-radius:1px;transition:width 0.3s cubic-bezier(0.16,1,0.3,1)}
+.svc-progress-label{font-family:'Space Mono',monospace;font-size:0.6rem;color:#999;letter-spacing:0.1em;min-width:50px;text-align:right}
+/* Nav arrows */
+.svc-nav{display:flex;gap:8px;margin-top:40px;justify-content:flex-end}
+.svc-nav-btn{width:48px;height:48px;border:1px solid rgba(255,255,255,0.12);background:transparent;color:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;border-radius:50%;transition:all 0.3s ease}
+.svc-nav-btn:hover{border-color:#e87823;color:#e87823;background:rgba(232,120,35,0.06)}
+.svc-nav-btn:disabled{opacity:0.2;cursor:default;border-color:rgba(255,255,255,0.06)}
+.svc-nav-btn:disabled:hover{background:transparent;color:#fff}
+.svc-nav-btn svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:1.5}
+@media(max-width:768px){.svc-card{min-width:300px;max-width:340px}.svc-carousel{padding-left:24px;padding-right:24px;gap:14px}}
+
+/* ══════ TIMETABLE CALENDAR GRID ══════ */
+.tt-cal-grid{display:none;grid-template-columns:repeat(7,1fr);gap:8px;min-height:300px}
+@media(min-width:768px){.tt-cal-grid{display:grid}}
+.tt-col{display:flex;flex-direction:column;gap:6px}
+.tt-col-head{text-align:center;padding:12px 4px;border-bottom:1px solid rgba(255,255,255,0.06);margin-bottom:6px;transition:border-color .3s ease}
+.tt-col-head .tt-day-name{font-family:'Space Mono',monospace;font-size:0.7rem;letter-spacing:0.12em;text-transform:uppercase;color:#aaa;display:block}
+.tt-col-head .tt-day-num{font-family:'Kanit',sans-serif;font-size:1.4rem;font-weight:700;color:#fff;display:block;margin-top:2px}
+.tt-col-head.is-today .tt-day-num{color:#e87823;text-shadow:0 0 12px rgba(232,120,35,0.5)}
+.tt-col-head.is-today{border-bottom-color:rgba(232,120,35,0.6);box-shadow:0 1px 8px rgba(232,120,35,0.25),0 1px 20px rgba(232,120,35,0.1)}
+
+.tt-block{background:rgba(255,255,255,0.03);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(232,120,35,0.1);border-radius:10px;padding:11px 12px;cursor:pointer;transition:all .3s cubic-bezier(0.16,1,0.3,1);position:relative;overflow:hidden}
+.tt-block::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:#e87823;border-radius:3px 0 0 3px;opacity:0.7;box-shadow:0 0 6px rgba(232,120,35,0.4)}
+.tt-block:hover{background:rgba(255,255,255,0.07);border-color:rgba(232,120,35,0.35);box-shadow:0 0 15px rgba(232,120,35,0.15),0 0 30px rgba(232,120,35,0.06);transform:translateY(-1px)}
+.tt-block.cancelled{opacity:0.35;pointer-events:none}
+.tt-block.cancelled::before{background:#ef4444}
+.tt-block-time{font-family:'Space Mono',monospace;font-size:0.75rem;color:#e87823;letter-spacing:0.05em;text-shadow:0 0 8px rgba(232,120,35,0.3)}
+.tt-block-name{font-family:'Kanit',sans-serif;font-size:0.85rem;font-weight:600;color:#fff;text-transform:uppercase;letter-spacing:0.03em;margin:4px 0 5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tt-block-meta{display:flex;align-items:center;justify-content:space-between;gap:4px}
+.tt-block-coach{font-family:'Montserrat',sans-serif;font-size:0.7rem;color:#aaa;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tt-block-spots{font-family:'Space Mono',monospace;font-size:0.65rem;white-space:nowrap;flex-shrink:0}
+.tt-col-empty{font-family:'Space Mono',monospace;font-size:0.7rem;color:rgba(255,255,255,0.2);text-align:center;padding:20px 4px}
+
+/* Mobile day tabs */
+.tt-mobile-view .tt-day-btn{padding:10px 16px;border-radius:100px;border:1px solid rgba(255,255,255,0.08);background:transparent;color:#aaa;font-family:'Space Mono',monospace;font-size:0.75rem;letter-spacing:0.06em;text-transform:uppercase;cursor:pointer;white-space:nowrap;transition:all .3s ease;flex-shrink:0}
+.tt-mobile-view .tt-day-btn:hover{border-color:rgba(232,120,35,0.3);color:#fff}
+.tt-mobile-view .tt-day-btn.active{background:#e87823;border-color:#e87823;color:#fff;box-shadow:0 0 20px rgba(232,120,35,0.3)}
+.tt-mobile-card{background:rgba(255,255,255,0.03);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(232,120,35,0.12);border-radius:14px;padding:16px;display:flex;gap:14px;align-items:center;cursor:pointer;transition:all .3s cubic-bezier(0.16,1,0.3,1);margin-bottom:8px}
+.tt-mobile-card:hover{background:rgba(255,255,255,0.06);border-color:rgba(232,120,35,0.3);box-shadow:0 0 15px rgba(232,120,35,0.12),0 0 30px rgba(232,120,35,0.06)}
+.tt-mobile-time{display:flex;flex-direction:column;align-items:center;min-width:60px;padding:10px 12px;background:rgba(232,120,35,0.08);border-radius:10px;border:1px solid rgba(232,120,35,0.15)}
+
+/* Modal */
+.tt-modal-overlay{position:fixed;inset:0;z-index:9999;display:flex;align-items:center;justify-content:center;padding:24px;opacity:0;transition:opacity .3s ease}
+.tt-modal-overlay.show{opacity:1}
+.tt-modal-backdrop{position:absolute;inset:0;background:rgba(0,0,0,0.7);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.tt-modal-card{position:relative;width:100%;max-width:440px;max-height:85vh;overflow-y:auto;z-index:1;transform:translateY(20px) scale(0.97);transition:transform .4s cubic-bezier(0.16,1,0.3,1)}
+.tt-modal-overlay.show .tt-modal-card{transform:translateY(0) scale(1)}
+.tt-modal-close-btn{position:absolute;top:16px;right:16px;background:none;border:none;color:#999;font-size:28px;cursor:pointer;width:36px;height:36px;display:flex;align-items:center;justify-content:center;border-radius:50%;transition:all .2s ease;z-index:2}
+.tt-modal-close-btn:hover{color:#fff;background:rgba(255,255,255,0.08)}
+.tt-modal-divider{height:1px;background:rgba(255,255,255,0.06);margin:16px 0}
+.scrollbar-hide::-webkit-scrollbar{display:none}
+
+/* ══════ STEP CARD HOVER REVEALS ══════ */
+.step-card{position:relative;overflow:hidden}
+.step-card .step-num{transition:transform 0.6s cubic-bezier(0.16,1,0.3,1),color 0.4s ease}
+.step-card:hover .step-num{transform:translateY(-6px);color:rgba(232,120,35,0.5)}
+.step-card h3{transition:transform 0.5s cubic-bezier(0.16,1,0.3,1)}
+.step-card:hover h3{transform:translateY(-4px)}
+.step-card .step-desc{max-height:0;opacity:0;overflow:hidden;transition:max-height 0.6s cubic-bezier(0.16,1,0.3,1),opacity 0.5s ease 0.05s,margin 0.5s ease}
+.step-card:hover .step-desc{max-height:120px;opacity:1;margin-top:12px}
+.step-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#e87823,#ff9f4a);transform:scaleX(0);transform-origin:left;transition:transform 0.5s cubic-bezier(0.16,1,0.3,1)}
+.step-card:hover::after{transform:scaleX(1)}
+
+/* ══════ FIRST-VISIT INTRO OVERLAY ══════ */
+.intro-overlay{position:fixed;top:0;left:0;width:100%;height:100%;z-index:10000;display:flex;align-items:center;justify-content:center;transition:opacity 0.8s ease}
+.intro-overlay-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.intro-overlay-dim{position:absolute;inset:0;background:rgba(0,0,0,0.82)}
+.intro-phrase-container{position:relative;z-index:2;width:100%;height:100vh}
+.intro-phrase{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:max(80vw,300px);text-align:center;opacity:0;font-family:'Kanit',sans-serif;font-size:clamp(2rem,6vw,4.5rem);font-weight:700;text-transform:uppercase;letter-spacing:0.08em;line-height:1.1;color:#fff;pointer-events:none;transition:opacity 0.6s ease,transform 0.6s cubic-bezier(0.16,1,0.3,1)}
+.intro-phrase.active{opacity:1;transform:translate(-50%,-50%) scale(1)}
+.intro-phrase.exit{opacity:0;transform:translate(-50%,-50%) scale(0.92)}
+.intro-phrase.enter{opacity:0;transform:translate(-50%,-50%) scale(1.06)}
+.intro-phrase .word{display:inline-block}
+.intro-phrase .word.accent{color:#e87823;text-shadow:0 0 30px rgba(232,120,35,0.4)}
+.intro-skip{position:fixed;bottom:40px;right:32px;z-index:10001;background:none;border:1px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.5);font-family:'Space Mono',monospace;font-size:0.65rem;letter-spacing:0.15em;padding:8px 20px;border-radius:100px;cursor:pointer;transition:all 0.3s ease}
+.intro-skip:hover{border-color:rgba(232,120,35,0.5);color:#e87823}
+body.intro-locked{overflow:hidden!important}
+
+/* ══════ SECTION BLEED GRADIENTS ══════ */
+.section-blend-top::before{content:'';position:absolute;top:-1px;left:0;right:0;height:120px;background:linear-gradient(to bottom,#000000,transparent);z-index:2;pointer-events:none}
+.section-blend-bottom::after{content:'';position:absolute;bottom:-1px;left:0;right:0;height:120px;background:linear-gradient(to top,#000000,transparent);z-index:2;pointer-events:none}
+
+/* ══════ SCROLL PROGRESS BAR ══════ */
+#scrollProgress{position:fixed;top:0;left:0;height:2px;background:linear-gradient(90deg,#e87823,#ff9f4a);z-index:10001;transition:width 0.05s linear;width:0}
+
+/* ══════ REDUCED MOTION ══════ */
+@media(prefers-reduced-motion:reduce){
+  .sr,.sr-left,.sr-right,.sr-scale{opacity:1!important;transform:none!important;transition:none!important}
+  .img-reveal img,.img-reveal .img-placeholder{clip-path:none!important;transform:none!important;filter:none!important;transition:none!important}
+  .word-cycler .word{animation:none!important}
+  .marquee-track,.marquee-track-reverse{animation:none!important}
+  .intro-overlay{display:none!important}
+  .hero-tilt{transform:none!important}
+  .heading-fade{opacity:1!important}
+}
+</style>
+</head>
+<body>
+
+<!-- ══════ 2. CUSTOM CURSOR ══════ -->
+
+<div id="scrollProgress"></div>
+<div id="page">
+
+<!-- ══════ FIRST-VISIT INTRO OVERLAY ══════ -->
+<div id="introOverlay" class="intro-overlay" style="display:none">
+  <img src="img/barbell-fog.jpg" alt="" class="intro-overlay-bg">
+  <div class="intro-overlay-dim"></div>
+  <div class="intro-phrase-container" id="introPhraseContainer">
+    <div class="intro-phrase active" data-index="0">
+      <span class="word">INTRODUCING</span><br>
+      <span class="word">A</span> <span class="word">BETTER</span> <span class="word">WAY</span><br>
+      <span class="word">TO</span> <span class="word accent">TRAIN</span>
+    </div>
+    <div class="intro-phrase" data-index="1">
+      <span class="word">ENGAGING</span><br>
+      <span class="word accent">GROUP</span><br>
+      <span class="word">WORKOUTS</span>
+    </div>
+    <div class="intro-phrase" data-index="2">
+      <span class="word accent">STRENGTH</span><span class="word">,</span><br>
+      <span class="word">MOBILITY</span> <span class="word">&amp;</span><br>
+      <span class="word">ENDURANCE</span>
+    </div>
+    <div class="intro-phrase" data-index="3">
+      <span class="word">SOMETHING</span> <span class="word">FOR</span><br>
+      <span class="word accent">EVERY</span><br>
+      <span class="word">SKILL</span> <span class="word">LEVEL</span>
+    </div>
+    <div class="intro-phrase" data-index="4">
+      <span class="word">WELCOME</span> <span class="word">TO</span><br>
+      <span class="word accent">CROSSFIT</span><br>
+      <span class="word">BIRKENHEAD</span>
+    </div>
+  </div>
+  <button class="intro-skip" id="introSkip" onclick="skipIntro()">SKIP &rarr;</button>
+</div>
+
+<!-- ══════ 7. NAVIGATION ══════ -->
+<nav id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-300" style="background:transparent">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <a href="#hero"><img src="img/CFB-Logo_REV-B.png" alt="CrossFit Birkenhead" class="h-8 md:h-10 w-auto"></a>
+    <div class="hidden lg:flex items-center gap-8">
+      <a href="#programs" class="nav-link font-body text-sm font-medium text-white/90 hover:text-accent tracking-wide uppercase transition-colors duration-200">Training</a>
+      <a href="#services" class="nav-link font-body text-sm font-medium text-white/90 hover:text-accent tracking-wide uppercase transition-colors duration-200">Recovery</a>
+      <a href="#schedule" class="nav-link font-body text-sm font-medium text-white/90 hover:text-accent tracking-wide uppercase transition-colors duration-200">Schedule</a>
+      <a href="whats-on.html" class="nav-link font-body text-sm font-medium text-white/90 hover:text-accent tracking-wide uppercase transition-colors duration-200">What's On</a>
+      <a href="blog.html" class="nav-link font-body text-sm font-medium text-white/90 hover:text-accent tracking-wide uppercase transition-colors duration-200">Blog</a>
+      <a href="coaches.html" class="nav-link font-body text-sm font-medium text-white/90 hover:text-accent tracking-wide uppercase transition-colors duration-200">Coaches</a>
+      <a href="#pricing" class="nav-link font-body text-sm font-medium text-white/90 hover:text-accent tracking-wide uppercase transition-colors duration-200">Pricing</a>
+      <a href="#about" class="nav-link font-body text-sm font-medium text-white/90 hover:text-accent tracking-wide uppercase transition-colors duration-200">About</a>
+      <a href="#contact" class="btn-primary ml-4 text-xs px-6 py-2.5 cursor-interactive">Get Started</a>
+    </div>
+    <button id="menuBtn" class="lg:hidden flex flex-col gap-1.5 z-50 cursor-interactive" onclick="toggleMobileNav()">
+      <span class="block w-6 h-0.5 bg-text transition-all duration-300" id="bar1"></span>
+      <span class="block w-6 h-0.5 bg-text transition-all duration-300" id="bar2"></span>
+      <span class="block w-4 h-0.5 bg-text transition-all duration-300 ml-auto" id="bar3"></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile Nav -->
+<div id="mobileNav" class="mobile-nav fixed inset-0 z-40 bg-bg/98 backdrop-blur-xl flex flex-col items-center justify-center gap-8">
+  <a href="#programs" onclick="closeMobileNav()" class="font-display text-4xl tracking-widest uppercase text-text hover:text-accent transition-colors">Training</a>
+  <a href="#services" onclick="closeMobileNav()" class="font-display text-4xl tracking-widest uppercase text-text hover:text-accent transition-colors">Recovery</a>
+  <a href="#schedule" onclick="closeMobileNav()" class="font-display text-4xl tracking-widest uppercase text-text hover:text-accent transition-colors">Schedule</a>
+  <a href="whats-on.html" onclick="closeMobileNav()" class="font-display text-4xl tracking-widest uppercase text-text hover:text-accent transition-colors">What's On</a>
+  <a href="blog.html" onclick="closeMobileNav()" class="font-display text-4xl tracking-widest uppercase text-text hover:text-accent transition-colors">Blog</a>
+  <a href="coaches.html" onclick="closeMobileNav()" class="font-display text-4xl tracking-widest uppercase text-text hover:text-accent transition-colors">Coaches</a>
+  <a href="#pricing" onclick="closeMobileNav()" class="font-display text-4xl tracking-widest uppercase text-text hover:text-accent transition-colors">Pricing</a>
+  <a href="#about" onclick="closeMobileNav()" class="font-display text-4xl tracking-widest uppercase text-text hover:text-accent transition-colors">About</a>
+  <a href="#contact" onclick="closeMobileNav()" class="font-display text-4xl tracking-widest uppercase text-text hover:text-accent transition-colors">Contact</a>
+  <a href="#contact" onclick="closeMobileNav()" class="btn-primary mt-4 text-xl px-10 py-4">Get Started</a>
+</div>
+
+<!-- ══════ 2. HERO -CURSOR-REACTIVE ══════ -->
+<section id="hero" class="relative min-h-screen flex items-center overflow-hidden section-blend-bottom">
+  <!-- Background image -->
+  <img src="img/barbell-fog.jpg" alt="" class="absolute inset-0 w-full h-full object-cover" loading="eager">
+  <div class="absolute inset-0 bg-gradient-to-r from-bg via-bg/85 to-bg/30"></div>
+  <!-- Ambient glow -->
+  <div class="pulse-glow absolute top-1/3 right-1/4 w-96 h-96 bg-accent/20 rounded-full blur-3xl"></div>
+  <!-- Crosshair decorations -->
+  <span class="crosshair bottom-8 left-8">+</span>
+  <span class="crosshair bottom-8 right-8">+</span>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-6 w-full pt-24 pb-16 md:pt-0 md:pb-0">
+    <div class="max-w-3xl">
+      <p class="sr font-mono text-xs tracking-[0.3em] text-text-muted uppercase mb-6" data-delay="0">Birkenhead, Auckland</p>
+      <h1 class="sr font-display font-bold uppercase tracking-wider leading-none" data-delay="100">
+        <span class="text-5xl md:text-7xl lg:text-8xl block mb-2 text-accent">CROSSFIT</span>
+        <span class="text-5xl md:text-7xl lg:text-8xl block text-white">BIRKENHEAD</span>
+      </h1>
+      <p class="sr font-body text-text-muted text-base md:text-lg max-w-xl mt-8 leading-relaxed" data-delay="200">
+        The home for CrossFit on Auckland's North Shore since 2009. Group-class fitness, mobility, osteo, physio, &amp; more.
+      </p>
+      <div class="sr flex flex-wrap gap-4 mt-10" data-delay="300">
+        <a href="#contact" class="btn-primary cursor-interactive">GET STARTED <span class="text-lg">&rarr;</span></a>
+        <a href="#schedule" class="btn-ghost cursor-interactive">VIEW SCHEDULE</a>
+      </div>
+    </div>
+    <!-- Stats strip -->
+    <div class="sr flex flex-wrap items-center gap-6 md:gap-10 mt-16 md:mt-24 font-mono text-xs tracking-wider text-text-muted uppercase" data-delay="400">
+      <span class="flex items-center gap-2"><span class="text-accent">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 5-Star Google Rating</span>
+      <span class="hidden md:block text-border">|</span>
+      <span><span class="text-accent font-bold">7</span> Expert Coaches</span>
+      <span class="hidden md:block text-border">|</span>
+      <span>Est. 2009</span>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 5. CROSSFIT PROGRAM -CAROUSEL ══════ -->
+<section id="programs" class="min-h-screen py-24 md:py-32 relative overflow-hidden section-blend-top section-blend-bottom flex items-center bg-bg">
+  <span class="crosshair top-8 right-12 relative z-10">+</span>
+  <div class="w-full">
+    <div class="text-center mb-16 px-6">
+      <p class="sr font-mono text-xs tracking-[0.3em] text-accent uppercase mb-4">What We Do</p>
+      <h2 class="sr heading-fade font-display text-4xl md:text-6xl font-bold uppercase tracking-wider">THE CROSSFIT<br>EXPERIENCE</h2>
+      <p class="sr font-body text-text-muted text-lg mt-4" data-delay="100">Everything you need, under one roof</p>
+    </div>
+
+    <div class="sr svc-carousel-wrap" data-delay="0">
+      <div class="svc-carousel" id="progCarousel">
+        <!-- 1. Group Workouts -->
+        <div class="svc-card cursor-interactive">
+          <img src="img/deadlift.jpg" alt="Group CrossFit class" loading="lazy">
+          <div class="svc-card-overlay"></div>
+          <div class="svc-card-content">
+            <span class="svc-card-tag">Daily Classes</span>
+            <h3>GROUP WORKOUTS</h3>
+            <span class="svc-card-name">Mon-Sat</span>
+            <p class="svc-card-detail">60-minute coached workouts. Constantly varied functional movement at high intensity, never the same day twice.</p>
+          </div>
+        </div>
+
+        <!-- 2. Strength -->
+        <div class="svc-card cursor-interactive">
+          <img src="img/barbell-fog.jpg" alt="Barbell strength training" loading="lazy">
+          <div class="svc-card-overlay"></div>
+          <div class="svc-card-content">
+            <span class="svc-card-tag">Programming</span>
+            <h3>STRENGTH</h3>
+            <span class="svc-card-name">Progressive Overload</span>
+            <p class="svc-card-detail">Structured barbell and gymnastics progressions designed to build real, functional strength you can use in life.</p>
+          </div>
+        </div>
+
+        <!-- 3. Conditioning -->
+        <div class="svc-card cursor-interactive">
+          <img src="img/airbike.jpg" alt="Conditioning workout" loading="lazy">
+          <div class="svc-card-overlay"></div>
+          <div class="svc-card-content">
+            <span class="svc-card-tag">Endurance</span>
+            <h3>CONDITIONING</h3>
+            <span class="svc-card-name">Heart &amp; Lungs</span>
+            <p class="svc-card-detail">Metabolic training that improves your engine. Row, bike, run. Push your limits and build real cardiovascular fitness.</p>
+          </div>
+        </div>
+
+        <!-- 4. Mobility -->
+        <div class="svc-card cursor-interactive">
+          <img src="img/hero-dumbbell.jpg" alt="Mobility session" loading="lazy">
+          <div class="svc-card-overlay"></div>
+          <div class="svc-card-content">
+            <span class="svc-card-tag">Recovery</span>
+            <h3>MOBILITY</h3>
+            <span class="svc-card-name">Move Better</span>
+            <p class="svc-card-detail">Dynamic stretching, foam rolling, and targeted mobility work. Train pain-free and move the way your body was designed to.</p>
+          </div>
+        </div>
+
+        <!-- 5. Coaching -->
+        <div class="svc-card cursor-interactive">
+          <img src="img/rower.jpg" alt="Expert coaching" loading="lazy">
+          <div class="svc-card-overlay"></div>
+          <div class="svc-card-content">
+            <span class="svc-card-tag">Every Class</span>
+            <h3>EXPERT COACHING</h3>
+            <span class="svc-card-name">Guided &amp; Scaled</span>
+            <p class="svc-card-detail">Every session is coached. Movements are scaled to your ability so you get the stimulus, no matter your experience level.</p>
+          </div>
+        </div>
+
+        <!-- 6. Community -->
+        <div class="svc-card cursor-interactive">
+          <img src="img/dumbbells-rack.jpg" alt="CrossFit community" loading="lazy">
+          <div class="svc-card-overlay"></div>
+          <div class="svc-card-content">
+            <span class="svc-card-tag">The Club</span>
+            <h3>COMMUNITY</h3>
+            <span class="svc-card-name">Your People</span>
+            <p class="svc-card-detail">More than a gym. A community of like-minded people who push each other, show up for each other, and win at life together.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Carousel controls -->
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="svc-progress">
+          <div class="svc-progress-track"><div class="svc-progress-fill" id="progProgressFill" style="width:0%"></div></div>
+          <span class="svc-progress-label" id="progProgressLabel">01 / 06</span>
+        </div>
+        <div class="svc-nav">
+          <button class="svc-nav-btn cursor-interactive" id="progPrev" aria-label="Previous">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3L5 9l7 6"/></svg>
+          </button>
+          <button class="svc-nav-btn cursor-interactive" id="progNext" aria-label="Next">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 3l7 6-7 6"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 6. FULL-WIDTH ACCENT BREAK ══════ -->
+<section class="relative py-32 md:py-44 px-6 overflow-hidden section-blend-top section-blend-bottom flex items-center justify-center">
+  <img src="img/airbike.jpg" alt="" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
+  <div class="absolute inset-0 bg-accent/40"></div>
+  <div class="relative z-10 text-center max-w-5xl mx-auto">
+    <p class="sr font-mono text-sm md:text-base tracking-[0.25em] text-white font-semibold uppercase mb-6" style="text-shadow:0 2px 8px rgba(0,0,0,0.5),0 1px 2px rgba(0,0,0,0.6)" data-delay="0">Introductory session + tour</p>
+    <h2 class="sr-scale font-display text-6xl md:text-[100px] lg:text-[140px] font-bold uppercase tracking-wider text-white leading-none mb-6" style="text-shadow:0 4px 20px rgba(0,0,0,0.4),0 2px 4px rgba(0,0,0,0.5)" data-delay="0">
+      JOIN THE<br>CLUB
+    </h2>
+    <p class="sr font-body text-white text-lg md:text-xl mb-10 max-w-lg mx-auto" style="text-shadow:0 2px 8px rgba(0,0,0,0.5)" data-delay="50">Book an introductory session and tour. View the gym, discuss your goals, and learn what we offer. No commitment needed.</p>
+    <a href="#contact" class="sr btn-primary !bg-black !text-white text-lg px-12 py-4 cursor-interactive" data-delay="100">BOOK YOUR INTRO &rarr;</a>
+  </div>
+  <span class="crosshair bottom-6 left-6 !text-black/20">+</span>
+  <span class="crosshair bottom-6 right-6 !text-black/20">+</span>
+</section>
+
+<!-- ══════ WELLNESS SERVICES ══════ -->
+<section id="services" class="min-h-screen py-24 md:py-32 relative overflow-hidden flex items-center bg-bg">
+  <span class="crosshair top-8 left-8">+</span>
+  <div class="w-full">
+    <div class="text-center mb-16 px-6">
+      <p class="sr font-mono text-xs tracking-[0.3em] text-accent uppercase mb-4">Wellness &amp; Recovery</p>
+      <h2 class="sr heading-fade font-display text-4xl md:text-6xl font-bold uppercase tracking-wider">BEYOND THE WORKOUT</h2>
+      <p class="sr font-body text-text-muted text-lg mt-4" data-delay="80">Recovery and wellness, all in one place</p>
+    </div>
+
+    <div class="sr svc-carousel-wrap" data-delay="0">
+      <div class="svc-carousel" id="svcCarousel">
+        <!-- 1. Physiotherapy -->
+        <div class="svc-card cursor-interactive">
+          <img src="img/svc-physio.jpg" alt="Physiotherapy session" loading="lazy">
+          <div class="svc-card-overlay"></div>
+          <div class="svc-card-content">
+            <span class="svc-card-tag">In-House</span>
+            <h3>PHYSIOTHERAPY</h3>
+            <span class="svc-card-name">Sam Schwab</span>
+            <p class="svc-card-detail">Physiotherapist with a background in personal training and CrossFit. I meet you where you are on your movement journey to resolve pain, improve mobility, and keep you training.</p>
+            <a href="tel:0226466923" class="svc-card-cta">022 646 6923 &rarr;</a>
+          </div>
+        </div>
+
+        <!-- 2. Osteopathy -->
+        <div class="svc-card cursor-interactive">
+          <img src="img/svc-osteo.jpg" alt="Osteopathy treatment" loading="lazy">
+          <div class="svc-card-overlay"></div>
+          <div class="svc-card-content">
+            <span class="svc-card-tag">In-House</span>
+            <h3>OSTEOPATHY</h3>
+            <span class="svc-card-name">Simone</span>
+            <p class="svc-card-detail">Whole-body assessment across all age groups. Identifying root causes, not just managing symptoms.</p>
+            <a href="https://reviveosteopathy.co.nz/" target="_blank" rel="noopener" class="svc-card-cta">Book via Revive Osteopathy &rarr;</a>
+          </div>
+        </div>
+
+        <!-- 3. Massage -->
+        <div class="svc-card cursor-interactive">
+          <img src="img/svc-massage.jpg" alt="Somatic bodywork and massage therapy" loading="lazy">
+          <div class="svc-card-overlay"></div>
+          <div class="svc-card-content">
+            <span class="svc-card-tag">In-House</span>
+            <h3>MASSAGE</h3>
+            <span class="svc-card-name">Nina &middot; Kansoma</span>
+            <p class="svc-card-detail">Deep bodywork and massage therapy. Choose from Karada (full-body), Chikara (deep-tissue sports), or Kawa (lymphatic drainage).</p>
+            <a href="https://sites.google.com/view/kansoma/home" target="_blank" rel="noopener" class="svc-card-cta">Book via Kansoma &rarr;</a>
+          </div>
+        </div>
+
+        <!-- 4. Personal Training -->
+        <div class="svc-card cursor-interactive">
+          <img src="img/svc-pt.jpg" alt="Personal training session" loading="lazy">
+          <div class="svc-card-overlay"></div>
+          <div class="svc-card-content">
+            <span class="svc-card-tag">In-House</span>
+            <h3>PERSONAL TRAINING</h3>
+            <span class="svc-card-name">Gabe</span>
+            <p class="svc-card-detail">1-on-1 coaching in gymnastics, calisthenics, and functional strength. 30 and 60 minute sessions.</p>
+            <a href="sms:0226391439" class="svc-card-cta" style="text-decoration:none">Text Gabe to book &rarr;</a>
+          </div>
+        </div>
+
+        <!-- 5. Recovery -->
+        <div class="svc-card cursor-interactive">
+          <img src="img/svc-recovery.jpg" alt="Sauna and cold plunge recovery" loading="lazy">
+          <div class="svc-card-overlay"></div>
+          <div class="svc-card-content">
+            <span class="svc-card-tag">Partner Studio</span>
+            <h3>RECOVERY</h3>
+            <span class="svc-card-name">Boon Wellness</span>
+            <p class="svc-card-detail">Sauna, cold plunge and red light therapy at our partner studio. The perfect complement to your training.</p>
+            <a href="https://www.boonwellness.co.nz/" target="_blank" rel="noopener" class="svc-card-cta">Visit Boon Wellness &rarr;</a>
+          </div>
+        </div>
+
+        <!-- 6. Pilates -->
+        <div class="svc-card cursor-interactive">
+          <img src="img/svc-pilates.jpg" alt="Pilates reformer class" loading="lazy">
+          <div class="svc-card-overlay"></div>
+          <div class="svc-card-content">
+            <span class="svc-card-tag">Partner Studio</span>
+            <h3>PILATES</h3>
+            <span class="svc-card-name">Reform Pilates</span>
+            <p class="svc-card-detail">Mobility and core strength training at our partner studio. Build the foundation that supports everything else.</p>
+            <a href="https://reformfitness.co.nz/studios/birkenhead/" target="_blank" rel="noopener" class="svc-card-cta">Visit Reform Pilates &rarr;</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Carousel controls -->
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="svc-progress">
+          <div class="svc-progress-track"><div class="svc-progress-fill" id="svcProgressFill" style="width:0%"></div></div>
+          <span class="svc-progress-label" id="svcProgressLabel">01 / 06</span>
+        </div>
+        <div class="svc-nav">
+          <button class="svc-nav-btn cursor-interactive" id="svcPrev" aria-label="Previous service">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3L5 9l7 6"/></svg>
+          </button>
+          <button class="svc-nav-btn cursor-interactive" id="svcNext" aria-label="Next service">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 3l7 6-7 6"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════ TESTIMONIALS ══════ -->
+<section id="testimonials" class="min-h-screen py-24 md:py-32 overflow-hidden relative flex items-center section-blend-top section-blend-bottom">
+  <img src="img/rower.jpg" alt="" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
+  <div class="absolute inset-0 bg-gradient-to-b from-bg/85 via-bg/80 to-bg/90"></div>
+  <span class="crosshair top-8 left-8 relative z-10">+</span>
+  <div class="w-full relative z-10">
+  <div class="max-w-7xl mx-auto px-6 mb-12">
+    <h2 class="sr heading-fade font-display text-4xl md:text-6xl lg:text-7xl font-bold uppercase tracking-wider">
+      <span class="text-accent">5</span> STAR GOOGLE<br>RATING
+    </h2>
+    <p class="sr font-body text-text-muted text-lg mt-4" data-delay="100">What Birkenhead locals are saying</p>
+  </div>
+
+  <!-- Marquee -->
+  <div class="overflow-hidden mb-4">
+    <div class="marquee-track">
+      <div class="flex-shrink-0 w-80 md:w-96 glass !py-6 !px-6 mx-2 !rounded-xl">
+        <div class="flex items-center gap-1 mb-3 text-accent text-sm">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="font-body text-text text-sm leading-relaxed mb-4">"It's been an amazing experience from day one!! Big thanks to Paul and the entire team. It feels more like a family than just a gym."</p>
+        <p class="font-mono text-xs text-text-muted uppercase tracking-wider">Param Kaur</p>
+      </div>
+      <div class="flex-shrink-0 w-80 md:w-96 glass !py-6 !px-6 mx-2 !rounded-xl">
+        <div class="flex items-center gap-1 mb-3 text-accent text-sm">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="font-body text-text text-sm leading-relaxed mb-4">"Brilliant crossfit gym! Superb training and good varied WODs. Excellent coaches. A real friendly community. Best box on the shore."</p>
+        <p class="font-mono text-xs text-text-muted uppercase tracking-wider">Rob Schwab</p>
+      </div>
+      <div class="flex-shrink-0 w-80 md:w-96 glass !py-6 !px-6 mx-2 !rounded-xl">
+        <div class="flex items-center gap-1 mb-3 text-accent text-sm">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="font-body text-text text-sm leading-relaxed mb-4">"All the coaches are lovely, welcoming and supportive. I couldn't have asked for a better box for my arrival in Auckland."</p>
+        <p class="font-mono text-xs text-text-muted uppercase tracking-wider">Marta Costa</p>
+      </div>
+      <div class="flex-shrink-0 w-80 md:w-96 glass !py-6 !px-6 mx-2 !rounded-xl">
+        <div class="flex items-center gap-1 mb-3 text-accent text-sm">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="font-body text-text text-sm leading-relaxed mb-4">"The coaches and members are so friendly, welcoming, and super supportive! My first time joining CrossFit and was a bit nervous but just blended in."</p>
+        <p class="font-mono text-xs text-text-muted uppercase tracking-wider">Sara Puliuvea</p>
+      </div>
+      <div class="flex-shrink-0 w-80 md:w-96 glass !py-6 !px-6 mx-2 !rounded-xl">
+        <div class="flex items-center gap-1 mb-3 text-accent text-sm">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="font-body text-text text-sm leading-relaxed mb-4">"Amazing place. Training is in groups and the trainer keeps an eye on everyone. I would encourage anyone and everyone to try it out."</p>
+        <p class="font-mono text-xs text-text-muted uppercase tracking-wider">Wallace D'Costa</p>
+      </div>
+      <div class="flex-shrink-0 w-80 md:w-96 glass !py-6 !px-6 mx-2 !rounded-xl">
+        <div class="flex items-center gap-1 mb-3 text-accent text-sm">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="font-body text-text text-sm leading-relaxed mb-4">"The best CrossFit gym in Auckland! Awesome workouts and an incredible community that makes you want to keep coming back."</p>
+        <p class="font-mono text-xs text-text-muted uppercase tracking-wider">Nikki Michaels</p>
+      </div>
+      <div class="flex-shrink-0 w-80 md:w-96 glass !py-6 !px-6 mx-2 !rounded-xl">
+        <div class="flex items-center gap-1 mb-3 text-accent text-sm">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="font-body text-text text-sm leading-relaxed mb-4">"If you are looking for a gym family… this is it. The support and encouragement from coaches and members alike is unmatched."</p>
+        <p class="font-mono text-xs text-text-muted uppercase tracking-wider">Denise Jenkins</p>
+      </div>
+      <!-- Duplicates for seamless loop -->
+      <div class="flex-shrink-0 w-80 md:w-96 glass !py-6 !px-6 mx-2 !rounded-xl">
+        <div class="flex items-center gap-1 mb-3 text-accent text-sm">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="font-body text-text text-sm leading-relaxed mb-4">"It's been an amazing experience from day one!! Big thanks to Paul and the entire team. It feels more like a family than just a gym."</p>
+        <p class="font-mono text-xs text-text-muted uppercase tracking-wider">Param Kaur</p>
+      </div>
+      <div class="flex-shrink-0 w-80 md:w-96 glass !py-6 !px-6 mx-2 !rounded-xl">
+        <div class="flex items-center gap-1 mb-3 text-accent text-sm">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="font-body text-text text-sm leading-relaxed mb-4">"Brilliant crossfit gym! Superb training and good varied WODs. Excellent coaches. A real friendly community. Best box on the shore."</p>
+        <p class="font-mono text-xs text-text-muted uppercase tracking-wider">Rob Schwab</p>
+      </div>
+      <div class="flex-shrink-0 w-80 md:w-96 glass !py-6 !px-6 mx-2 !rounded-xl">
+        <div class="flex items-center gap-1 mb-3 text-accent text-sm">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="font-body text-text text-sm leading-relaxed mb-4">"All the coaches are lovely, welcoming and supportive. I couldn't have asked for a better box for my arrival in Auckland."</p>
+        <p class="font-mono text-xs text-text-muted uppercase tracking-wider">Marta Costa</p>
+      </div>
+      <div class="flex-shrink-0 w-80 md:w-96 glass !py-6 !px-6 mx-2 !rounded-xl">
+        <div class="flex items-center gap-1 mb-3 text-accent text-sm">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="font-body text-text text-sm leading-relaxed mb-4">"The coaches and members are so friendly, welcoming, and super supportive! My first time joining CrossFit and was a bit nervous but just blended in."</p>
+        <p class="font-mono text-xs text-text-muted uppercase tracking-wider">Sara Puliuvea</p>
+      </div>
+      <div class="flex-shrink-0 w-80 md:w-96 glass !py-6 !px-6 mx-2 !rounded-xl">
+        <div class="flex items-center gap-1 mb-3 text-accent text-sm">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="font-body text-text text-sm leading-relaxed mb-4">"Amazing place. Training is in groups and the trainer keeps an eye on everyone. I would encourage anyone and everyone to try it out."</p>
+        <p class="font-mono text-xs text-text-muted uppercase tracking-wider">Wallace D'Costa</p>
+      </div>
+      <div class="flex-shrink-0 w-80 md:w-96 glass !py-6 !px-6 mx-2 !rounded-xl">
+        <div class="flex items-center gap-1 mb-3 text-accent text-sm">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="font-body text-text text-sm leading-relaxed mb-4">"The best CrossFit gym in Auckland! Awesome workouts and an incredible community that makes you want to keep coming back."</p>
+        <p class="font-mono text-xs text-text-muted uppercase tracking-wider">Nikki Michaels</p>
+      </div>
+      <div class="flex-shrink-0 w-80 md:w-96 glass !py-6 !px-6 mx-2 !rounded-xl">
+        <div class="flex items-center gap-1 mb-3 text-accent text-sm">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="font-body text-text text-sm leading-relaxed mb-4">"If you are looking for a gym family… this is it. The support and encouragement from coaches and members alike is unmatched."</p>
+        <p class="font-mono text-xs text-text-muted uppercase tracking-wider">Denise Jenkins</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Second row -reverse direction -->
+  <div class="overflow-hidden mt-4">
+    <div class="marquee-track-reverse">
+      <div class="flex-shrink-0 w-80 md:w-96 glass !py-6 !px-6 mx-2 !rounded-xl">
+        <div class="flex items-center gap-1 mb-3 text-accent text-sm">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="font-body text-text text-sm leading-relaxed mb-4">"Amazing place. Training is in groups and the trainer keeps an eye on everyone. I would encourage anyone and everyone to try it out."</p>
+        <p class="font-mono text-xs text-text-muted uppercase tracking-wider">Wallace D'Costa</p>
+      </div>
+      <div class="flex-shrink-0 w-80 md:w-96 glass !py-6 !px-6 mx-2 !rounded-xl">
+        <div class="flex items-center gap-1 mb-3 text-accent text-sm">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="font-body text-text text-sm leading-relaxed mb-4">"The best CrossFit gym in Auckland! Awesome workouts and an incredible community that makes you want to keep coming back."</p>
+        <p class="font-mono text-xs text-text-muted uppercase tracking-wider">Nikki Michaels</p>
+      </div>
+      <div class="flex-shrink-0 w-80 md:w-96 glass !py-6 !px-6 mx-2 !rounded-xl">
+        <div class="flex items-center gap-1 mb-3 text-accent text-sm">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="font-body text-text text-sm leading-relaxed mb-4">"If you are looking for a gym family… this is it. The support and encouragement from coaches and members alike is unmatched."</p>
+        <p class="font-mono text-xs text-text-muted uppercase tracking-wider">Denise Jenkins</p>
+      </div>
+      <div class="flex-shrink-0 w-80 md:w-96 glass !py-6 !px-6 mx-2 !rounded-xl">
+        <div class="flex items-center gap-1 mb-3 text-accent text-sm">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="font-body text-text text-sm leading-relaxed mb-4">"Brilliant crossfit gym! Superb training and good varied WODs. Excellent coaches. A real friendly community. Best box on the shore."</p>
+        <p class="font-mono text-xs text-text-muted uppercase tracking-wider">Rob Schwab</p>
+      </div>
+      <div class="flex-shrink-0 w-80 md:w-96 glass !py-6 !px-6 mx-2 !rounded-xl">
+        <div class="flex items-center gap-1 mb-3 text-accent text-sm">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="font-body text-text text-sm leading-relaxed mb-4">"The coaches and members are so friendly, welcoming, and super supportive! My first time joining CrossFit and was a bit nervous but just blended in."</p>
+        <p class="font-mono text-xs text-text-muted uppercase tracking-wider">Sara Puliuvea</p>
+      </div>
+      <div class="flex-shrink-0 w-80 md:w-96 glass !py-6 !px-6 mx-2 !rounded-xl">
+        <div class="flex items-center gap-1 mb-3 text-accent text-sm">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="font-body text-text text-sm leading-relaxed mb-4">"All the coaches are lovely, welcoming and supportive. I couldn't have asked for a better box for my arrival in Auckland."</p>
+        <p class="font-mono text-xs text-text-muted uppercase tracking-wider">Marta Costa</p>
+      </div>
+      <div class="flex-shrink-0 w-80 md:w-96 glass !py-6 !px-6 mx-2 !rounded-xl">
+        <div class="flex items-center gap-1 mb-3 text-accent text-sm">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="font-body text-text text-sm leading-relaxed mb-4">"It's been an amazing experience from day one!! Big thanks to Paul and the entire team. It feels more like a family than just a gym."</p>
+        <p class="font-mono text-xs text-text-muted uppercase tracking-wider">Param Kaur</p>
+      </div>
+      <!-- Duplicates for seamless loop -->
+      <div class="flex-shrink-0 w-80 md:w-96 glass !py-6 !px-6 mx-2 !rounded-xl">
+        <div class="flex items-center gap-1 mb-3 text-accent text-sm">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="font-body text-text text-sm leading-relaxed mb-4">"Amazing place. Training is in groups and the trainer keeps an eye on everyone. I would encourage anyone and everyone to try it out."</p>
+        <p class="font-mono text-xs text-text-muted uppercase tracking-wider">Wallace D'Costa</p>
+      </div>
+      <div class="flex-shrink-0 w-80 md:w-96 glass !py-6 !px-6 mx-2 !rounded-xl">
+        <div class="flex items-center gap-1 mb-3 text-accent text-sm">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="font-body text-text text-sm leading-relaxed mb-4">"The best CrossFit gym in Auckland! Awesome workouts and an incredible community that makes you want to keep coming back."</p>
+        <p class="font-mono text-xs text-text-muted uppercase tracking-wider">Nikki Michaels</p>
+      </div>
+      <div class="flex-shrink-0 w-80 md:w-96 glass !py-6 !px-6 mx-2 !rounded-xl">
+        <div class="flex items-center gap-1 mb-3 text-accent text-sm">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="font-body text-text text-sm leading-relaxed mb-4">"If you are looking for a gym family… this is it. The support and encouragement from coaches and members alike is unmatched."</p>
+        <p class="font-mono text-xs text-text-muted uppercase tracking-wider">Denise Jenkins</p>
+      </div>
+      <div class="flex-shrink-0 w-80 md:w-96 glass !py-6 !px-6 mx-2 !rounded-xl">
+        <div class="flex items-center gap-1 mb-3 text-accent text-sm">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="font-body text-text text-sm leading-relaxed mb-4">"Brilliant crossfit gym! Superb training and good varied WODs. Excellent coaches. A real friendly community. Best box on the shore."</p>
+        <p class="font-mono text-xs text-text-muted uppercase tracking-wider">Rob Schwab</p>
+      </div>
+      <div class="flex-shrink-0 w-80 md:w-96 glass !py-6 !px-6 mx-2 !rounded-xl">
+        <div class="flex items-center gap-1 mb-3 text-accent text-sm">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="font-body text-text text-sm leading-relaxed mb-4">"The coaches and members are so friendly, welcoming, and super supportive! My first time joining CrossFit and was a bit nervous but just blended in."</p>
+        <p class="font-mono text-xs text-text-muted uppercase tracking-wider">Sara Puliuvea</p>
+      </div>
+      <div class="flex-shrink-0 w-80 md:w-96 glass !py-6 !px-6 mx-2 !rounded-xl">
+        <div class="flex items-center gap-1 mb-3 text-accent text-sm">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="font-body text-text text-sm leading-relaxed mb-4">"All the coaches are lovely, welcoming and supportive. I couldn't have asked for a better box for my arrival in Auckland."</p>
+        <p class="font-mono text-xs text-text-muted uppercase tracking-wider">Marta Costa</p>
+      </div>
+      <div class="flex-shrink-0 w-80 md:w-96 glass !py-6 !px-6 mx-2 !rounded-xl">
+        <div class="flex items-center gap-1 mb-3 text-accent text-sm">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="font-body text-text text-sm leading-relaxed mb-4">"It's been an amazing experience from day one!! Big thanks to Paul and the entire team. It feels more like a family than just a gym."</p>
+        <p class="font-mono text-xs text-text-muted uppercase tracking-wider">Param Kaur</p>
+      </div>
+    </div>
+  </div>
+
+  </div>
+</section>
+
+<!-- ══════ SCHEDULE ══════ -->
+<section id="schedule" class="min-h-screen py-24 md:py-32 px-6 relative flex items-center bg-bg">
+  <span class="crosshair bottom-8 left-8">+</span>
+  <div class="max-w-6xl mx-auto w-full">
+    <div class="mb-16 flex flex-col md:flex-row md:items-end md:justify-between gap-4">
+      <div>
+        <p class="sr font-mono text-xs tracking-[0.3em] text-accent uppercase mb-4">Weekly Timetable</p>
+        <h2 class="sr heading-fade font-display text-4xl md:text-6xl font-bold uppercase tracking-wider">OUR SCHEDULE</h2>
+      </div>
+      <p class="sr font-body text-text-muted text-sm" data-delay="80">Book directly through the timetable below</p>
+    </div>
+
+    <!-- Live Timetable -Week Grid Calendar -->
+    <div class="sr" data-delay="0">
+      <!-- Week Navigation -->
+      <div class="flex items-center justify-between mb-6">
+        <button id="tt-prev" class="svc-nav-btn" aria-label="Previous week">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3L5 9l7 6"/></svg>
+        </button>
+        <div id="tt-week-label" class="font-mono text-xs tracking-[0.2em] text-accent uppercase"></div>
+        <button id="tt-next" class="svc-nav-btn" aria-label="Next week">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 3l7 6-7 6"/></svg>
+        </button>
+      </div>
+
+      <!-- Calendar Grid -->
+      <div id="tt-calendar" class="tt-cal-grid">
+        <!-- Filled by JS: 7 day columns with class blocks -->
+      </div>
+
+      <!-- Mobile: scrollable day view (shown below md) -->
+      <div id="tt-mobile" class="tt-mobile-view md:hidden">
+        <div id="tt-mobile-tabs" class="flex gap-2 overflow-x-auto pb-3 mb-4" style="scrollbar-width:none"></div>
+        <div id="tt-mobile-classes"></div>
+      </div>
+
+      <!-- Loading State -->
+      <div id="tt-loading" class="flex items-center justify-center py-20">
+        <div class="w-8 h-8 border-2 border-accent border-t-transparent rounded-full animate-spin"></div>
+      </div>
+
+      <!-- Empty State -->
+      <div id="tt-empty" class="hidden text-center py-16">
+        <p class="font-mono text-sm text-text-muted">No classes scheduled this week</p>
+      </div>
+    </div>
+
+    <p class="sr font-mono text-xs text-text-muted text-center mt-6" data-delay="100">
+      Live schedule &middot; <a href="https://go.streamfit.com/embed/schedule/404-crossfit-birkenhead" target="_blank" rel="noopener" class="text-accent hover:underline">Book on Streamfit</a>
+    </p>
+
+    <!-- Workout Detail Modal -->
+    <div id="tt-modal" class="tt-modal-overlay hidden" role="dialog" aria-modal="true">
+      <div class="tt-modal-backdrop"></div>
+      <div class="tt-modal-card glass">
+        <button id="tt-modal-close" class="tt-modal-close-btn" aria-label="Close">&times;</button>
+        <div id="tt-modal-body"><!-- Filled by JS --></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 10. MEMBERSHIP / PRICING ══════ -->
+<section id="pricing" class="min-h-screen py-24 md:py-32 px-6 relative overflow-hidden flex items-center section-blend-top section-blend-bottom">
+  <img src="img/barbell-fog.jpg" alt="" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
+  <div class="absolute inset-0 bg-gradient-to-b from-bg/90 via-bg/85 to-bg/95"></div>
+  <span class="crosshair top-8 left-8 relative z-10">+</span>
+  <span class="crosshair bottom-8 right-8 relative z-10">+</span>
+  <div class="max-w-6xl mx-auto relative z-10 w-full">
+    <div class="text-center mb-16">
+      <p class="sr font-mono text-xs tracking-[0.3em] text-accent uppercase mb-4">Membership</p>
+      <h2 class="sr heading-fade font-display text-4xl md:text-6xl font-bold uppercase tracking-wider" style="text-shadow:0 2px 12px rgba(0,0,0,0.4)">FIND YOUR FIT</h2>
+      <p class="sr font-body text-text-muted text-lg mt-4" data-delay="80">Simple pricing, no lock-in contracts</p>
+    </div>
+
+    <!-- Weekly Memberships -->
+    <div class="grid md:grid-cols-3 gap-6 mb-8">
+      <!-- 2x Per Week -->
+      <div class="sr glass" data-delay="0">
+        <p class="font-mono text-xs text-text-muted uppercase tracking-wider mb-2">Starter</p>
+        <p class="font-display text-5xl font-bold uppercase tracking-wider mb-1">$39<span class="text-xl text-text-muted">/wk</span></p>
+        <p class="font-body text-text-muted text-sm leading-relaxed mb-6">2 classes per week, perfect for getting started.</p>
+        <div class="space-y-3 mb-8">
+          <p class="font-body text-sm text-text"><span class="text-accent mr-2">+</span> 2 classes per week</p>
+          <p class="font-body text-sm text-text"><span class="text-accent mr-2">+</span> In-person coaching</p>
+          <p class="font-body text-sm text-text"><span class="text-accent mr-2">+</span> Renews weekly</p>
+        </div>
+        <a href="#contact" class="btn-ghost w-full justify-center cursor-interactive">GET STARTED</a>
+      </div>
+
+      <!-- 3x Per Week -->
+      <div class="sr glass" data-delay="60">
+        <p class="font-mono text-xs text-text-muted uppercase tracking-wider mb-2">Regular</p>
+        <p class="font-display text-5xl font-bold uppercase tracking-wider mb-1">$49<span class="text-xl text-text-muted">/wk</span></p>
+        <p class="font-body text-text-muted text-sm leading-relaxed mb-6">3 classes per week, build consistency and results.</p>
+        <div class="space-y-3 mb-8">
+          <p class="font-body text-sm text-text"><span class="text-accent mr-2">+</span> 3 classes per week</p>
+          <p class="font-body text-sm text-text"><span class="text-accent mr-2">+</span> In-person coaching</p>
+          <p class="font-body text-sm text-text"><span class="text-accent mr-2">+</span> Renews weekly</p>
+        </div>
+        <a href="#contact" class="btn-ghost w-full justify-center cursor-interactive">GET STARTED</a>
+      </div>
+
+      <!-- Unlimited (highlighted) -->
+      <div class="sr glass" data-delay="120" style="box-shadow:0 0 40px rgba(232,120,35,.08);border-color:rgba(232,120,35,.15)">
+        <div class="absolute -top-3 right-6"><span class="font-mono text-xs bg-accent text-white px-3 py-1 rounded-full">BEST VALUE</span></div>
+        <p class="font-mono text-xs text-accent uppercase tracking-wider mb-2">Unlimited</p>
+        <p class="font-display text-5xl font-bold uppercase tracking-wider mb-1">$59<span class="text-xl text-text-muted">/wk</span></p>
+        <p class="font-body text-text-muted text-sm leading-relaxed mb-6">Up to 7 classes per week. Full access, maximum results.</p>
+        <div class="space-y-3 mb-8">
+          <p class="font-body text-sm text-text"><span class="text-accent mr-2">+</span> 7 classes per week</p>
+          <p class="font-body text-sm text-text"><span class="text-accent mr-2">+</span> In-person coaching</p>
+          <p class="font-body text-sm text-text"><span class="text-accent mr-2">+</span> Renews weekly</p>
+        </div>
+        <a href="#contact" class="btn-primary w-full justify-center cursor-interactive">GET STARTED &rarr;</a>
+      </div>
+    </div>
+
+    <!-- Casual & Extras -->
+    <div class="grid md:grid-cols-3 gap-6 mb-8">
+      <div class="sr glass !p-5" data-delay="0">
+        <p class="font-mono text-xs text-text-muted uppercase tracking-wider mb-1">Drop In</p>
+        <p class="font-display text-3xl font-bold tracking-wider mb-2">$29</p>
+        <p class="font-body text-text-muted text-xs leading-relaxed">Single class, any day on the timetable</p>
+      </div>
+      <div class="sr glass !p-5" data-delay="60">
+        <p class="font-mono text-xs text-text-muted uppercase tracking-wider mb-1">8 Class Concession</p>
+        <p class="font-display text-3xl font-bold tracking-wider mb-2">$199</p>
+        <p class="font-body text-text-muted text-xs leading-relaxed">Valid for 3 months from purchase</p>
+      </div>
+      <div class="sr glass !p-5" data-delay="120">
+        <p class="font-mono text-xs text-text-muted uppercase tracking-wider mb-1">Personal Training</p>
+        <p class="font-display text-3xl font-bold tracking-wider mb-2">$59<span class="text-lg text-text-muted">-$79</span></p>
+        <p class="font-body text-text-muted text-xs leading-relaxed mb-2">30 or 60 minute 1-on-1 sessions</p>
+        <a href="sms:0226391439" class="font-mono text-[10px] text-accent hover:underline uppercase tracking-wider">Text Gabe to book &rarr;</a>
+      </div>
+    </div>
+
+    <p class="sr text-center font-body text-text-muted text-sm mt-8" data-delay="200">
+      Drop-in: $29 per class &middot; All memberships require 30-days written notice to cancel
+    </p>
+  </div>
+</section>
+
+<!-- ══════ ABOUT / COACHES ══════ -->
+<section id="about" class="min-h-screen py-24 md:py-32 px-6 relative overflow-hidden section-blend-top section-blend-bottom flex items-center">
+  <img src="img/dumbbells-rack.jpg" alt="" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
+  <div class="absolute inset-0 bg-gradient-to-b from-bg/85 via-bg/80 to-bg/90"></div>
+  <span class="crosshair top-8 right-8 relative z-10">+</span>
+  <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-16 lg:gap-20 items-center relative z-10 w-full">
+
+    <!-- Left: Story -->
+    <div>
+      <p class="sr-left font-mono text-xs tracking-[0.3em] text-accent uppercase mb-4">Our Story</p>
+      <h2 class="sr-left heading-fade font-display text-4xl md:text-5xl font-bold uppercase tracking-wider leading-tight mb-8">EDUCATE.<br>TRAIN.<br>INSPIRE.</h2>
+      <p class="sr font-body text-text-muted text-lg leading-relaxed mb-8" data-delay="80">
+        CrossFit Birkenhead is a vehicle for life change, focusing on educating, training, and inspiring members to achieve long-term fitness results. Accessible to all fitness levels, with scaling and modifications.
+      </p>
+      <div class="sr border-l-2 border-accent pl-6 mb-8" data-delay="120">
+        <p class="font-display text-2xl md:text-3xl font-bold uppercase tracking-wider leading-tight text-white">"Do something today<br>you'll be proud of<br>tomorrow."</p>
+      </div>
+      <p class="sr font-body text-text-muted leading-relaxed" data-delay="160">
+        Our purpose is to pass on empowering knowledge and training guidance to have a positive impact on the health and fitness of everyone we work with in the Birkenhead area.
+      </p>
+    </div>
+
+    <!-- Right: Paul + Meet the Team -->
+    <div class="sr" data-delay="60">
+      <div class="glass p-0 overflow-hidden">
+        <!-- Paul photo -->
+        <div class="relative aspect-[4/3] overflow-hidden">
+          <img src="img/coach-paul.jpg" alt="Paul Davies" class="w-full h-full object-cover filter saturate-[0.85] brightness-[0.85]" onerror="this.style.display='none'">
+          <div class="absolute inset-0 bg-gradient-to-t from-[rgba(20,20,20,0.95)] via-[rgba(20,20,20,0.4)] to-transparent"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-8">
+            <p class="font-mono text-[10px] text-accent tracking-wider uppercase mb-1">Owner + Head Coach</p>
+            <h3 class="font-display text-3xl md:text-4xl uppercase tracking-wider">PAUL DAVIES</h3>
+          </div>
+        </div>
+        <!-- Bio -->
+        <div class="p-8">
+          <p class="font-body text-text-muted text-sm leading-relaxed mb-5">
+            Owner and Director of Solid Strength Equipment and CrossFit Birkenhead. Paul's passion for coaching comes down to one thing: inspiring people to improve their health and fitness.
+          </p>
+          <div class="flex gap-8 mb-8">
+            <div>
+              <p class="font-mono text-[10px] text-text-muted/50 uppercase mb-1">Fav WOD</p>
+              <p class="font-mono text-sm text-text">Filthy Fifty</p>
+            </div>
+            <div>
+              <p class="font-mono text-[10px] text-text-muted/50 uppercase mb-1">Fav Exercise</p>
+              <p class="font-mono text-sm text-text">Double-unders</p>
+            </div>
+          </div>
+          <div class="border-t border-white/5 pt-6">
+            <p class="font-body text-text-muted text-sm mb-4">7 coaches ready to help you reach your goals.</p>
+            <a href="coaches.html" class="btn-primary text-xs px-8 py-3 cursor-interactive">MEET THE TEAM &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════ 11. FAQ ACCORDION ══════ -->
+<section id="faq" class="py-24 md:py-32 px-6 relative flex items-center bg-bg overflow-hidden">
+  <span class="crosshair top-8 left-8">+</span>
+  <!-- Subtle background texture -->
+  <div class="absolute inset-0 opacity-[0.03]" style="background-image:radial-gradient(circle at 1px 1px, #e87823 1px, transparent 0);background-size:40px 40px"></div>
+  <div class="max-w-3xl mx-auto w-full relative z-10">
+    <div class="text-center mb-16">
+      <h2 class="sr heading-fade font-display text-5xl md:text-7xl font-bold uppercase tracking-wider">GOT<br><span class="text-accent">QUESTIONS?</span></h2>
+    </div>
+
+    <div class="sr" data-delay="0">
+      <div class="faq-item">
+        <div class="faq-question cursor-interactive" onclick="toggleFaq(this)">
+          <p class="font-display text-lg uppercase tracking-wider pr-4">Do I need to be fit to start CrossFit?</p>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          <p class="font-body text-text-muted text-sm leading-relaxed">Not at all. CrossFit is for everyone regardless of fitness level. Every workout can be scaled and modified to meet you where you are. Our coaches guide beginners through fundamentals before jumping into group classes.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question cursor-interactive" onclick="toggleFaq(this)">
+          <p class="font-display text-lg uppercase tracking-wider pr-4">What should I bring to my first session?</p>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          <p class="font-body text-text-muted text-sm leading-relaxed">Comfortable workout clothes, indoor training shoes, a water bottle, and a towel. We supply all the equipment. Just bring your energy and willingness to learn.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question cursor-interactive" onclick="toggleFaq(this)">
+          <p class="font-display text-lg uppercase tracking-wider pr-4">How does the intro program work?</p>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          <p class="font-body text-text-muted text-sm leading-relaxed">Book an introductory session and tour where you'll meet a coach, view the gym, discuss your goals, and learn about our facility and what we offer. From there we'll build a plan to get you started.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question cursor-interactive" onclick="toggleFaq(this)">
+          <p class="font-display text-lg uppercase tracking-wider pr-4">Can I put my membership on hold?</p>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          <p class="font-body text-text-muted text-sm leading-relaxed">Yes. Members may place their membership on hold twice yearly for up to 3 consecutive months each time, with a minimum of 2 business days notice required.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question cursor-interactive" onclick="toggleFaq(this)">
+          <p class="font-display text-lg uppercase tracking-wider pr-4">Do you offer drop-in sessions for visitors?</p>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          <p class="font-body text-text-muted text-sm leading-relaxed">Yes, drop-ins are $29 per class. If you are visiting Auckland and have CrossFit experience, you are welcome to join any class on our timetable.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 9. CONTACT FORM + MAP ══════ -->
+<section id="contact" class="min-h-screen py-24 md:py-32 px-6 relative overflow-hidden section-blend-top section-blend-bottom flex items-center">
+  <img src="img/rower.jpg" alt="" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
+  <div class="absolute inset-0 bg-gradient-to-b from-bg/85 via-bg/75 to-bg/90"></div>
+  <span class="crosshair top-8 right-8 relative z-10">+</span>
+  <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center relative z-10 w-full">
+    <!-- Chat-style SMS widget (left) -->
+    <div id="contactFormWrap">
+      <h2 class="sr font-display text-4xl md:text-5xl font-bold uppercase tracking-wider mb-2">TEXT PAUL</h2>
+      <p class="sr font-body text-white/80 mb-6" data-delay="80">Send a text to get started. Paul will get back to you personally.</p>
+
+      <div class="sr" data-delay="160">
+        <!-- Chat window -->
+        <div id="chatWindow" class="glass rounded-2xl overflow-hidden" style="max-width:480px">
+          <!-- Chat header -->
+          <div class="flex items-center gap-3 px-5 py-4 border-b border-white/10">
+            <div class="w-10 h-10 rounded-full bg-accent/30 flex items-center justify-center flex-shrink-0">
+              <span class="font-display text-accent text-sm font-bold">PD</span>
+            </div>
+            <div>
+              <p class="font-display text-white text-sm uppercase tracking-wider">Paul Davies</p>
+              <p class="font-mono text-[10px] text-accent tracking-wider uppercase">Owner + Head Coach</p>
+            </div>
+          </div>
+
+          <!-- Chat messages area -->
+          <div class="px-5 py-6 space-y-4" style="min-height:160px">
+            <!-- Paul's welcome bubble -->
+            <div class="flex gap-3 items-end">
+              <div class="w-7 h-7 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0">
+                <span class="font-display text-accent text-[9px] font-bold">PD</span>
+              </div>
+              <div class="bg-white/10 rounded-2xl rounded-bl-md px-4 py-3 max-w-[80%]">
+                <p class="font-body text-sm text-white/90 leading-relaxed">Hey! Keen to check out CrossFit Birkenhead? Flick me a text and I'll sort out an intro session and tour for you.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Input area -->
+          <form id="smsForm" class="border-t border-white/10">
+            <div class="px-5 pt-4 pb-2">
+              <label for="smsName" class="font-mono text-[10px] text-white/50 uppercase tracking-wider block mb-1.5">Your name</label>
+              <input id="smsName" name="name" type="text" class="form-input text-sm" placeholder="e.g. Blake" autocomplete="given-name" required>
+            </div>
+            <div class="px-5 pt-2 pb-2">
+              <label for="smsPhone" class="font-mono text-[10px] text-white/50 uppercase tracking-wider block mb-1.5">Your mobile number</label>
+              <input id="smsPhone" name="phone" type="tel" class="form-input text-sm" placeholder="021 000 0000" autocomplete="tel" required>
+            </div>
+            <div class="px-5 pt-2 pb-4">
+              <label for="smsMessage" class="font-mono text-[10px] text-white/50 uppercase tracking-wider block mb-1.5">Message</label>
+              <textarea id="smsMessage" name="message" rows="2" class="form-input text-sm resize-none" placeholder="Hi Paul, I'd like to book an intro session..." autocomplete="off" required></textarea>
+            </div>
+            <div class="px-5 pb-5">
+              <button type="submit" class="btn-primary text-sm px-8 py-3 w-full flex items-center justify-center gap-2">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>
+                SEND TEXT &rarr;
+              </button>
+            </div>
+          </form>
+
+          <!-- Success state (hidden by default) -->
+          <div id="smsSuccess" class="hidden px-5 py-10 text-center">
+            <div class="text-accent text-5xl mb-4" style="animation:successPop 0.5s cubic-bezier(0.16,1,0.3,1)">&#10003;</div>
+            <h3 class="font-display text-2xl uppercase tracking-wider mb-2">CHECK YOUR MESSAGES</h3>
+            <p class="font-body text-white/70 text-sm mb-2">We've opened your messaging app with the text ready to send. Just hit send!</p>
+            <p class="font-mono text-[10px] text-accent uppercase tracking-wider">Or text Paul directly: 021 784 988</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Map (right) -16:9 landscape -->
+    <div class="sr" data-delay="0">
+      <div class="rounded-2xl overflow-hidden border border-accent/40" style="box-shadow:0 0 40px rgba(232,120,35,0.08);aspect-ratio:16/9">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3193.5!2d174.7272!3d-36.8132!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d0d39f0c8e8e8e1%3A0x0!2s22+Mokoia+Road%2C+Birkenhead%2C+Auckland!5e0!3m2!1sen!2snz!4v1"
+          width="100%" height="100%"
+          style="border:0;filter:grayscale(80%) invert(92%) contrast(90%)"
+          allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 12. FOOTER ══════ -->
+<footer class="relative py-20 px-6 overflow-hidden">
+  <!-- Background gradient -->
+  <div class="absolute inset-0 bg-gradient-to-b from-bg via-bg/80 to-bg/95"></div>
+
+  <div class="relative z-10 max-w-7xl mx-auto">
+    <div class="grid md:grid-cols-3 gap-12 mb-12">
+      <!-- Left: logo + description -->
+      <div>
+        <a href="#hero" class="inline-block mb-4"><img src="img/CFB-Logo_REV-B.png" alt="CrossFit Birkenhead" class="h-10 w-auto"></a>
+        <p class="font-body text-text-muted leading-relaxed mb-6 max-w-md">CrossFit Birkenhead. More than just a gym. A supportive community for active people of all skill levels in Birkenhead, Auckland.</p>
+      </div>
+
+      <!-- Middle: Come Say Hi -->
+      <div>
+        <h3 class="font-display text-lg uppercase tracking-wider mb-4">Come Say Hi</h3>
+        <p class="font-body text-text-muted text-sm mb-1">22 Mokoia Road, Birkenhead</p>
+        <p class="font-body text-text-muted text-sm mb-4">Auckland 0626, New Zealand</p>
+        <p class="font-mono text-xs text-text-muted/60 uppercase tracking-wider mb-1">Hours</p>
+        <p class="font-body text-text-muted text-sm mb-1">Mon-Fri: 5:30am-7:30pm</p>
+        <p class="font-body text-text-muted text-sm mb-4">Sat: 7:00am-11:00am</p>
+        <a href="tel:021784988" class="font-mono text-sm text-accent hover:underline block mb-2">021 784 988</a>
+        <a href="mailto:info@crossfitbirkenhead.co.nz" class="font-mono text-sm text-accent hover:underline block mb-5">info@crossfitbirkenhead.co.nz</a>
+        <div class="flex gap-3">
+          <a href="https://www.facebook.com/crossfitbirkenhead" target="_blank" rel="noopener noreferrer" aria-label="CrossFit Birkenhead on Facebook" class="w-9 h-9 rounded-full border border-white/10 flex items-center justify-center text-text-muted hover:text-accent hover:border-accent transition-all duration-200 cursor-interactive">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/crossfitbirkenhead" target="_blank" rel="noopener noreferrer" aria-label="CrossFit Birkenhead on Instagram" class="w-9 h-9 rounded-full border border-white/10 flex items-center justify-center text-text-muted hover:text-accent hover:border-accent transition-all duration-200 cursor-interactive">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Right: links + newsletter -->
+      <div>
+        <p class="font-mono text-xs text-text-muted uppercase tracking-wider mb-4">Quick Links</p>
+        <div class="flex flex-wrap gap-x-6 gap-y-3 mb-8">
+          <a href="#programs" class="font-body text-sm text-text-muted hover:text-accent transition-colors duration-200">Training</a>
+          <a href="#services" class="font-body text-sm text-text-muted hover:text-accent transition-colors duration-200">Recovery</a>
+          <a href="#schedule" class="font-body text-sm text-text-muted hover:text-accent transition-colors duration-200">Schedule</a>
+          <a href="whats-on.html" class="font-body text-sm text-text-muted hover:text-accent transition-colors duration-200">What's On</a>
+          <a href="blog.html" class="font-body text-sm text-text-muted hover:text-accent transition-colors duration-200">Blog</a>
+          <a href="coaches.html" class="font-body text-sm text-text-muted hover:text-accent transition-colors duration-200">Coaches</a>
+          <a href="#pricing" class="font-body text-sm text-text-muted hover:text-accent transition-colors duration-200">Pricing</a>
+          <a href="#about" class="font-body text-sm text-text-muted hover:text-accent transition-colors duration-200">About</a>
+        </div>
+        <p class="font-mono text-xs text-text-muted uppercase tracking-wider mb-4">Stay Updated</p>
+        <form id="newsletterForm" class="flex items-center gap-4">
+          <label for="newsletterEmail" class="sr-only">Email for updates</label>
+          <input id="newsletterEmail" name="email" type="email" class="form-input flex-1" placeholder="Enter your email" autocomplete="email" required>
+          <button type="submit" class="btn-primary !px-6 cursor-interactive" aria-label="Join the CrossFit Birkenhead mailing list">&rarr;</button>
+        </form>
+        <p id="newsletterSuccess" class="hidden font-mono text-[11px] text-accent tracking-[0.12em] uppercase mt-4">Your email app should open with a pre-filled signup request.</p>
+      </div>
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="border-t border-white/5 pt-6 flex flex-col md:flex-row items-center justify-between gap-4">
+      <p class="font-mono text-xs text-text-muted/40">&copy; 2025 CrossFit Birkenhead &middot; 22 Mokoia Road, Auckland</p>
+      <div class="flex gap-6">
+        <a href="mailto:info@crossfitbirkenhead.co.nz?subject=Privacy%20Policy%20Request" class="font-mono text-xs text-text-muted/40 hover:text-text-muted transition-colors duration-200">Privacy Policy</a>
+        <a href="mailto:info@crossfitbirkenhead.co.nz?subject=Terms%20Request" class="font-mono text-xs text-text-muted/40 hover:text-text-muted transition-colors duration-200">Terms</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</div><!-- end #page -->
+
+<!-- ══════════════════════════════════════ -->
+<!-- ══════ JAVASCRIPT ══════ -->
+<!-- ══════════════════════════════════════ -->
+<script>
+// ═══════ 3. SCROLL REVEALS WITH STAGGER ═══════
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const delay = parseInt(entry.target.dataset.delay) || 0;
+      setTimeout(() => {
+        entry.target.classList.add('visible');
+      }, delay);
+    }
+  });
+}, { threshold: 0.12, rootMargin: '-30px' });
+
+document.querySelectorAll('.sr, .sr-left, .sr-right, .sr-scale, .img-reveal').forEach(el => revealObserver.observe(el));
+
+// ═══════ 3e. SCROLL PROGRESS BAR ═══════
+const progressBar = document.getElementById('scrollProgress');
+function updateScrollProgress() {
+  const scrollTop = window.scrollY;
+  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+  const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+  progressBar.style.width = progress + '%';
+}
+window.addEventListener('scroll', updateScrollProgress, { passive: true });
+
+// ═══════ 3b. HEADING SCROLL-LINKED OPACITY ═══════
+function updateHeadingFades() {
+  document.querySelectorAll('.heading-fade').forEach(h => {
+    const rect = h.getBoundingClientRect();
+    const vh = window.innerHeight;
+    // Progress: 0 when bottom enters viewport, 1 when element at center
+    const progress = Math.max(0, Math.min(1, 1 - (rect.top - vh * 0.3) / (vh * 0.5)));
+    h.style.opacity = 0.1 + progress * 0.9;
+  });
+  requestAnimationFrame(updateHeadingFades);
+}
+requestAnimationFrame(updateHeadingFades);
+
+// ═══════ 3c. COUNTER ANIMATION ═══════
+function animateCounter(el) {
+  const target = parseInt(el.dataset.target);
+  const duration = 1500;
+  const start = performance.now();
+  function tick(now) {
+    const p = Math.min((now - start) / duration, 1);
+    const eased = 1 - Math.pow(1 - p, 3);
+    el.textContent = Math.floor(eased * target);
+    if (p < 1) requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+}
+const counterObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) { animateCounter(e.target); counterObs.unobserve(e.target); }
+  });
+}, { threshold: 0.5 });
+document.querySelectorAll('.counter').forEach(el => counterObs.observe(el));
+
+// ═══════ 7. NAVBAR GLASS ON SCROLL ═══════
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 80) {
+    navbar.style.background = 'rgba(10,10,10,0.7)';
+    navbar.style.backdropFilter = 'blur(20px)';
+    navbar.style.webkitBackdropFilter = 'blur(20px)';
+  } else {
+    navbar.style.background = 'transparent';
+    navbar.style.backdropFilter = 'none';
+    navbar.style.webkitBackdropFilter = 'none';
+  }
+});
+
+// ═══════ MOBILE NAV ═══════
+let mobileNavOpen = false;
+function toggleMobileNav() {
+  mobileNavOpen = !mobileNavOpen;
+  const nav = document.getElementById('mobileNav');
+  if (mobileNavOpen) {
+    nav.classList.add('open');
+    document.getElementById('bar1').style.transform = 'rotate(45deg) translate(4px,4px)';
+    document.getElementById('bar2').style.opacity = '0';
+    document.getElementById('bar3').style.transform = 'rotate(-45deg) translate(3px,-3px)';
+    document.getElementById('bar3').style.width = '1.5rem';
+    document.body.style.overflow = 'hidden';
+  } else closeMobileNav();
+}
+function closeMobileNav() {
+  mobileNavOpen = false;
+  document.getElementById('mobileNav').classList.remove('open');
+  document.getElementById('bar1').style.transform = '';
+  document.getElementById('bar2').style.opacity = '1';
+  document.getElementById('bar3').style.transform = '';
+  document.getElementById('bar3').style.width = '';
+  document.body.style.overflow = '';
+}
+
+// ═══════ 11. FAQ ACCORDION ═══════
+function toggleFaq(btn) {
+  const item = btn.closest('.faq-item');
+  const wasOpen = item.classList.contains('open');
+  // Close all
+  document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+  // Toggle current
+  if (!wasOpen) item.classList.add('open');
+}
+
+// ═══════ SMOOTH SCROLL ═══════
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', function(e) {
+    e.preventDefault();
+    const t = document.querySelector(this.getAttribute('href'));
+    if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+});
+
+// ═══════ SERVICE CAROUSEL ═══════
+(function() {
+  const carousel = document.getElementById('svcCarousel');
+  if (!carousel) return;
+  const cards = carousel.querySelectorAll('.svc-card');
+  const fill = document.getElementById('svcProgressFill');
+  const label = document.getElementById('svcProgressLabel');
+  const prevBtn = document.getElementById('svcPrev');
+  const nextBtn = document.getElementById('svcNext');
+  const totalCards = cards.length;
+
+  // -Progress bar & label update —
+  function updateProgress() {
+    const maxScroll = carousel.scrollWidth - carousel.clientWidth;
+    const pct = maxScroll > 0 ? (carousel.scrollLeft / maxScroll) * 100 : 0;
+    fill.style.width = pct + '%';
+    // Determine which card is most visible
+    let closest = 0, minDist = Infinity;
+    cards.forEach((c, i) => {
+      const rect = c.getBoundingClientRect();
+      const carouselRect = carousel.getBoundingClientRect();
+      const dist = Math.abs(rect.left - carouselRect.left);
+      if (dist < minDist) { minDist = dist; closest = i; }
+    });
+    const num = String(closest + 1).padStart(2, '0');
+    label.textContent = num + ' / ' + String(totalCards).padStart(2, '0');
+  }
+  carousel.addEventListener('scroll', updateProgress, { passive: true });
+
+  // -Arrow navigation —
+  function scrollToCard(index) {
+    if (index < 0) index = 0;
+    if (index >= totalCards) index = totalCards - 1;
+    cards[index].scrollIntoView({ behavior: 'smooth', inline: 'start', block: 'nearest' });
+  }
+  function getCurrentIndex() {
+    let closest = 0, minDist = Infinity;
+    cards.forEach((c, i) => {
+      const rect = c.getBoundingClientRect();
+      const carouselRect = carousel.getBoundingClientRect();
+      const dist = Math.abs(rect.left - carouselRect.left);
+      if (dist < minDist) { minDist = dist; closest = i; }
+    });
+    return closest;
+  }
+  prevBtn.addEventListener('click', () => scrollToCard(getCurrentIndex() - 1));
+  nextBtn.addEventListener('click', () => scrollToCard(getCurrentIndex() + 1));
+
+  // -Drag to scroll —
+  let isDragging = false, startX = 0, scrollStart = 0, hasDragged = false;
+
+  carousel.addEventListener('mousedown', e => {
+    // Don't hijack clicks on links
+    if (e.target.closest('a')) return;
+    isDragging = true;
+    hasDragged = false;
+    startX = e.pageX - carousel.offsetLeft;
+    scrollStart = carousel.scrollLeft;
+    carousel.classList.add('dragging');
+  });
+  carousel.addEventListener('mouseleave', () => {
+    if (isDragging) { isDragging = false; carousel.classList.remove('dragging'); }
+  });
+  carousel.addEventListener('mouseup', () => {
+    isDragging = false;
+    carousel.classList.remove('dragging');
+  });
+  carousel.addEventListener('mousemove', e => {
+    if (!isDragging) return;
+    e.preventDefault();
+    const x = e.pageX - carousel.offsetLeft;
+    const walk = (x - startX) * 1.8;
+    if (Math.abs(walk) > 15) hasDragged = true;
+    carousel.scrollLeft = scrollStart - walk;
+  });
+  // Prevent accidental card clicks after a real drag -but never block links
+  carousel.addEventListener('click', e => {
+    if (hasDragged && !e.target.closest('a')) { e.preventDefault(); e.stopPropagation(); }
+    hasDragged = false;
+  }, true);
+
+  // -Keyboard navigation —
+  carousel.setAttribute('tabindex', '0');
+  carousel.addEventListener('keydown', e => {
+    if (e.key === 'ArrowRight') { scrollToCard(getCurrentIndex() + 1); e.preventDefault(); }
+    if (e.key === 'ArrowLeft') { scrollToCard(getCurrentIndex() - 1); e.preventDefault(); }
+  });
+
+  // Init
+  updateProgress();
+})();
+
+// ═══════ FIRST-VISIT INTRO OVERLAY ═══════
+var introTimer = null;
+var introAdvancing = false;
+
+function skipIntro() {
+  if (introTimer) { clearTimeout(introTimer); introTimer = null; }
+  var overlay = document.getElementById('introOverlay');
+  if (!overlay || overlay.style.display === 'none') return;
+
+  // Fade out the text first, then dissolve the background to reveal hero beneath
+  var phrases = overlay.querySelectorAll('.intro-phrase');
+  phrases.forEach(function(p) { p.classList.remove('active'); p.classList.add('exit'); });
+  var skip = document.getElementById('introSkip');
+  if (skip) skip.style.opacity = '0';
+
+  // Brief pause, then fade entire overlay
+  setTimeout(function() {
+    overlay.style.transition = 'opacity 1s ease';
+    overlay.style.opacity = '0';
+    setTimeout(function() {
+      overlay.style.display = 'none';
+      document.body.classList.remove('intro-locked');
+    }, 1000);
+  }, 400);
+
+  try { localStorage.setItem('cfb_intro_seen', '1'); } catch(e) {}
+}
+
+(function() {
+  var seen = false;
+  try { seen = localStorage.getItem('cfb_intro_seen') === '1'; } catch(e) {}
+
+  var overlay = document.getElementById('introOverlay');
+  if (!overlay) return;
+
+  // If already visited, skip entirely
+  if (seen) {
+    overlay.style.display = 'none';
+    return;
+  }
+
+  // Show the intro
+  overlay.style.display = 'flex';
+  document.body.classList.add('intro-locked');
+
+  var phrases = overlay.querySelectorAll('.intro-phrase');
+  var current = 0;
+  var total = phrases.length;
+  var phraseTime = 2500; // ms per phrase auto-advance
+  var scrollCooldown = false;
+
+  function showPhrase(idx) {
+    if (idx >= total) {
+      // Final phrase done, transition out
+      setTimeout(function() { skipIntro(); }, 1200);
+      return;
+    }
+    phrases.forEach(function(p, i) {
+      p.classList.remove('active', 'exit', 'enter');
+      if (i === idx) {
+        p.classList.add('enter');
+        void p.offsetWidth;
+        p.classList.remove('enter');
+        p.classList.add('active');
+      } else if (i < idx) {
+        p.classList.add('exit');
+      }
+    });
+    current = idx;
+    scheduleNext();
+  }
+
+  function scheduleNext() {
+    if (introTimer) clearTimeout(introTimer);
+    introTimer = setTimeout(function() {
+      showPhrase(current + 1);
+    }, phraseTime);
+  }
+
+  function advanceNow() {
+    if (scrollCooldown) return;
+    scrollCooldown = true;
+    setTimeout(function() { scrollCooldown = false; }, 400);
+    if (introTimer) clearTimeout(introTimer);
+    showPhrase(current + 1);
+  }
+
+  // Start
+  showPhrase(0);
+
+  // Scroll/wheel to advance faster
+  overlay.addEventListener('wheel', function(e) {
+    e.preventDefault();
+    if (e.deltaY > 0) advanceNow();
+  }, { passive: false });
+
+  // Touch swipe to advance
+  var touchStartY = 0;
+  overlay.addEventListener('touchstart', function(e) {
+    touchStartY = e.touches[0].clientY;
+  }, { passive: true });
+  overlay.addEventListener('touchend', function(e) {
+    var diff = touchStartY - e.changedTouches[0].clientY;
+    if (diff > 40) advanceNow(); // swipe up
+  }, { passive: true });
+
+  // Click/tap anywhere (except skip) also advances
+  overlay.addEventListener('click', function(e) {
+    if (e.target.id === 'introSkip') return;
+    advanceNow();
+  });
+})();
+
+// ═══════ PROGRAMS CAROUSEL ═══════
+(function() {
+  const carousel = document.getElementById('progCarousel');
+  if (!carousel) return;
+  const cards = carousel.querySelectorAll('.svc-card');
+  const fill = document.getElementById('progProgressFill');
+  const label = document.getElementById('progProgressLabel');
+  const prevBtn = document.getElementById('progPrev');
+  const nextBtn = document.getElementById('progNext');
+  const totalCards = cards.length;
+
+  function updateProgress() {
+    const maxScroll = carousel.scrollWidth - carousel.clientWidth;
+    const pct = maxScroll > 0 ? (carousel.scrollLeft / maxScroll) * 100 : 0;
+    fill.style.width = pct + '%';
+    let closest = 0, minDist = Infinity;
+    cards.forEach((c, i) => {
+      const dist = Math.abs(c.getBoundingClientRect().left - carousel.getBoundingClientRect().left);
+      if (dist < minDist) { minDist = dist; closest = i; }
+    });
+    label.textContent = String(closest + 1).padStart(2, '0') + ' / ' + String(totalCards).padStart(2, '0');
+  }
+  carousel.addEventListener('scroll', updateProgress, { passive: true });
+
+  function getCurrentIndex() {
+    let closest = 0, minDist = Infinity;
+    cards.forEach((c, i) => {
+      const dist = Math.abs(c.getBoundingClientRect().left - carousel.getBoundingClientRect().left);
+      if (dist < minDist) { minDist = dist; closest = i; }
+    });
+    return closest;
+  }
+  function scrollToCard(index) {
+    if (index < 0) index = 0;
+    if (index >= totalCards) index = totalCards - 1;
+    cards[index].scrollIntoView({ behavior: 'smooth', inline: 'start', block: 'nearest' });
+  }
+  prevBtn.addEventListener('click', () => scrollToCard(getCurrentIndex() - 1));
+  nextBtn.addEventListener('click', () => scrollToCard(getCurrentIndex() + 1));
+
+  // Drag to scroll
+  let isDragging = false, startX = 0, scrollStart = 0, hasDragged = false;
+  carousel.addEventListener('mousedown', e => {
+    if (e.target.closest('a')) return;
+    isDragging = true; hasDragged = false;
+    startX = e.pageX - carousel.offsetLeft;
+    scrollStart = carousel.scrollLeft;
+    carousel.classList.add('dragging');
+  });
+  carousel.addEventListener('mouseleave', () => { if (isDragging) { isDragging = false; carousel.classList.remove('dragging'); } });
+  carousel.addEventListener('mouseup', () => { isDragging = false; carousel.classList.remove('dragging'); });
+  carousel.addEventListener('mousemove', e => {
+    if (!isDragging) return;
+    e.preventDefault();
+    const walk = (e.pageX - carousel.offsetLeft - startX) * 1.8;
+    if (Math.abs(walk) > 15) hasDragged = true;
+    carousel.scrollLeft = scrollStart - walk;
+  });
+  carousel.addEventListener('click', e => {
+    if (hasDragged && !e.target.closest('a')) { e.preventDefault(); e.stopPropagation(); }
+    hasDragged = false;
+  }, true);
+
+  updateProgress();
+})();
+
+// ═══════ SMS CHAT WIDGET ═══════
+(function() {
+  const form = document.getElementById('smsForm');
+  const success = document.getElementById('smsSuccess');
+  if (!form || !success) return;
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const inputs = form.querySelectorAll('[required]');
+    let valid = true;
+    inputs.forEach(inp => { if (!inp.value.trim()) { valid = false; inp.focus(); } });
+    if (!valid) return;
+
+    const name = form.querySelector('[name="name"]').value.trim();
+    const phone = form.querySelector('[name="phone"]').value.trim();
+    const message = form.querySelector('[name="message"]').value.trim();
+
+    // Build the SMS body
+    const smsBody = 'Hi Paul, ' + message + ' - ' + name + ' (' + phone + ')';
+    const smsUrl = 'sms:021784988?&body=' + encodeURIComponent(smsBody);
+
+    window.location.href = smsUrl;
+
+    // Transition to success state
+    form.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+    form.style.opacity = '0';
+    form.style.transform = 'translateY(-10px)';
+    setTimeout(() => {
+      form.classList.add('hidden');
+      success.classList.remove('hidden');
+      success.style.opacity = '0';
+      success.style.transform = 'translateY(10px)';
+      requestAnimationFrame(() => {
+        success.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+        success.style.opacity = '1';
+        success.style.transform = 'translateY(0)';
+      });
+    }, 400);
+  });
+})();
+
+(function() {
+  const form = document.getElementById('newsletterForm');
+  const success = document.getElementById('newsletterSuccess');
+  if (!form || !success) return;
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const email = form.elements.email.value.trim();
+    if (!email) {
+      form.elements.email.focus();
+      return;
+    }
+
+    const href =
+      'mailto:info@crossfitbirkenhead.co.nz?subject=' + encodeURIComponent('Newsletter Signup') +
+      '&body=' + encodeURIComponent('Hi CrossFit Birkenhead,\n\nPlease add me to your updates list.\n\nEmail: ' + email + '\n');
+
+    window.location.href = href;
+    success.classList.remove('hidden');
+    form.reset();
+  });
+})();
+
+// ═══════ LIVE TIMETABLE -WEEK GRID CALENDAR ═══════
+(function() {
+  const API_BASE = 'https://streamfit-proxy.blakerichardholmes.workers.dev';
+  const GYM_TZ = 'Pacific/Auckland';
+  const BOOKING_URL = 'https://go.streamfit.com/embed/schedule/404-crossfit-birkenhead';
+
+  const calEl = document.getElementById('tt-calendar');
+  const mobileTabsEl = document.getElementById('tt-mobile-tabs');
+  const mobileClassesEl = document.getElementById('tt-mobile-classes');
+  const loadingEl = document.getElementById('tt-loading');
+  const emptyEl = document.getElementById('tt-empty');
+  const weekLabel = document.getElementById('tt-week-label');
+  const prevBtn = document.getElementById('tt-prev');
+  const nextBtn = document.getElementById('tt-next');
+  const modalEl = document.getElementById('tt-modal');
+  const modalBody = document.getElementById('tt-modal-body');
+  const modalClose = document.getElementById('tt-modal-close');
+
+  if (!calEl) return;
+
+  let weekOffset = 0;
+  let allClasses = [];
+  let activeMobileDay = null;
+  let hasFetchError = false;
+
+  function escapeHtml(value) {
+    return String(value ?? '').replace(/[&<>"']/g, (char) => ({
+      '&': '&amp;',
+      '<': '&lt;',
+      '>': '&gt;',
+      '"': '&quot;',
+      "'": '&#39;'
+    }[char]));
+  }
+
+  function escapeAttr(value) {
+    return escapeHtml(value).replace(/`/g, '&#96;');
+  }
+
+  function safeCount(value) {
+    const num = Number(value);
+    return Number.isFinite(num) && num > 0 ? num : 0;
+  }
+
+  // ── Timezone-safe helpers ──
+  function nzDateStr(date) {
+    return (date instanceof Date ? date : new Date(date))
+      .toLocaleDateString('en-CA', { timeZone: GYM_TZ });
+  }
+  function nzDayOfWeek(date) {
+    const str = date.toLocaleDateString('en-US', { timeZone: GYM_TZ, weekday: 'short' });
+    return { Sun:0, Mon:1, Tue:2, Wed:3, Thu:4, Fri:5, Sat:6 }[str] ?? 0;
+  }
+  function nzMidnightUTC(dateStr) {
+    const [y, m, d] = dateStr.split('-').map(Number);
+    const ref = new Date(Date.UTC(y, m - 1, d, 12, 0, 0));
+    const nzStr = ref.toLocaleString('en-US', { timeZone: GYM_TZ });
+    const nzRef = new Date(nzStr);
+    const offsetMs = nzRef.getTime() - ref.getTime();
+    return new Date(Date.UTC(y, m - 1, d) - offsetMs);
+  }
+  function getWeekMondayStr(offset) {
+    const now = new Date();
+    const todayStr = nzDateStr(now);
+    const dow = nzDayOfWeek(now);
+    const daysToMon = dow === 0 ? -6 : 1 - dow;
+    const [y, m, d] = todayStr.split('-').map(Number);
+    const mon = new Date(Date.UTC(y, m - 1, d + daysToMon + offset * 7));
+    return mon.toISOString().slice(0, 10);
+  }
+  function getWeekDates(mondayStr) {
+    const [y, m, d] = mondayStr.split('-').map(Number);
+    return Array.from({ length: 7 }, (_, i) => {
+      const dt = new Date(Date.UTC(y, m - 1, d + i));
+      return dt.toISOString().slice(0, 10);
+    });
+  }
+  function formatTime(isoStr) {
+    return new Date(isoStr).toLocaleTimeString('en-NZ', { timeZone: GYM_TZ, hour: '2-digit', minute: '2-digit', hour12: true }).replace(':00', '').toLowerCase();
+  }
+  function formatTimeFull(isoStr) {
+    return new Date(isoStr).toLocaleTimeString('en-NZ', { timeZone: GYM_TZ, hour: 'numeric', minute: '2-digit', hour12: true }).toLowerCase();
+  }
+  function formatDayShort(dateStr) {
+    const [y, m, d] = dateStr.split('-').map(Number);
+    return new Date(Date.UTC(y, m - 1, d)).toLocaleDateString('en-NZ', { timeZone: GYM_TZ, weekday: 'short' }).toUpperCase();
+  }
+  function formatDayNum(dateStr) {
+    return parseInt(dateStr.split('-')[2], 10);
+  }
+  function formatDateFull(dateStr) {
+    const [y, m, d] = dateStr.split('-').map(Number);
+    return new Date(Date.UTC(y, m - 1, d)).toLocaleDateString('en-NZ', { timeZone: GYM_TZ, weekday: 'long', day: 'numeric', month: 'long' });
+  }
+  function formatMonthRange(s, e) {
+    const fmt = str => { const [y,m,d] = str.split('-').map(Number); return new Date(Date.UTC(y,m-1,d)).toLocaleDateString('en-NZ', { timeZone: GYM_TZ, month: 'short', day: 'numeric' }); };
+    return fmt(s) + ' - ' + fmt(e);
+  }
+  function classOnDay(cls, dateStr) {
+    return nzDateStr(new Date(cls.start_at)) === dateStr;
+  }
+  function getDuration(cls) {
+    const ms = new Date(cls.end_at) - new Date(cls.start_at);
+    return Math.round(ms / 60000);
+  }
+  function spotsColor(spots) {
+    return spots <= 2 ? '#ef4444' : spots <= 5 ? '#f59e0b' : '#22c55e';
+  }
+
+  // ── Fetch week ──
+  async function fetchWeek() {
+    loadingEl.classList.remove('hidden');
+    calEl.innerHTML = '';
+    emptyEl.classList.add('hidden');
+
+    const mondayStr = getWeekMondayStr(weekOffset);
+    const days = getWeekDates(mondayStr);
+    weekLabel.textContent = formatMonthRange(mondayStr, days[6]);
+
+    const startUTC = nzMidnightUTC(mondayStr);
+    const endUTC = new Date(nzMidnightUTC(days[6]).getTime() + 86400000 - 1);
+    const params = new URLSearchParams({ start_at: startUTC.toISOString(), end_at: endUTC.toISOString() });
+
+    try {
+      const res = await fetch(API_BASE + '?' + params);
+      const json = await res.json();
+      allClasses = (json.data || []).sort((a, b) => new Date(a.start_at) - new Date(b.start_at));
+      hasFetchError = false;
+    } catch (err) {
+      console.error('Timetable fetch error:', err);
+      allClasses = [];
+      hasFetchError = true;
+    }
+
+    loadingEl.classList.add('hidden');
+
+    if (allClasses.length === 0) {
+      emptyEl.querySelector('p').textContent = hasFetchError
+        ? 'Schedule unavailable right now. Please book directly on Streamfit.'
+        : 'No classes scheduled this week';
+      emptyEl.classList.remove('hidden');
+      return;
+    }
+
+    buildCalendarGrid(days);
+    buildMobileView(days);
+  }
+
+  // ── Desktop: 7-column grid ──
+  function buildCalendarGrid(days) {
+    calEl.innerHTML = '';
+    const todayStr = nzDateStr(new Date());
+
+    days.forEach((dateStr, colIdx) => {
+      const col = document.createElement('div');
+      col.className = 'tt-col';
+
+      // Column header
+      const head = document.createElement('div');
+      head.className = 'tt-col-head' + (dateStr === todayStr ? ' is-today' : '');
+      head.innerHTML = '<span class="tt-day-name">' + formatDayShort(dateStr) + '</span><span class="tt-day-num">' + formatDayNum(dateStr) + '</span>';
+      col.appendChild(head);
+
+      // Class blocks
+      const dayClasses = allClasses.filter(c => classOnDay(c, dateStr));
+      if (dayClasses.length === 0) {
+        const empty = document.createElement('div');
+        empty.className = 'tt-col-empty';
+        empty.textContent = 'Rest day';
+        col.appendChild(empty);
+      } else {
+        dayClasses.forEach((cls, i) => {
+          const block = document.createElement('div');
+          block.className = 'tt-block' + (cls.canceled ? ' cancelled' : '');
+          block.style.opacity = '0';
+          block.style.transform = 'translateY(12px)';
+
+          const capacity = safeCount(cls.in_person_max_users);
+          const booked = safeCount(cls.count_in_person_users);
+          const spots = Math.max(capacity - booked, 0);
+          const coachName = cls.main_coach?.user?.first_name || 'TBA';
+
+          block.innerHTML =
+            '<div class="tt-block-time">' + formatTime(cls.start_at) + '</div>' +
+            '<div class="tt-block-name">' + escapeHtml(cls.name) + '</div>' +
+            '<div class="tt-block-meta">' +
+              '<span class="tt-block-coach">' + escapeHtml(coachName) + '</span>' +
+              (cls.canceled ? '<span style="color:#ef4444;font-size:0.55rem">✕</span>' :
+                '<span class="tt-block-spots" style="color:' + spotsColor(spots) + '">' + spots + ' left</span>') +
+            '</div>';
+
+          block.addEventListener('click', () => openModal(cls, dateStr));
+          col.appendChild(block);
+
+          // Staggered animation
+          setTimeout(() => {
+            block.style.transition = 'opacity 0.4s cubic-bezier(0.16,1,0.3,1), transform 0.4s cubic-bezier(0.16,1,0.3,1)';
+            block.style.opacity = '1';
+            block.style.transform = 'translateY(0)';
+          }, colIdx * 60 + i * 40);
+        });
+      }
+      calEl.appendChild(col);
+    });
+  }
+
+  // ── Mobile: day tabs + card list ──
+  function buildMobileView(days) {
+    if (!mobileTabsEl) return;
+    mobileTabsEl.innerHTML = '';
+    const todayStr = nzDateStr(new Date());
+    let autoSelect = null;
+
+    days.forEach(dateStr => {
+      const btn = document.createElement('button');
+      btn.className = 'tt-day-btn';
+      const count = allClasses.filter(c => classOnDay(c, dateStr)).length;
+      btn.innerHTML = '<span style="display:block;font-size:0.55rem;opacity:0.6;margin-bottom:2px">' + formatDayShort(dateStr) + '</span>' + formatDayNum(dateStr);
+      if (count === 0) btn.style.opacity = '0.35';
+      btn.addEventListener('click', () => selectMobileDay(dateStr, btn));
+      mobileTabsEl.appendChild(btn);
+
+      if (dateStr === todayStr) autoSelect = { dateStr, btn };
+      else if (!autoSelect && count > 0) autoSelect = { dateStr, btn };
+    });
+
+    if (autoSelect) selectMobileDay(autoSelect.dateStr, autoSelect.btn);
+  }
+
+  function selectMobileDay(dateStr, btn) {
+    activeMobileDay = dateStr;
+    mobileTabsEl.querySelectorAll('.tt-day-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    renderMobileClasses(dateStr);
+  }
+
+  function renderMobileClasses(dateStr) {
+    if (!mobileClassesEl) return;
+    mobileClassesEl.innerHTML = '';
+    const dayClasses = allClasses.filter(c => classOnDay(c, dateStr));
+
+    if (dayClasses.length === 0) {
+      mobileClassesEl.innerHTML = '<p class="font-mono text-sm text-text-muted text-center py-8">Rest day</p>';
+      return;
+    }
+
+    dayClasses.forEach((cls, i) => {
+      const capacity = safeCount(cls.in_person_max_users);
+      const booked = safeCount(cls.count_in_person_users);
+      const spots = Math.max(capacity - booked, 0);
+      const coachName = cls.main_coach?.user?.name || 'TBA';
+      const card = document.createElement('div');
+      card.className = 'tt-mobile-card';
+      card.style.opacity = '0';
+      card.style.transform = 'translateY(15px)';
+
+      card.innerHTML =
+        '<div class="tt-mobile-time">' +
+          '<span class="font-mono text-base font-bold text-accent">' + formatTime(cls.start_at) + '</span>' +
+          '<span class="font-mono text-xs" style="color:#aaa">' + getDuration(cls) + 'min</span>' +
+        '</div>' +
+        '<div class="flex-1 min-w-0">' +
+          '<div class="font-display text-lg font-bold uppercase tracking-wide text-white">' + escapeHtml(cls.name) + '</div>' +
+          '<div class="font-body text-sm mt-1" style="color:#aaa">' + escapeHtml(coachName) + '</div>' +
+        '</div>' +
+        '<div class="text-right">' +
+          (cls.canceled ? '<span class="font-mono text-sm text-red-400">Cancelled</span>' :
+            '<span class="font-mono text-sm" style="color:' + spotsColor(spots) + '">' + spots + ' spots</span>') +
+        '</div>';
+
+      card.addEventListener('click', () => openModal(cls, dateStr));
+      mobileClassesEl.appendChild(card);
+
+      setTimeout(() => {
+        card.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+        card.style.opacity = '1';
+        card.style.transform = 'translateY(0)';
+      }, i * 60);
+    });
+  }
+
+  // ── Modal ──
+  function openModal(cls, dateStr) {
+    const capacity = safeCount(cls.in_person_max_users);
+    const booked = safeCount(cls.count_in_person_users);
+    const waitlist = safeCount(cls.waitlist_count);
+    const spots = Math.max(capacity - booked, 0);
+    const pct = capacity > 0 ? Math.round((booked / capacity) * 100) : 0;
+    const sc = spotsColor(spots);
+    const coachName = cls.main_coach?.user?.name || 'TBA';
+    const coachImg = cls.main_coach?.user?.image?.image?.size350?.url || '';
+    const coachInitials = cls.main_coach?.user?.initials || '?';
+    const duration = getDuration(cls);
+
+    modalBody.innerHTML =
+      // Header
+      '<div style="margin-bottom:20px">' +
+        '<p class="font-mono text-sm text-accent tracking-[0.2em] uppercase mb-2">' + escapeHtml(formatDateFull(dateStr)) + '</p>' +
+        '<h3 class="font-display text-3xl font-bold uppercase tracking-wider text-white">' + escapeHtml(cls.name) + '</h3>' +
+        (cls.canceled ? '<span class="inline-block mt-2 font-mono text-xs bg-red-500/20 text-red-400 px-3 py-1 rounded-full">Cancelled</span>' : '') +
+      '</div>' +
+
+      '<div class="tt-modal-divider"></div>' +
+
+      // Time
+      '<div style="display:flex;align-items:center;gap:12px;margin-bottom:16px">' +
+        '<div style="width:40px;height:40px;border-radius:10px;background:rgba(232,120,35,0.1);border:1px solid rgba(232,120,35,0.2);display:flex;align-items:center;justify-content:center">' +
+          '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#e87823" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>' +
+        '</div>' +
+        '<div>' +
+          '<div class="font-body text-white text-base">' + formatTimeFull(cls.start_at) + ' – ' + formatTimeFull(cls.end_at) + '</div>' +
+          '<div class="font-mono text-sm" style="color:#aaa">' + duration + ' minutes</div>' +
+        '</div>' +
+      '</div>' +
+
+      // Coach
+      '<div style="display:flex;align-items:center;gap:12px;margin-bottom:16px">' +
+        (coachImg
+          ? '<img src="' + escapeAttr(coachImg) + '" alt="" style="width:40px;height:40px;border-radius:10px;object-fit:cover;border:1px solid rgba(232,120,35,0.2)">'
+          : '<div style="width:40px;height:40px;border-radius:10px;background:rgba(232,120,35,0.1);border:1px solid rgba(232,120,35,0.2);display:flex;align-items:center;justify-content:center;font-family:Space Mono;font-size:0.7rem;color:#e87823">' + escapeHtml(coachInitials) + '</div>'
+        ) +
+        '<div>' +
+          '<div class="font-body text-white text-base">' + escapeHtml(coachName) + '</div>' +
+          '<div class="font-mono text-sm" style="color:#aaa">Coach</div>' +
+        '</div>' +
+      '</div>' +
+
+      // Spots
+      (cls.canceled ? '' :
+        '<div style="display:flex;align-items:center;gap:12px;margin-bottom:4px">' +
+          '<div style="width:40px;height:40px;border-radius:10px;background:rgba(232,120,35,0.1);border:1px solid rgba(232,120,35,0.2);display:flex;align-items:center;justify-content:center">' +
+            '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#e87823" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>' +
+          '</div>' +
+          '<div class="flex-1">' +
+            '<div class="flex items-center justify-between">' +
+              '<span class="font-body text-base text-white">' + booked + ' / ' + capacity + ' booked</span>' +
+              '<span class="font-mono text-sm" style="color:' + sc + '">' + spots + ' left</span>' +
+            '</div>' +
+            '<div style="height:4px;border-radius:2px;background:rgba(255,255,255,0.08);margin-top:6px;overflow:hidden">' +
+              '<div style="height:100%;width:' + pct + '%;background:' + sc + ';border-radius:2px;transition:width .6s ease"></div>' +
+            '</div>' +
+            (waitlist > 0 ? '<div class="font-mono text-sm text-amber-400 mt-1">' + waitlist + ' on waitlist</div>' : '') +
+          '</div>' +
+        '</div>'
+      ) +
+
+      '<div class="tt-modal-divider"></div>' +
+
+      // Workout note + Book button
+      '<p style="text-align:center;font-family:\'Space Mono\',monospace;font-size:0.75rem;color:#aaa;margin-bottom:12px;letter-spacing:0.04em">View the full workout details & book on StreamFit</p>' +
+      '<a href="' + escapeAttr(BOOKING_URL) + '" target="_blank" rel="noopener noreferrer" class="btn-primary" style="width:100%;justify-content:center;margin-top:0">' +
+        'View Workout & Book' +
+        '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>' +
+      '</a>';
+
+    modalEl.classList.remove('hidden');
+    requestAnimationFrame(() => modalEl.classList.add('show'));
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    modalEl.classList.remove('show');
+    setTimeout(() => {
+      modalEl.classList.add('hidden');
+      document.body.style.overflow = '';
+    }, 300);
+  }
+
+  modalClose.addEventListener('click', closeModal);
+  modalEl.querySelector('.tt-modal-backdrop').addEventListener('click', closeModal);
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && !modalEl.classList.contains('hidden')) closeModal(); });
+
+  // Week navigation
+  prevBtn.addEventListener('click', () => { weekOffset--; fetchWeek(); });
+  nextBtn.addEventListener('click', () => { weekOffset++; fetchWeek(); });
+
+  // Initial load
+  fetchWeek();
+})();
+</script>
+
+</body>
+</html>

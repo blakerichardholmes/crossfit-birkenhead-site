@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Kids &amp; Teens Fitness Program | CrossFit Birkenhead</title>
+<meta name="description" content="Kids (8–11) and Teens (12–15) fitness program at CrossFit Birkenhead. Functional movement, coordination, confidence, and fun, coached in a safe, supportive environment." />
+<meta property="og:title" content="Kids & Teens Fitness Program | CrossFit Birkenhead" />
+<meta property="og:description" content="Functional workouts, skill development, and games for ages 8–15 in Birkenhead, Auckland." />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https: blob:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com; connect-src 'self'; frame-src https://www.google.com; form-action 'self' mailto:; object-src 'none'; base-uri 'self'; upgrade-insecure-requests" />
+
+<link rel="icon" type="image/png" href="img/CFB-Logo_REV-B.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;600;700;800;900&family=Montserrat:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        bg: '#000000',
+        'bg-alt': '#000000',
+        'bg-card': '#141414',
+        text: '#FFFFFF',
+        'text-muted': '#999999',
+        accent: '#e87823',
+        amber: '#e87823',
+        border: '#222222',
+      },
+      fontFamily: {
+        display: ['Kanit', 'sans-serif'],
+        body: ['Montserrat', 'sans-serif'],
+        mono: ['Space Mono', 'monospace'],
+      }
+    }
+  }
+}
+</script>
+<style>
+/* ══════ BASE ══════ */
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+body{background:#000000;color:#FFFFFF;font-family:'Montserrat',sans-serif;overflow-x:hidden}
+body.loading{overflow:hidden}
+::-webkit-scrollbar{width:5px}
+::-webkit-scrollbar-track{background:#000000}
+::-webkit-scrollbar-thumb{background:#222222;border-radius:10px}
+::-webkit-scrollbar-thumb:hover{background:#444}
+
+/* Grain overlay */
+body::before{content:'';position:fixed;top:0;left:0;width:100%;height:100%;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");pointer-events:none;z-index:9998}
+
+/* Loader */
+#loader{position:fixed;inset:0;z-index:10000;background:#000000;display:flex;align-items:center;justify-content:center}
+#loader .logo-mark{opacity:0;transform:scale(0.9);animation:loaderFadeIn 600ms ease-out 150ms forwards}
+#loader.exit{animation:loaderExit 600ms cubic-bezier(0.76,0,0.24,1) forwards}
+@keyframes loaderFadeIn{to{opacity:1;transform:scale(1)}}
+@keyframes loaderExit{to{opacity:0;transform:translateY(-100vh)}}
+
+
+/* Scroll reveal */
+.sr{opacity:0;transform:translateY(50px);transition:opacity 900ms cubic-bezier(0.16,1,0.3,1),transform 900ms cubic-bezier(0.16,1,0.3,1)}
+.sr.visible{opacity:1;transform:translateY(0) translateX(0)}
+.sr-left{opacity:0;transform:translateX(-60px);transition:opacity 900ms cubic-bezier(0.16,1,0.3,1),transform 900ms cubic-bezier(0.16,1,0.3,1)}
+.sr-left.visible{opacity:1;transform:translateX(0)}
+.sr-right{opacity:0;transform:translateX(60px);transition:opacity 900ms cubic-bezier(0.16,1,0.3,1),transform 900ms cubic-bezier(0.16,1,0.3,1)}
+.sr-right.visible{opacity:1;transform:translateX(0)}
+.sr-scale{opacity:0;transform:scale(0.9);transition:opacity 900ms cubic-bezier(0.16,1,0.3,1),transform 900ms cubic-bezier(0.16,1,0.3,1)}
+.sr-scale.visible{opacity:1;transform:scale(1)}
+
+/* Nav */
+.nav-link{position:relative}
+.nav-link::after{content:'';position:absolute;bottom:-2px;left:0;width:0;height:1px;background:#e87823;transition:width .2s ease}
+.nav-link:hover::after{width:100%}
+.nav-link.active{color:#e87823}
+.nav-link.active::after{width:100%}
+
+/* Mobile nav */
+.mobile-nav{transform:translateX(100%);transition:transform .5s cubic-bezier(0.16,1,0.3,1)}
+.mobile-nav.open{transform:translateX(0)}
+.mobile-nav a{opacity:0;transform:translateX(40px)}
+.mobile-nav.open a{opacity:1;transform:translateX(0);transition:opacity .4s ease,transform .4s ease}
+.mobile-nav.open a:nth-child(1){transition-delay:.06s}
+.mobile-nav.open a:nth-child(2){transition-delay:.12s}
+.mobile-nav.open a:nth-child(3){transition-delay:.18s}
+.mobile-nav.open a:nth-child(4){transition-delay:.24s}
+.mobile-nav.open a:nth-child(5){transition-delay:.30s}
+.mobile-nav.open a:nth-child(6){transition-delay:.36s}
+.mobile-nav.open a:nth-child(7){transition-delay:.42s}
+.mobile-nav.open a:nth-child(8){transition-delay:.48s}
+
+/* Buttons */
+.btn-primary{display:inline-flex;align-items:center;gap:8px;border-radius:100px;padding:14px 32px;background:#e87823;color:#FFFFFF;font-family:'Kanit',sans-serif;font-size:14px;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;cursor:pointer;border:none;transition:transform .2s ease-out,filter .2s ease-out}
+.btn-primary:hover{transform:scale(1.03);filter:brightness(1.1)}
+.btn-ghost{display:inline-flex;align-items:center;gap:8px;border-radius:100px;padding:14px 32px;background:transparent;color:#FFFFFF;font-family:'Kanit',sans-serif;font-size:14px;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;cursor:pointer;border:1px solid rgba(240,237,232,.2);transition:transform .2s ease-out,filter .2s ease-out,border-color .2s ease}
+.btn-ghost:hover{transform:scale(1.03);filter:brightness(1.15);border-color:rgba(232,120,35,.4)}
+
+/* Form inputs */
+.form-input{width:100%;height:60px;background:transparent;border:none;border-bottom:1px solid #2a2a2a;color:#FFFFFF;font-family:'Montserrat',sans-serif;font-size:16px;outline:none;transition:border-color .2s ease}
+.form-input:focus{border-bottom-color:#e87823}
+.form-input::placeholder{color:#555}
+
+/* Glassmorphism */
+.glass{background:rgba(255,255,255,0.03);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid rgba(232,120,35,0.15);border-radius:16px;padding:32px;box-shadow:0 0 30px rgba(232,120,35,0.06);transition:background .3s cubic-bezier(0.16,1,0.3,1),border-color .3s cubic-bezier(0.16,1,0.3,1),box-shadow .3s cubic-bezier(0.16,1,0.3,1),transform .3s cubic-bezier(0.16,1,0.3,1)}
+.glass:hover{background:rgba(255,255,255,0.05);border-color:rgba(232,120,35,0.3);box-shadow:0 0 40px rgba(232,120,35,0.1);transform:translateY(-2px)}
+
+/* Crosshair */
+.crosshair{position:absolute;font-family:'Space Mono',monospace;font-size:14px;color:rgba(232,120,35,.15);user-select:none;pointer-events:none}
+
+/* Section heading scroll fade */
+.heading-fade{opacity:.1;transition:opacity .1s linear}
+
+/* Section bleeds */
+.section-blend-top::before{content:'';position:absolute;top:-1px;left:0;right:0;height:120px;background:linear-gradient(to bottom,#000000,transparent);z-index:2;pointer-events:none}
+.section-blend-bottom::after{content:'';position:absolute;bottom:-1px;left:0;right:0;height:120px;background:linear-gradient(to top,#000000,transparent);z-index:2;pointer-events:none}
+
+/* Scroll progress bar */
+#scrollProgress{position:fixed;top:0;left:0;height:2px;background:linear-gradient(90deg,#e87823,#ff9f4a);z-index:10001;transition:width 0.05s linear;width:0}
+
+/* Ambient pulse */
+.pulse-glow{animation:pulseGlow 4s ease-in-out infinite}
+@keyframes pulseGlow{0%,100%{opacity:.03}50%{opacity:.08}}
+
+/* ═════ PAGE-SPECIFIC STYLES ═════ */
+
+/* Breadcrumb */
+.breadcrumb{display:flex;align-items:center;gap:8px;font-family:'Space Mono',monospace;font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:#aaa}
+.breadcrumb a{color:#aaa;text-decoration:none;transition:color .2s ease}
+.breadcrumb a:hover{color:#e87823}
+.breadcrumb .sep{color:rgba(255,255,255,0.2)}
+.breadcrumb .current{color:#e87823}
+
+/* Age group cards */
+.age-card{position:relative;border-radius:20px;overflow:hidden;background:#0a0a0a;border:1px solid rgba(232,120,35,0.15);transition:all .4s cubic-bezier(0.16,1,0.3,1)}
+.age-card:hover{border-color:rgba(232,120,35,0.4);box-shadow:0 0 40px rgba(232,120,35,0.12),0 0 80px rgba(232,120,35,0.05);transform:translateY(-4px)}
+.age-card-img{position:relative;aspect-ratio:4/3;overflow:hidden}
+.age-card-img img{width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(0.16,1,0.3,1);filter:saturate(0.85) brightness(0.85)}
+.age-card:hover .age-card-img img{transform:scale(1.06);filter:saturate(1) brightness(0.95)}
+.age-card-img-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.6) 0%,transparent 60%);z-index:1}
+.age-card-badge{position:absolute;top:20px;left:20px;z-index:2;background:rgba(232,120,35,0.95);color:#fff;font-family:'Space Mono',monospace;font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;padding:8px 16px;border-radius:100px;font-weight:700}
+.age-card-body{padding:28px 32px 32px}
+.age-card-title{font-family:'Kanit',sans-serif;font-size:2rem;font-weight:700;color:#fff;text-transform:uppercase;letter-spacing:0.03em;margin-bottom:6px;line-height:1}
+.age-card-range{font-family:'Space Mono',monospace;font-size:0.75rem;color:#e87823;letter-spacing:0.15em;text-transform:uppercase;margin-bottom:18px}
+.age-card-desc{font-family:'Montserrat',sans-serif;font-size:0.95rem;color:#bbb;line-height:1.7}
+
+/* Aim cards */
+.aim-card{background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.06);border-radius:16px;padding:28px 26px;transition:all .3s cubic-bezier(0.16,1,0.3,1);position:relative;overflow:hidden;height:100%}
+.aim-card:hover{border-color:rgba(232,120,35,0.35);background:rgba(232,120,35,0.03);box-shadow:0 0 30px rgba(232,120,35,0.08);transform:translateY(-2px)}
+.aim-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,#e87823,#ff9f4a);transform:scaleX(0);transform-origin:left;transition:transform .4s cubic-bezier(0.16,1,0.3,1)}
+.aim-card:hover::before{transform:scaleX(1)}
+.aim-icon{width:52px;height:52px;border-radius:14px;background:linear-gradient(135deg,rgba(232,120,35,0.2),rgba(232,120,35,0.05));border:1px solid rgba(232,120,35,0.25);display:flex;align-items:center;justify-content:center;margin-bottom:18px;color:#e87823;transition:all .3s ease}
+.aim-card:hover .aim-icon{background:linear-gradient(135deg,rgba(232,120,35,0.3),rgba(232,120,35,0.1));border-color:rgba(232,120,35,0.5);box-shadow:0 0 20px rgba(232,120,35,0.2)}
+.aim-icon svg{width:26px;height:26px;stroke-width:1.8}
+.aim-num{font-family:'Space Mono',monospace;font-size:0.65rem;color:#e87823;letter-spacing:0.2em;margin-bottom:10px;display:block}
+.aim-title{font-family:'Kanit',sans-serif;font-size:1.1rem;font-weight:600;color:#fff;text-transform:uppercase;letter-spacing:0.02em;margin-bottom:10px;line-height:1.2}
+.aim-desc{font-family:'Montserrat',sans-serif;font-size:0.88rem;color:#a8a8a8;line-height:1.6}
+
+/* Contact card */
+.contact-card{background:linear-gradient(135deg,rgba(232,120,35,0.08),rgba(232,120,35,0.02));border:1px solid rgba(232,120,35,0.25);border-radius:24px;padding:48px 40px;box-shadow:0 0 60px rgba(232,120,35,0.08)}
+
+/* Reduced motion */
+@media(prefers-reduced-motion:reduce){
+  .sr,.sr-left,.sr-right,.sr-scale{opacity:1!important;transform:none!important;transition:none!important}
+  #loader{display:none!important}
+  .heading-fade{opacity:1!important}
+}
+</style>
+</head>
+<body>
+
+<!-- CURSOR -->
+
+<!-- SCROLL PROGRESS -->
+<div id="scrollProgress"></div>
+
+<div id="page">
+
+<!-- ══════ NAVIGATION ══════ -->
+<nav id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-300" style="background:transparent">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <a href="index.html"><img src="img/CFB-Logo_REV-B.png" alt="CrossFit Birkenhead" class="h-8 md:h-10 w-auto"></a>
+    <div class="hidden lg:flex items-center gap-8">
+      <a href="index.html#programs" class="nav-link font-body text-sm font-medium text-white/90 hover:text-accent tracking-wide uppercase transition-colors duration-200">Training</a>
+      <a href="index.html#services" class="nav-link font-body text-sm font-medium text-white/90 hover:text-accent tracking-wide uppercase transition-colors duration-200">Recovery</a>
+      <a href="index.html#schedule" class="nav-link font-body text-sm font-medium text-white/90 hover:text-accent tracking-wide uppercase transition-colors duration-200">Schedule</a>
+      <a href="whats-on.html" class="nav-link active font-body text-sm font-medium text-white/90 hover:text-accent tracking-wide uppercase transition-colors duration-200">What's On</a>
+      <a href="blog.html" class="nav-link font-body text-sm font-medium text-white/90 hover:text-accent tracking-wide uppercase transition-colors duration-200">Blog</a>
+      <a href="coaches.html" class="nav-link font-body text-sm font-medium text-white/90 hover:text-accent tracking-wide uppercase transition-colors duration-200">Coaches</a>
+      <a href="index.html#pricing" class="nav-link font-body text-sm font-medium text-white/90 hover:text-accent tracking-wide uppercase transition-colors duration-200">Pricing</a>
+      <a href="index.html#about" class="nav-link font-body text-sm font-medium text-white/90 hover:text-accent tracking-wide uppercase transition-colors duration-200">About</a>
+      <a href="#enquire" class="btn-primary ml-4 text-xs px-6 py-2.5 cursor-interactive">Enquire</a>
+    </div>
+    <button id="menuBtn" class="lg:hidden flex flex-col gap-1.5 z-50 cursor-interactive" onclick="toggleMobileNav()">
+      <span class="block w-6 h-0.5 bg-text transition-all duration-300" id="bar1"></span>
+      <span class="block w-6 h-0.5 bg-text transition-all duration-300" id="bar2"></span>
+      <span class="block w-4 h-0.5 bg-text transition-all duration-300 ml-auto" id="bar3"></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile Nav -->
+<div id="mobileNav" class="mobile-nav fixed inset-0 z-40 bg-bg/98 backdrop-blur-xl flex flex-col items-center justify-center gap-8">
+  <a href="index.html#programs" onclick="closeMobileNav()" class="font-display text-4xl tracking-widest uppercase text-text hover:text-accent transition-colors">Training</a>
+  <a href="index.html#services" onclick="closeMobileNav()" class="font-display text-4xl tracking-widest uppercase text-text hover:text-accent transition-colors">Recovery</a>
+  <a href="index.html#schedule" onclick="closeMobileNav()" class="font-display text-4xl tracking-widest uppercase text-text hover:text-accent transition-colors">Schedule</a>
+  <a href="whats-on.html" onclick="closeMobileNav()" class="font-display text-4xl tracking-widest uppercase text-accent">What's On</a>
+  <a href="blog.html" onclick="closeMobileNav()" class="font-display text-4xl tracking-widest uppercase text-text hover:text-accent transition-colors">Blog</a>
+  <a href="coaches.html" onclick="closeMobileNav()" class="font-display text-4xl tracking-widest uppercase text-text hover:text-accent transition-colors">Coaches</a>
+  <a href="index.html#pricing" onclick="closeMobileNav()" class="font-display text-4xl tracking-widest uppercase text-text hover:text-accent transition-colors">Pricing</a>
+  <a href="index.html#about" onclick="closeMobileNav()" class="font-display text-4xl tracking-widest uppercase text-text hover:text-accent transition-colors">About</a>
+  <a href="#enquire" onclick="closeMobileNav()" class="btn-primary mt-4 text-xl px-10 py-4">Enquire</a>
+</div>
+
+<!-- ══════ 1. HERO (image bg) ══════ -->
+<section class="relative min-h-[90vh] flex items-center overflow-hidden pt-20 section-blend-bottom">
+  <!-- Background image -kids push-ups + boy mid-jump, dark gym -->
+  <img src="img/kids-pushups-wide.jpg" alt="" class="absolute inset-0 w-full h-full object-cover" loading="eager" onerror="this.style.display='none'">
+  <div class="absolute inset-0 bg-gradient-to-r from-bg via-bg/90 to-bg/50"></div>
+  <div class="absolute inset-0 bg-gradient-to-t from-bg via-transparent to-transparent"></div>
+  <div class="pulse-glow absolute top-1/3 right-1/4 w-96 h-96 bg-accent/30 rounded-full blur-3xl"></div>
+  <span class="crosshair top-24 left-8">+</span>
+  <span class="crosshair bottom-8 right-8">+</span>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-6 py-16 w-full">
+    <!-- Breadcrumb -->
+    <div class="sr breadcrumb mb-10" data-delay="0">
+      <a href="index.html">Home</a>
+      <span class="sep">/</span>
+      <a href="whats-on.html">What's On</a>
+      <span class="sep">/</span>
+      <span class="current">Kids &amp; Teens Fitness</span>
+    </div>
+
+    <div class="max-w-4xl">
+      <p class="sr font-mono text-xs tracking-[0.3em] text-accent uppercase mb-6" data-delay="0">New Program · Ages 8–15</p>
+      <h1 class="sr-scale font-display text-5xl md:text-7xl lg:text-8xl font-bold uppercase tracking-wider text-white leading-[0.95] mb-8" data-delay="50">
+        KIDS &amp; TEENS<br><span class="text-accent">FITNESS</span> PROGRAM
+      </h1>
+      <p class="sr font-body text-white/85 text-lg md:text-xl mb-10 max-w-2xl leading-relaxed" data-delay="100" style="text-shadow:0 2px 8px rgba(0,0,0,0.5)">
+        CrossFit methodology meets movement, games, and skill-building. A safe, supportive, high-energy environment where young athletes build strength, coordination, and confidence for life.
+      </p>
+      <div class="sr flex flex-col sm:flex-row gap-4" data-delay="150">
+        <a href="#enquire" class="btn-primary cursor-interactive">REGISTER INTEREST &rarr;</a>
+        <a href="#overview" class="btn-ghost cursor-interactive">LEARN MORE</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll indicator -->
+  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-60">
+    <span class="font-mono text-[10px] tracking-[0.2em] text-white/50 uppercase">Scroll</span>
+    <div class="w-px h-10 bg-gradient-to-b from-accent to-transparent"></div>
+  </div>
+</section>
+
+<!-- ══════ 2. OVERVIEW ══════ -->
+<section id="overview" class="py-24 md:py-32 px-6 relative overflow-hidden bg-bg">
+  <span class="crosshair top-8 left-8">+</span>
+  <div class="max-w-5xl mx-auto relative z-10">
+    <div class="text-center mb-16">
+      <p class="sr font-mono text-xs tracking-[0.3em] text-accent uppercase mb-4">The Program</p>
+      <h2 class="sr heading-fade font-display text-4xl md:text-6xl font-bold uppercase tracking-wider mb-6">
+        BUILT FOR<br>YOUNG ATHLETES
+      </h2>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
+      <div class="sr" data-delay="0">
+        <p class="font-body text-text-muted text-lg leading-relaxed mb-6">
+          Our Kids &amp; Teens Fitness Program uses proven <span class="text-white font-semibold">CrossFit methodology</span> to combine functional workouts with skill development, all wrapped in games, play, and friendly challenges.
+        </p>
+        <p class="font-body text-text-muted text-lg leading-relaxed mb-6">
+          Every session is <span class="text-white font-semibold">tailored to ability</span>, so whether your child is brand-new to exercise or already plays a sport, they'll be coached with the right scaling and encouragement.
+        </p>
+        <p class="font-body text-text-muted text-lg leading-relaxed">
+          The goal isn't to create gym rats. It's to teach young people how to move well, move often, and enjoy the process. Habits that last a lifetime.
+        </p>
+      </div>
+
+      <div class="sr-right" data-delay="100">
+        <div class="glass">
+          <p class="font-mono text-xs tracking-[0.2em] text-accent uppercase mb-4">What's Included</p>
+          <ul class="space-y-4">
+            <li class="flex items-start gap-3">
+              <span class="text-accent text-xl mt-0.5 leading-none">→</span>
+              <span class="font-body text-text leading-relaxed">Warm-ups and mobility designed for growing bodies</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-accent text-xl mt-0.5 leading-none">→</span>
+              <span class="font-body text-text leading-relaxed">Fundamental movement patterns (squat, hinge, push, pull, carry)</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-accent text-xl mt-0.5 leading-none">→</span>
+              <span class="font-body text-text leading-relaxed">Basic gymnastics &amp; bodyweight skill work</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-accent text-xl mt-0.5 leading-none">→</span>
+              <span class="font-body text-text leading-relaxed">Team games and friendly challenges</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-accent text-xl mt-0.5 leading-none">→</span>
+              <span class="font-body text-text leading-relaxed">Small groups, constant coaching, zero judgement</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 3. AGE GROUPS (image bg) ══════ -->
+<section class="py-24 md:py-32 px-6 relative overflow-hidden section-blend-top section-blend-bottom">
+  <!-- Background image -kettlebell swings with coach (heavy overlay) -->
+  <img src="img/kids-kettlebell-wide.jpg" alt="" class="absolute inset-0 w-full h-full object-cover" loading="lazy" onerror="this.style.display='none'">
+  <div class="absolute inset-0 bg-gradient-to-b from-bg/90 via-bg/85 to-bg/95"></div>
+  <span class="crosshair top-8 right-8 relative z-10">+</span>
+  <div class="max-w-6xl mx-auto relative z-10">
+    <div class="text-center mb-16">
+      <p class="sr font-mono text-xs tracking-[0.3em] text-accent uppercase mb-4">Two Classes</p>
+      <h2 class="sr heading-fade font-display text-4xl md:text-6xl font-bold uppercase tracking-wider mb-6" style="text-shadow:0 2px 12px rgba(0,0,0,0.5)">
+        FIND YOUR<br>AGE GROUP
+      </h2>
+      <p class="sr font-body text-white/80 text-lg max-w-2xl mx-auto" style="text-shadow:0 1px 4px rgba(0,0,0,0.5)" data-delay="60">
+        Two separate classes, each with programming suited to where young athletes are in their development.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-6 md:gap-8">
+      <!-- Kids -->
+      <div class="sr age-card" data-delay="0">
+        <div class="age-card-img">
+          <span class="age-card-badge">Ages 8–11</span>
+          <img src="img/kids-medball-card.jpg" alt="Kids CrossFit class at CFB" loading="lazy" onerror="this.parentElement.style.background='#141414'">
+          <div class="age-card-img-overlay"></div>
+        </div>
+        <div class="age-card-body">
+          <h3 class="age-card-title">Kids Class</h3>
+          <p class="age-card-range">Foundational Movement</p>
+          <p class="age-card-desc">
+            Packed with games, obstacle-style workouts, and fun skill challenges. We focus on coordination, balance, listening, and teamwork, setting young athletes up with great habits, early.
+          </p>
+        </div>
+      </div>
+
+      <!-- Teens -->
+      <div class="sr age-card" data-delay="80">
+        <div class="age-card-img">
+          <span class="age-card-badge">Ages 12–15</span>
+          <img src="img/teens-rowers-card.jpg" alt="Teens CrossFit class at CFB" loading="lazy" onerror="this.parentElement.style.background='#141414'">
+          <div class="age-card-img-overlay"></div>
+        </div>
+        <div class="age-card-body">
+          <h3 class="age-card-title">Teens Class</h3>
+          <p class="age-card-range">Strength &amp; Skill Progression</p>
+          <p class="age-card-desc">
+            A step up in technique and intensity. Teens learn proper lifting mechanics, progress through gymnastics skills, and build genuine strength, all with the right load and scaling for their age.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 4. AIMS ══════ -->
+<section class="py-24 md:py-32 px-6 relative overflow-hidden bg-bg section-blend-top section-blend-bottom">
+  <div class="pulse-glow absolute top-1/2 left-1/4 w-[30rem] h-[30rem] bg-accent/20 rounded-full blur-3xl"></div>
+  <span class="crosshair top-8 left-8">+</span>
+  <span class="crosshair bottom-8 right-8">+</span>
+
+  <div class="max-w-6xl mx-auto relative z-10">
+    <div class="text-center mb-16">
+      <p class="sr font-mono text-xs tracking-[0.3em] text-accent uppercase mb-4">Our Aims</p>
+      <h2 class="sr heading-fade font-display text-4xl md:text-6xl font-bold uppercase tracking-wider mb-6">
+        MORE THAN<br>A WORKOUT
+      </h2>
+      <p class="sr font-body text-text-muted text-lg max-w-2xl mx-auto" data-delay="60">
+        What young athletes walk away with, week after week.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+      <!-- Aim 1 -->
+      <div class="sr aim-card" data-delay="0">
+        <div class="aim-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6.5 6.5h11M6.5 17.5h11M4 12h16M9 3v18M15 3v18"/></svg>
+        </div>
+        <span class="aim-num">01</span>
+        <h3 class="aim-title">Functional Movement</h3>
+        <p class="aim-desc">Learn the squat, hinge, push, pull, and carry patterns that support every sport, and every day of life.</p>
+      </div>
+
+      <!-- Aim 2 -->
+      <div class="sr aim-card" data-delay="60">
+        <div class="aim-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 2l2.5 6h6l-5 4 2 7-5.5-4-5.5 4 2-7-5-4h6z"/></svg>
+        </div>
+        <span class="aim-num">02</span>
+        <h3 class="aim-title">Self-Confidence</h3>
+        <p class="aim-desc">There's nothing like doing something you didn't think you could. Confidence grows rep by rep, class by class.</p>
+      </div>
+
+      <!-- Aim 3 -->
+      <div class="sr aim-card" data-delay="120">
+        <div class="aim-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3 12h3l3-9 6 18 3-9h3"/></svg>
+        </div>
+        <span class="aim-num">03</span>
+        <h3 class="aim-title">Coordination &amp; Strength</h3>
+        <p class="aim-desc">Develop body awareness, balance, and age-appropriate strength: the building blocks for every sport.</p>
+      </div>
+
+      <!-- Aim 4 -->
+      <div class="sr aim-card" data-delay="180">
+        <div class="aim-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/><circle cx="12" cy="12" r="3"/></svg>
+        </div>
+        <span class="aim-num">04</span>
+        <h3 class="aim-title">Focus &amp; Resilience</h3>
+        <p class="aim-desc">Discipline and persistence are trainable. Kids learn to stick with tough tasks and bounce back from setbacks.</p>
+      </div>
+
+      <!-- Aim 5 -->
+      <div class="sr aim-card" data-delay="240">
+        <div class="aim-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+        </div>
+        <span class="aim-num">05</span>
+        <h3 class="aim-title">A Lifelong Love of Movement</h3>
+        <p class="aim-desc">The real goal: young people who genuinely enjoy being active, long after they leave our program.</p>
+      </div>
+
+      <!-- Aim 6 - supportive environment -->
+      <div class="sr aim-card" data-delay="300">
+        <div class="aim-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a4 4 0 00-3-3.87M9 20H4v-2a4 4 0 013-3.87M13 7a4 4 0 11-8 0 4 4 0 018 0zM21 7a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+        </div>
+        <span class="aim-num">06</span>
+        <h3 class="aim-title">Friendship &amp; Belonging</h3>
+        <p class="aim-desc">Training alongside peers builds community. Kids leave with training partners, teammates, and real friendships.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ 5. IMAGE FEATURE (image bg) ══════ -->
+<section class="relative py-32 md:py-44 px-6 overflow-hidden section-blend-top section-blend-bottom flex items-center justify-center">
+  <!-- Background image -box jump wide shot, energetic group -->
+  <img src="img/kids-boxjump-wide.jpg" alt="Kids training at CrossFit Birkenhead" class="absolute inset-0 w-full h-full object-cover" loading="lazy" onerror="this.style.display='none'">
+  <div class="absolute inset-0 bg-accent/40"></div>
+  <div class="relative z-10 text-center max-w-4xl mx-auto">
+    <p class="sr font-mono text-sm md:text-base tracking-[0.25em] text-white font-semibold uppercase mb-6" style="text-shadow:0 2px 8px rgba(0,0,0,0.5),0 1px 2px rgba(0,0,0,0.6)" data-delay="0">Safe · Supportive · High Energy</p>
+    <h2 class="sr-scale font-display text-5xl md:text-7xl lg:text-8xl font-bold uppercase tracking-wider text-white leading-none mb-6" style="text-shadow:0 4px 20px rgba(0,0,0,0.4),0 2px 4px rgba(0,0,0,0.5)" data-delay="0">
+      GET THEM<br>MOVING
+    </h2>
+    <p class="sr font-body text-white text-lg md:text-xl mb-10 max-w-xl mx-auto" style="text-shadow:0 2px 8px rgba(0,0,0,0.5)" data-delay="50">
+      Every session is planned, coached, and scaled. Your child just has to show up ready to give it a go.
+    </p>
+    <a href="#enquire" class="sr btn-primary !bg-black !text-white text-lg px-12 py-4 cursor-interactive" data-delay="100">REGISTER YOUR INTEREST &rarr;</a>
+  </div>
+  <span class="crosshair bottom-6 left-6 !text-black/20">+</span>
+  <span class="crosshair bottom-6 right-6 !text-black/20">+</span>
+</section>
+
+<!-- ══════ 6. CONTACT / ENQUIRE ══════ -->
+<section id="enquire" class="py-24 md:py-32 px-6 relative overflow-hidden bg-bg">
+  <span class="crosshair top-8 left-8">+</span>
+  <span class="crosshair bottom-8 right-8">+</span>
+  <div class="pulse-glow absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[40rem] h-[40rem] bg-accent/15 rounded-full blur-3xl"></div>
+
+  <div class="max-w-5xl mx-auto relative z-10">
+    <div class="text-center mb-12">
+      <p class="sr font-mono text-xs tracking-[0.3em] text-accent uppercase mb-4">Get In Touch</p>
+      <h2 class="sr heading-fade font-display text-4xl md:text-6xl font-bold uppercase tracking-wider mb-6">
+        READY TO<br>SIGN UP?
+      </h2>
+      <p class="sr font-body text-text-muted text-lg max-w-2xl mx-auto" data-delay="60">
+        Chat with Coach Phoebe directly, or send us a message and we'll get back to you within 24 hours.
+      </p>
+    </div>
+
+    <div class="sr contact-card" data-delay="0">
+      <div class="grid md:grid-cols-2 gap-10 md:gap-14">
+        <!-- Coach + contact info -->
+        <div>
+          <p class="font-mono text-xs tracking-[0.2em] text-accent uppercase mb-3">Your Coach</p>
+          <h3 class="font-display text-3xl md:text-4xl font-bold uppercase tracking-wider mb-2">PHOEBE</h3>
+          <p class="font-body text-text-muted leading-relaxed mb-8">
+            Phoebe coaches the Kids &amp; Teens program and is the easiest way to get questions answered. Give her a call or drop her a message.
+          </p>
+
+          <div class="space-y-5">
+            <div>
+              <p class="font-mono text-[11px] tracking-[0.2em] text-text-muted uppercase mb-1">Call or text</p>
+              <a href="tel:+642102311229" class="font-display text-xl md:text-2xl text-accent hover:underline tracking-wide">021 023 11229</a>
+            </div>
+            <div>
+              <p class="font-mono text-[11px] tracking-[0.2em] text-text-muted uppercase mb-1">Location</p>
+              <p class="font-body text-text">22 Mokoia Road, Birkenhead</p>
+              <p class="font-body text-text-muted text-sm">Auckland 0626, New Zealand</p>
+            </div>
+            <div>
+              <p class="font-mono text-[11px] tracking-[0.2em] text-text-muted uppercase mb-1">Email</p>
+              <a href="mailto:info@crossfitbirkenhead.co.nz?subject=Kids%20%26%20Teens%20Fitness%20Enquiry" class="font-body text-accent hover:underline">info@crossfitbirkenhead.co.nz</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Enquiry form -->
+        <div>
+          <p class="font-mono text-xs tracking-[0.2em] text-accent uppercase mb-6">Register Interest</p>
+          <form id="kidsForm" class="space-y-6" onsubmit="handleEnquire(event)">
+            <div>
+              <label for="kidsGuardianName" class="font-mono text-[11px] text-text-muted uppercase tracking-wider block mb-1">Parent / Guardian Name</label>
+              <input id="kidsGuardianName" name="guardian_name" type="text" class="form-input" autocomplete="name" required>
+            </div>
+            <div>
+              <label for="kidsGuardianEmail" class="font-mono text-[11px] text-text-muted uppercase tracking-wider block mb-1">Email</label>
+              <input id="kidsGuardianEmail" name="guardian_email" type="email" class="form-input" autocomplete="email" required>
+            </div>
+            <div>
+              <label for="kidsGuardianPhone" class="font-mono text-[11px] text-text-muted uppercase tracking-wider block mb-1">Phone</label>
+              <input id="kidsGuardianPhone" name="guardian_phone" type="tel" class="form-input" autocomplete="tel">
+            </div>
+            <div>
+              <label for="kidsAgeGroup" class="font-mono text-[11px] text-text-muted uppercase tracking-wider block mb-1">Child's Age Group</label>
+              <select id="kidsAgeGroup" name="age_group" class="form-input bg-transparent" style="color:#fff" required>
+                <option value="" style="background:#141414">Select an age group</option>
+                <option value="kids" style="background:#141414">Kids (8–11)</option>
+                <option value="teens" style="background:#141414">Teens (12–15)</option>
+                <option value="both" style="background:#141414">Both / Unsure</option>
+              </select>
+            </div>
+            <button type="submit" class="btn-primary text-base px-10 py-4 cursor-interactive">SEND ENQUIRY &rarr;</button>
+          </form>
+
+          <!-- Success state -->
+          <div id="kidsFormSuccess" class="hidden text-center py-12">
+            <div class="text-accent text-6xl mb-4">✓</div>
+            <h3 class="font-display text-2xl uppercase tracking-wider mb-2">CHECK YOUR EMAIL APP</h3>
+            <p class="font-body text-text-muted">We pre-filled an enquiry email for you. Send it through and Phoebe can follow up.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ FOOTER ══════ -->
+<footer class="relative py-20 px-6 overflow-hidden">
+  <div class="absolute inset-0 bg-gradient-to-b from-bg via-bg/80 to-bg/95"></div>
+  <div class="relative z-10 max-w-7xl mx-auto">
+    <div class="grid md:grid-cols-3 gap-12 mb-12">
+      <div>
+        <a href="index.html" class="inline-block mb-4"><img src="img/CFB-Logo_REV-B.png" alt="CrossFit Birkenhead" class="h-10 w-auto"></a>
+        <p class="font-body text-text-muted leading-relaxed mb-6 max-w-md">CrossFit Birkenhead. More than just a gym. A supportive community for active people of all skill levels in Birkenhead, Auckland.</p>
+      </div>
+
+      <div>
+        <h3 class="font-display text-lg uppercase tracking-wider mb-4">Come Say Hi</h3>
+        <p class="font-body text-text-muted text-sm mb-1">22 Mokoia Road, Birkenhead</p>
+        <p class="font-body text-text-muted text-sm mb-4">Auckland 0626, New Zealand</p>
+        <p class="font-mono text-xs text-text-muted/60 uppercase tracking-wider mb-1">Hours</p>
+        <p class="font-body text-text-muted text-sm mb-1">Mon-Fri: 5:30am-7:30pm</p>
+        <p class="font-body text-text-muted text-sm mb-4">Sat: 7:00am-11:00am</p>
+        <a href="tel:021784988" class="font-mono text-sm text-accent hover:underline block mb-2">021 784 988</a>
+        <a href="mailto:info@crossfitbirkenhead.co.nz" class="font-mono text-sm text-accent hover:underline block mb-5">info@crossfitbirkenhead.co.nz</a>
+      </div>
+
+      <div>
+        <p class="font-mono text-xs text-text-muted uppercase tracking-wider mb-4">Quick Links</p>
+        <div class="flex flex-wrap gap-x-6 gap-y-3 mb-8">
+          <a href="index.html#programs" class="font-body text-sm text-text-muted hover:text-accent transition-colors duration-200">Training</a>
+          <a href="index.html#services" class="font-body text-sm text-text-muted hover:text-accent transition-colors duration-200">Recovery</a>
+          <a href="index.html#schedule" class="font-body text-sm text-text-muted hover:text-accent transition-colors duration-200">Schedule</a>
+          <a href="whats-on.html" class="font-body text-sm text-text-muted hover:text-accent transition-colors duration-200">What's On</a>
+          <a href="blog.html" class="font-body text-sm text-text-muted hover:text-accent transition-colors duration-200">Blog</a>
+          <a href="coaches.html" class="font-body text-sm text-text-muted hover:text-accent transition-colors duration-200">Coaches</a>
+          <a href="index.html#pricing" class="font-body text-sm text-text-muted hover:text-accent transition-colors duration-200">Pricing</a>
+          <a href="index.html#about" class="font-body text-sm text-text-muted hover:text-accent transition-colors duration-200">About</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="border-t border-white/5 pt-6 flex flex-col md:flex-row items-center justify-between gap-4">
+      <p class="font-mono text-xs text-text-muted/40">&copy; 2025 CrossFit Birkenhead &middot; 22 Mokoia Road, Auckland</p>
+      <div class="flex gap-6">
+        <a href="mailto:info@crossfitbirkenhead.co.nz?subject=Privacy%20Policy%20Request" class="font-mono text-xs text-text-muted/40 hover:text-text-muted transition-colors duration-200">Privacy Policy</a>
+        <a href="mailto:info@crossfitbirkenhead.co.nz?subject=Terms%20Request" class="font-mono text-xs text-text-muted/40 hover:text-text-muted transition-colors duration-200">Terms</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</div><!-- end #page -->
+
+<script>
+// Immediately trigger hero reveals -no loader delay
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('section:first-of-type .sr, section:first-of-type .sr-scale').forEach(el => el.classList.add('visible'));
+});
+
+// CURSOR
+// SCROLL REVEALS
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const delay = parseInt(entry.target.dataset.delay) || 0;
+      setTimeout(() => entry.target.classList.add('visible'), delay);
+    }
+  });
+}, { threshold: 0.12, rootMargin: '-30px' });
+document.querySelectorAll('.sr, .sr-left, .sr-right, .sr-scale').forEach(el => revealObserver.observe(el));
+
+// SCROLL PROGRESS
+const progressBar = document.getElementById('scrollProgress');
+window.addEventListener('scroll', () => {
+  const scrollTop = window.scrollY;
+  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+  const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+  progressBar.style.width = progress + '%';
+}, { passive: true });
+
+// HEADING FADES
+function updateHeadingFades() {
+  document.querySelectorAll('.heading-fade').forEach(h => {
+    const rect = h.getBoundingClientRect();
+    const vh = window.innerHeight;
+    const progress = Math.max(0, Math.min(1, 1 - (rect.top - vh * 0.3) / (vh * 0.5)));
+    h.style.opacity = 0.1 + progress * 0.9;
+  });
+  requestAnimationFrame(updateHeadingFades);
+}
+requestAnimationFrame(updateHeadingFades);
+
+// NAVBAR GLASS
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 80) {
+    navbar.style.background = 'rgba(10,10,10,0.7)';
+    navbar.style.backdropFilter = 'blur(20px)';
+    navbar.style.webkitBackdropFilter = 'blur(20px)';
+  } else {
+    navbar.style.background = 'transparent';
+    navbar.style.backdropFilter = 'none';
+    navbar.style.webkitBackdropFilter = 'none';
+  }
+});
+
+// MOBILE NAV
+let mobileNavOpen = false;
+function toggleMobileNav() {
+  mobileNavOpen = !mobileNavOpen;
+  const nav = document.getElementById('mobileNav');
+  if (mobileNavOpen) {
+    nav.classList.add('open');
+    document.getElementById('bar1').style.transform = 'rotate(45deg) translate(4px,4px)';
+    document.getElementById('bar2').style.opacity = '0';
+    document.getElementById('bar3').style.transform = 'rotate(-45deg) translate(3px,-3px)';
+    document.getElementById('bar3').style.width = '1.5rem';
+    document.body.style.overflow = 'hidden';
+  } else closeMobileNav();
+}
+function closeMobileNav() {
+  mobileNavOpen = false;
+  document.getElementById('mobileNav').classList.remove('open');
+  document.getElementById('bar1').style.transform = '';
+  document.getElementById('bar2').style.opacity = '1';
+  document.getElementById('bar3').style.transform = '';
+  document.getElementById('bar3').style.width = '';
+  document.body.style.overflow = '';
+}
+
+// SMOOTH SCROLL FOR ON-PAGE LINKS
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', function(e) {
+    const hash = this.getAttribute('href');
+    if (hash.length > 1) {
+      const t = document.querySelector(hash);
+      if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+    }
+  });
+});
+
+// FORM SUBMIT
+function handleEnquire(e) {
+  e.preventDefault();
+  const form = document.getElementById('kidsForm');
+  const success = document.getElementById('kidsFormSuccess');
+  const required = form.querySelectorAll('[required]');
+  let valid = true;
+
+  required.forEach((field) => {
+    if (!field.value.trim()) {
+      valid = false;
+      field.focus();
+    }
+  });
+
+  if (!valid) return;
+
+  const formData = new FormData(form);
+  const body = [
+    'Hi CrossFit Birkenhead,',
+    '',
+    'I would like more information about the kids and teens fitness programme.',
+    '',
+    'Parent / Guardian Name: ' + (formData.get('guardian_name') || 'Not provided'),
+    'Email: ' + (formData.get('guardian_email') || 'Not provided'),
+    'Phone: ' + (formData.get('guardian_phone') || 'Not provided'),
+    'Age Group: ' + (formData.get('age_group') || 'Not provided'),
+    '',
+    'Thanks!'
+  ].join('\n');
+
+  window.location.href =
+    'mailto:info@crossfitbirkenhead.co.nz?subject=' +
+    encodeURIComponent('Kids & Teens Fitness Enquiry') +
+    '&body=' + encodeURIComponent(body);
+
+  form.classList.add('hidden');
+  success.classList.remove('hidden');
+}
+</script>
+</body>
+</html>

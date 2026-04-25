@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Blog | CrossFit Birkenhead | Best Gym on Auckland's North Shore</title>
+<meta name="description" content="Fitness tips, training guides, and community stories from CrossFit Birkenhead, the best gym in Birkenhead and Auckland's North Shore. Expert coaching since 2009." />
+<meta property="og:title" content="Blog | CrossFit Birkenhead" />
+<meta property="og:description" content="Training guides, fitness tips, and stories from Birkenhead's best gym community on Auckland's North Shore." />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https: blob:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com; connect-src 'self'; frame-src https://www.google.com; form-action 'self' mailto:; object-src 'none'; base-uri 'self'; upgrade-insecure-requests" />
+<meta name="keywords" content="CrossFit Birkenhead, best gym North Shore, best gym Auckland, fitness Birkenhead, gym Birkenhead, CrossFit Auckland, North Shore fitness, personal training Birkenhead" />
+
+<link rel="icon" type="image/png" href="img/CFB-Logo_REV-B.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;600;700;800;900&family=Montserrat:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        bg: '#000000',
+        'bg-alt': '#000000',
+        'bg-card': '#141414',
+        text: '#FFFFFF',
+        'text-muted': '#999999',
+        accent: '#e87823',
+        amber: '#e87823',
+        border: '#222222',
+      },
+      fontFamily: {
+        display: ['Kanit', 'sans-serif'],
+        body: ['Montserrat', 'sans-serif'],
+        mono: ['Space Mono', 'monospace'],
+      }
+    }
+  }
+}
+</script>
+<style>
+/* ══════ BASE ══════ */
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+body{background:#000000;color:#FFFFFF;font-family:'Montserrat',sans-serif;overflow-x:hidden}
+::-webkit-scrollbar{width:5px}
+::-webkit-scrollbar-track{background:#000000}
+::-webkit-scrollbar-thumb{background:#222222;border-radius:10px}
+::-webkit-scrollbar-thumb:hover{background:#444}
+
+body::before{content:'';position:fixed;top:0;left:0;width:100%;height:100%;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");pointer-events:none;z-index:9998}
+
+
+.sr{opacity:0;transform:translateY(50px);transition:opacity 900ms cubic-bezier(0.16,1,0.3,1),transform 900ms cubic-bezier(0.16,1,0.3,1)}
+.sr.visible{opacity:1;transform:translateY(0)}
+.sr-scale{opacity:0;transform:scale(0.9);transition:opacity 900ms cubic-bezier(0.16,1,0.3,1),transform 900ms cubic-bezier(0.16,1,0.3,1)}
+.sr-scale.visible{opacity:1;transform:scale(1)}
+
+.nav-link{position:relative}
+.nav-link::after{content:'';position:absolute;bottom:-2px;left:0;width:0;height:1px;background:#e87823;transition:width .2s ease}
+.nav-link:hover::after{width:100%}
+.nav-link.active{color:#e87823}
+.nav-link.active::after{width:100%}
+
+.mobile-nav{transform:translateX(100%);transition:transform .5s cubic-bezier(0.16,1,0.3,1)}
+.mobile-nav.open{transform:translateX(0)}
+.mobile-nav a{opacity:0;transform:translateX(40px)}
+.mobile-nav.open a{opacity:1;transform:translateX(0);transition:opacity .4s ease,transform .4s ease}
+.mobile-nav.open a:nth-child(1){transition-delay:.06s}
+.mobile-nav.open a:nth-child(2){transition-delay:.12s}
+.mobile-nav.open a:nth-child(3){transition-delay:.18s}
+.mobile-nav.open a:nth-child(4){transition-delay:.24s}
+.mobile-nav.open a:nth-child(5){transition-delay:.30s}
+.mobile-nav.open a:nth-child(6){transition-delay:.36s}
+.mobile-nav.open a:nth-child(7){transition-delay:.42s}
+.mobile-nav.open a:nth-child(8){transition-delay:.48s}
+
+.btn-primary{display:inline-flex;align-items:center;gap:8px;border-radius:100px;padding:14px 32px;background:#e87823;color:#FFFFFF;font-family:'Kanit',sans-serif;font-size:14px;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;cursor:pointer;border:none;transition:transform .2s ease-out,filter .2s ease-out}
+.btn-primary:hover{transform:scale(1.03);filter:brightness(1.1)}
+.btn-ghost{display:inline-flex;align-items:center;gap:8px;border-radius:100px;padding:14px 32px;background:transparent;color:#FFFFFF;font-family:'Kanit',sans-serif;font-size:14px;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;cursor:pointer;border:1px solid rgba(240,237,232,.2);transition:transform .2s ease-out,filter .2s ease-out,border-color .2s ease}
+.btn-ghost:hover{transform:scale(1.03);filter:brightness(1.15);border-color:rgba(232,120,35,.4)}
+
+.crosshair{position:absolute;font-family:'Space Mono',monospace;font-size:14px;color:rgba(232,120,35,.15);user-select:none;pointer-events:none}
+.heading-fade{opacity:.1;transition:opacity .1s linear}
+.section-blend-top::before{content:'';position:absolute;top:-1px;left:0;right:0;height:120px;background:linear-gradient(to bottom,#000000,transparent);z-index:2;pointer-events:none}
+.section-blend-bottom::after{content:'';position:absolute;bottom:-1px;left:0;right:0;height:120px;background:linear-gradient(to top,#000000,transparent);z-index:2;pointer-events:none}
+#scrollProgress{position:fixed;top:0;left:0;height:2px;background:linear-gradient(90deg,#e87823,#ff9f4a);z-index:10001;transition:width 0.05s linear;width:0}
+.pulse-glow{animation:pulseGlow 4s ease-in-out infinite}
+@keyframes pulseGlow{0%,100%{opacity:.03}50%{opacity:.08}}
+
+/* Glass card */
+.glass{background:rgba(20,20,20,0.6);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,0.06);border-radius:16px;padding:32px}
+
+/* ═════ BLOG STYLES ═════ */
+.blog-card{position:relative;display:block;border-radius:20px;overflow:hidden;background:#0a0a0a;border:1px solid rgba(255,255,255,0.06);text-decoration:none;color:inherit;transition:all .4s cubic-bezier(0.16,1,0.3,1)}
+.blog-card:hover{border-color:rgba(232,120,35,0.35);box-shadow:0 0 40px rgba(232,120,35,0.08);transform:translateY(-4px)}
+.blog-card-img{position:relative;aspect-ratio:16/10;overflow:hidden}
+.blog-card-img img{width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(0.16,1,0.3,1);filter:saturate(0.85) brightness(0.85)}
+.blog-card:hover .blog-card-img img{transform:scale(1.06);filter:saturate(1) brightness(0.95)}
+.blog-card-img-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.6) 0%,transparent 50%);z-index:1}
+.blog-card-body{padding:28px 28px 32px}
+
+/* Blog article */
+.blog-article{max-width:760px;margin:0 auto}
+.blog-article h2{font-family:'Kanit',sans-serif;font-size:1.8rem;font-weight:700;text-transform:uppercase;letter-spacing:0.04em;color:#fff;margin:2.5rem 0 1rem;line-height:1.2}
+.blog-article h3{font-family:'Kanit',sans-serif;font-size:1.3rem;font-weight:600;text-transform:uppercase;letter-spacing:0.03em;color:#e87823;margin:2rem 0 0.75rem}
+.blog-article p{font-family:'Montserrat',sans-serif;font-size:1rem;color:#bbb;line-height:1.85;margin-bottom:1.25rem}
+.blog-article p strong{color:#fff;font-weight:600}
+.blog-article blockquote{border-left:3px solid #e87823;padding:1rem 1.5rem;margin:2rem 0;background:rgba(232,120,35,0.04);border-radius:0 12px 12px 0}
+.blog-article blockquote p{color:#ccc;font-style:italic;margin-bottom:0}
+.blog-article ul{list-style:none;padding:0;margin:1.25rem 0}
+.blog-article ul li{padding:0.5rem 0 0.5rem 1.5rem;position:relative;font-family:'Montserrat',sans-serif;font-size:1rem;color:#bbb;line-height:1.7}
+.blog-article ul li::before{content:'+';position:absolute;left:0;color:#e87823;font-family:'Space Mono',monospace;font-weight:700}
+
+@media(prefers-reduced-motion:reduce){
+  .sr,.sr-scale{opacity:1!important;transform:none!important;transition:none!important}
+  .heading-fade{opacity:1!important}
+}
+</style>
+</head>
+<body>
+
+<div id="scrollProgress"></div>
+
+<div id="page">
+
+<!-- NAV -->
+<nav id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-300" style="background:transparent">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <a href="index.html"><img src="img/CFB-Logo_REV-B.png" alt="CrossFit Birkenhead" class="h-8 md:h-10 w-auto"></a>
+    <div class="hidden lg:flex items-center gap-8">
+      <a href="index.html#programs" class="nav-link font-body text-sm font-medium text-white/90 hover:text-accent tracking-wide uppercase transition-colors duration-200">Training</a>
+      <a href="index.html#services" class="nav-link font-body text-sm font-medium text-white/90 hover:text-accent tracking-wide uppercase transition-colors duration-200">Recovery</a>
+      <a href="index.html#schedule" class="nav-link font-body text-sm font-medium text-white/90 hover:text-accent tracking-wide uppercase transition-colors duration-200">Schedule</a>
+      <a href="whats-on.html" class="nav-link font-body text-sm font-medium text-white/90 hover:text-accent tracking-wide uppercase transition-colors duration-200">What's On</a>
+      <a href="blog.html" class="nav-link active font-body text-sm font-medium text-white/90 hover:text-accent tracking-wide uppercase transition-colors duration-200">Blog</a>
+      <a href="coaches.html" class="nav-link font-body text-sm font-medium text-white/90 hover:text-accent tracking-wide uppercase transition-colors duration-200">Coaches</a>
+      <a href="index.html#pricing" class="nav-link font-body text-sm font-medium text-white/90 hover:text-accent tracking-wide uppercase transition-colors duration-200">Pricing</a>
+      <a href="index.html#about" class="nav-link font-body text-sm font-medium text-white/90 hover:text-accent tracking-wide uppercase transition-colors duration-200">About</a>
+      <a href="index.html#contact" class="btn-primary ml-4 text-xs px-6 py-2.5 cursor-interactive">Get Started</a>
+    </div>
+    <button id="menuBtn" class="lg:hidden flex flex-col gap-1.5 z-50 cursor-interactive" onclick="toggleMobileNav()">
+      <span class="block w-6 h-0.5 bg-text transition-all duration-300" id="bar1"></span>
+      <span class="block w-6 h-0.5 bg-text transition-all duration-300" id="bar2"></span>
+      <span class="block w-4 h-0.5 bg-text transition-all duration-300 ml-auto" id="bar3"></span>
+    </button>
+  </div>
+</nav>
+
+<div id="mobileNav" class="mobile-nav fixed inset-0 z-40 bg-bg/98 backdrop-blur-xl flex flex-col items-center justify-center gap-8">
+  <a href="index.html#programs" onclick="closeMobileNav()" class="font-display text-4xl tracking-widest uppercase text-text hover:text-accent transition-colors">Training</a>
+  <a href="index.html#services" onclick="closeMobileNav()" class="font-display text-4xl tracking-widest uppercase text-text hover:text-accent transition-colors">Recovery</a>
+  <a href="index.html#schedule" onclick="closeMobileNav()" class="font-display text-4xl tracking-widest uppercase text-text hover:text-accent transition-colors">Schedule</a>
+  <a href="whats-on.html" onclick="closeMobileNav()" class="font-display text-4xl tracking-widest uppercase text-text hover:text-accent transition-colors">What's On</a>
+  <a href="blog.html" onclick="closeMobileNav()" class="font-display text-4xl tracking-widest uppercase text-accent">Blog</a>
+  <a href="coaches.html" onclick="closeMobileNav()" class="font-display text-4xl tracking-widest uppercase text-text hover:text-accent transition-colors">Coaches</a>
+  <a href="index.html#pricing" onclick="closeMobileNav()" class="font-display text-4xl tracking-widest uppercase text-text hover:text-accent transition-colors">Pricing</a>
+  <a href="index.html#about" onclick="closeMobileNav()" class="font-display text-4xl tracking-widest uppercase text-text hover:text-accent transition-colors">About</a>
+  <a href="index.html#contact" onclick="closeMobileNav()" class="btn-primary mt-4 text-xl px-10 py-4">Get Started</a>
+</div>
+
+<!-- HERO -->
+<section class="relative min-h-[60vh] flex items-center overflow-hidden pt-32 pb-16 section-blend-bottom">
+  <img src="img/barbell-fog.jpg" alt="" class="absolute inset-0 w-full h-full object-cover" loading="eager" onerror="this.style.display='none'">
+  <div class="absolute inset-0 bg-gradient-to-b from-bg/70 via-bg/85 to-bg"></div>
+  <div class="pulse-glow absolute top-1/3 right-1/3 w-96 h-96 bg-accent/25 rounded-full blur-3xl"></div>
+  <span class="crosshair top-24 left-8">+</span>
+  <span class="crosshair bottom-8 right-12">+</span>
+  <div class="relative z-10 max-w-4xl mx-auto px-6 text-center">
+    <p class="sr font-mono text-xs tracking-[0.3em] text-accent uppercase mb-4">CrossFit Birkenhead</p>
+    <h1 class="sr heading-fade font-display text-5xl md:text-7xl font-bold uppercase tracking-wider mb-6" style="text-shadow:0 2px 12px rgba(0,0,0,0.5)">BLOG</h1>
+    <p class="sr font-body text-text-muted text-lg md:text-xl max-w-2xl mx-auto" data-delay="60">Training tips, fitness guides, and stories from Auckland's North Shore fitness community.</p>
+  </div>
+</section>
+
+<!-- BLOG LISTING -->
+<section class="py-20 md:py-28 px-6 relative bg-bg">
+  <span class="crosshair top-8 right-8">+</span>
+  <div class="max-w-6xl mx-auto">
+
+    <!-- ════ POST 1 ════ -->
+    <article id="post-why-crossfit" class="sr mb-24" data-delay="0">
+      <div class="blog-card" onclick="togglePost(this)" style="cursor:pointer">
+        <div class="blog-card-img">
+          <img src="img/deadlift.jpg" alt="Group CrossFit class at CrossFit Birkenhead" loading="lazy" onerror="this.parentElement.style.background='#141414'">
+          <div class="blog-card-img-overlay"></div>
+        </div>
+        <div class="blog-card-body">
+          <p class="font-mono text-[11px] tracking-[0.2em] text-accent uppercase mb-3">Beginner's Guide</p>
+          <h2 class="font-display text-2xl md:text-4xl font-bold uppercase tracking-wider mb-4 text-white transition-colors duration-300">Why CrossFit Birkenhead Is the Best Gym on Auckland's North Shore</h2>
+          <p class="font-body text-text-muted text-base leading-relaxed mb-4">Looking for a gym in Birkenhead that goes beyond rows of machines and lonely treadmill sessions? Here's what makes CrossFit Birkenhead different from every other fitness option on the North Shore.</p>
+          <div class="flex items-center gap-4">
+            <span class="font-mono text-[10px] tracking-[0.1em] uppercase text-text-muted bg-white/5 border border-white/10 px-3 py-1.5 rounded-full">5 min read</span>
+            <span class="font-mono text-[10px] tracking-[0.1em] uppercase text-accent font-bold">Read article &darr;</span>
+          </div>
+        </div>
+      </div>
+      <div class="blog-post-content hidden mt-8 px-2">
+        <div class="blog-article">
+          <p>If you've been searching for the best gym in Birkenhead or the best gym on Auckland's North Shore, you've probably noticed that most options look the same: rows of machines, a couple of treadmills, and a "good luck, figure it out" approach to training. CrossFit Birkenhead is built differently.</p>
+
+          <p>Since 2009, we've been the home for CrossFit on Auckland's North Shore, and we're still here because what we do works. Not because it's trendy, but because community-driven, coach-led fitness changes lives in ways that solo gym memberships simply don't.</p>
+
+          <h2>What Actually Makes Us Different?</h2>
+
+          <h3>Every Session Is Coached</h3>
+          <p>You won't find yourself wandering around the gym floor wondering what to do. Every class at CrossFit Birkenhead is designed, programmed, and coached by one of our seven experienced coaches. Whether you're a complete beginner or a competitive athlete, every movement is demonstrated, corrected, and scaled to your level. That means you get real results without the guesswork, and without the injury risk that comes from doing it alone.</p>
+
+          <h3>A Community That Shows Up For Each Other</h3>
+          <p>This is the part people don't expect. You walk in thinking you're joining a gym, and you leave realising you've found a community. At CrossFit Birkenhead, members know each other's names. They cheer the last person to finish. They celebrate each other's personal bests. It's a culture of encouragement that turns "I should probably go to the gym" into "I can't wait to get there."</p>
+
+          <h3>Real Programming, Real Results</h3>
+          <p>Our programming is constantly varied, which means no two days are the same. One day you're lifting heavy barbells. The next, you're rowing intervals and working gymnastic progressions. This approach builds functional fitness that carries over into real life: picking up your kids, carrying groceries upstairs, playing weekend sport without pulling a hamstring.</p>
+
+          <h3>More Than Just a Gym</h3>
+          <p>Beyond the daily workouts, CrossFit Birkenhead offers physiotherapy, osteopathy, massage therapy, personal training, and access to partner recovery studios including sauna, cold plunge, and Pilates. Everything you need to train hard, recover well, and keep showing up, all under one roof on Mokoia Road in Birkenhead, Auckland.</p>
+
+          <blockquote><p>The best gym isn't the one with the most equipment. It's the one you actually want to go to.</p></blockquote>
+
+          <h2>Who Is CrossFit For?</h2>
+          <p>Everyone. Seriously. CrossFit gets a reputation for being intense, and it can be, but every workout is scalable. We have members in their twenties training alongside members in their sixties. New parents alongside competitive athletes. The common thread isn't fitness level. It's the willingness to show up and give it a go.</p>
+
+          <p>If you've been thinking about trying CrossFit in Auckland or looking for a gym near Birkenhead that actually delivers, book an introductory session and tour. Come see the facility, meet a coach, and find out why our members stay for years.</p>
+
+          <div class="mt-10 text-center">
+            <a href="index.html#contact" class="btn-primary text-base px-10 py-4 cursor-interactive">BOOK YOUR INTRO SESSION &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ════ POST 2 ════ -->
+    <article id="post-first-visit" class="sr mb-24" data-delay="0">
+      <div class="blog-card" onclick="togglePost(this)" style="cursor:pointer">
+        <div class="blog-card-img">
+          <img src="img/airbike.jpg" alt="Conditioning workout at CrossFit Birkenhead gym" loading="lazy" onerror="this.parentElement.style.background='#141414'">
+          <div class="blog-card-img-overlay"></div>
+        </div>
+        <div class="blog-card-body">
+          <p class="font-mono text-[11px] tracking-[0.2em] text-accent uppercase mb-3">Getting Started</p>
+          <h2 class="font-display text-2xl md:text-4xl font-bold uppercase tracking-wider mb-4 text-white transition-colors duration-300">Your First Visit to CrossFit Birkenhead: What to Expect</h2>
+          <p class="font-body text-text-muted text-base leading-relaxed mb-4">Nervous about walking into a CrossFit gym for the first time? Here's exactly what happens at your introductory appointment and how we make sure you feel welcome from day one.</p>
+          <div class="flex items-center gap-4">
+            <span class="font-mono text-[10px] tracking-[0.1em] uppercase text-text-muted bg-white/5 border border-white/10 px-3 py-1.5 rounded-full">4 min read</span>
+            <span class="font-mono text-[10px] tracking-[0.1em] uppercase text-accent font-bold">Read article &darr;</span>
+          </div>
+        </div>
+      </div>
+      <div class="blog-post-content hidden mt-8 px-2">
+        <div class="blog-article">
+          <p>Walking into any gym for the first time is daunting. Walking into a CrossFit gym (with the barbells, the rigs, the chalk dust) can feel even more intimidating. We get it. And that's exactly why your first visit to CrossFit Birkenhead isn't a class. It's an introductory session and tour, designed to make you feel completely at ease.</p>
+
+          <h2>What Happens at Your Introductory Appointment</h2>
+
+          <h3>Step 1: Meet Your Coach</h3>
+          <p>Your appointment can be scheduled outside of regular class times, so there's no pressure and no audience. You'll meet one of our coaches, who'll take the time to chat about where you're at, what your goals are, and what's brought you through the door. Whether that's losing weight, getting stronger, training for a sport, or just wanting to feel better, we've heard it all, and there's no wrong answer.</p>
+
+          <h3>Step 2: Tour the Facility</h3>
+          <p>We'll walk you through the gym so you can see everything we offer. The main training floor with rigs, rowers, and air bikes. The barbell and dumbbell area. And we'll talk you through our recovery and wellness services (physiotherapy, osteopathy, massage, personal training) so you understand the full picture of what's available at our Birkenhead gym.</p>
+
+          <h3>Step 3: Learn About How It Works</h3>
+          <p>We'll explain how our classes are structured, how the programming works, and most importantly, how everything is scaled to your ability. You won't be thrown into the deep end. We build you up through fundamentals so that when you do join regular group workouts, you feel confident and prepared.</p>
+
+          <h2>Common Questions We Hear</h2>
+          <ul>
+            <li>"Do I need to be fit to start?" No. Our members come from every background and fitness level. Every movement can be scaled.</li>
+            <li>"What should I wear?" Comfortable workout clothes and indoor training shoes. We supply all the equipment.</li>
+            <li>"Will I be the only beginner?" Unlikely. We welcome new members every week. And even our experienced members remember being new, and they'll make you feel right at home.</li>
+            <li>"What does it cost?" Memberships start from $39 per week, with flexible options to suit your schedule. Drop-ins are $29.</li>
+          </ul>
+
+          <h2>Why People Stay</h2>
+          <p>Most people come to CrossFit Birkenhead for the fitness. They stay for the people. There's something about training alongside a group of encouraging, like-minded people that changes how you feel about exercise. It stops being a chore and starts being something you genuinely look forward to.</p>
+
+          <p>We're located at 22 Mokoia Road, Birkenhead, Auckland, right in the heart of the North Shore. If you've been looking for a gym that's welcoming, well-coached, and built around community, this is it.</p>
+
+          <div class="mt-10 text-center">
+            <a href="index.html#contact" class="btn-primary text-base px-10 py-4 cursor-interactive">BOOK YOUR INTRO SESSION &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ════ POST 3 ════ -->
+    <article id="post-north-shore-fitness" class="sr mb-16" data-delay="0">
+      <div class="blog-card" onclick="togglePost(this)" style="cursor:pointer">
+        <div class="blog-card-img">
+          <img src="img/rower.jpg" alt="Rowing at CrossFit Birkenhead North Shore gym" loading="lazy" onerror="this.parentElement.style.background='#141414'">
+          <div class="blog-card-img-overlay"></div>
+        </div>
+        <div class="blog-card-body">
+          <p class="font-mono text-[11px] tracking-[0.2em] text-accent uppercase mb-3">North Shore Fitness</p>
+          <h2 class="font-display text-2xl md:text-4xl font-bold uppercase tracking-wider mb-4 text-white transition-colors duration-300">The North Shore Fitness Scene: Why Birkenhead Is Auckland's Best-Kept Secret</h2>
+          <p class="font-body text-text-muted text-base leading-relaxed mb-4">Auckland's North Shore has no shortage of gyms, but Birkenhead offers something different. Here's why locals are choosing community-driven fitness over big-box chains.</p>
+          <div class="flex items-center gap-4">
+            <span class="font-mono text-[10px] tracking-[0.1em] uppercase text-text-muted bg-white/5 border border-white/10 px-3 py-1.5 rounded-full">4 min read</span>
+            <span class="font-mono text-[10px] tracking-[0.1em] uppercase text-accent font-bold">Read article &darr;</span>
+          </div>
+        </div>
+      </div>
+      <div class="blog-post-content hidden mt-8 px-2">
+        <div class="blog-article">
+          <p>Auckland's North Shore is one of the most active regions in New Zealand. Between the beaches, the parks, and the harbour, people here love moving. But when it comes to choosing a gym, the options can feel overwhelming, and most of them look exactly the same.</p>
+
+          <p>So what makes Birkenhead different? And why are more North Shore locals choosing to train at a CrossFit gym on Mokoia Road instead of the big-box chains in Glenfield, Takapuna, or Albany?</p>
+
+          <h2>The Big-Box Problem</h2>
+          <p>Commercial gyms are designed around volume. They sign up thousands of members, rely on the fact that most won't show up regularly, and give you a keycard and a "good luck." If you're self-motivated and already know what you're doing, that model works fine. But for most people, especially those getting back into fitness or starting from scratch, it's a recipe for giving up within a few months.</p>
+
+          <p>There's no coaching. No structure. No one notices if you don't show up. And that's the gap that CrossFit Birkenhead fills.</p>
+
+          <h2>What Community-Driven Fitness Looks Like</h2>
+          <p>At CrossFit Birkenhead, you're not a membership number. You're a name. Your coaches know your goals, your limitations, and your progress. The members around you know your name and will notice if you miss a session. That accountability, combined with expert programming and hands-on coaching, is what makes community-driven gyms outperform commercial ones for long-term results.</p>
+
+          <h3>The Birkenhead Advantage</h3>
+          <p>Birkenhead itself is central to the North Shore, making it easy to get to from Northcote, Glenfield, Beach Haven, Birkdale, and Hillcrest. We're just off the motorway, with easy parking on Mokoia Road. And unlike the CBD-based gyms, you're not fighting traffic or paying for parking just to work out.</p>
+
+          <p>Beyond location, CrossFit Birkenhead brings together services you'd normally have to visit three or four different places for: group training, personal coaching, physiotherapy, osteopathy, massage, and access to sauna, cold plunge, and Pilates through our partner studios. It's a full wellness ecosystem in one location.</p>
+
+          <h2>Finding the Right Gym for You</h2>
+          <p>The best gym in Auckland isn't necessarily the one with the most locations or the cheapest membership. It's the one that fits your life, keeps you consistent, and helps you actually reach your goals. If you value coaching, community, and results over machines and mirrors, CrossFit Birkenhead is worth a visit.</p>
+
+          <p>We've been part of the Birkenhead fitness community since 2009, long enough to know that the people who walk through our doors looking nervous almost always end up staying. Come see why.</p>
+
+          <div class="mt-10 text-center">
+            <a href="index.html#contact" class="btn-primary text-base px-10 py-4 cursor-interactive">BOOK YOUR INTRO SESSION &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ════ POST 4 ════ -->
+    <article id="post-crossfit-vs-hyrox" class="sr mb-16" data-delay="0">
+      <div class="blog-card" onclick="togglePost(this)" style="cursor:pointer">
+        <div class="blog-card-img">
+          <img src="img/barbell-fog.jpg" alt="Barbell training at CrossFit Birkenhead" loading="lazy" onerror="this.parentElement.style.background='#141414'">
+          <div class="blog-card-img-overlay"></div>
+        </div>
+        <div class="blog-card-body">
+          <p class="font-mono text-[11px] tracking-[0.2em] text-accent uppercase mb-3">CrossFit vs Hyrox</p>
+          <h2 class="font-display text-2xl md:text-4xl font-bold uppercase tracking-wider mb-4 text-white transition-colors duration-300">CrossFit vs Hyrox: Which One Actually Makes You Fitter?</h2>
+          <p class="font-body text-text-muted text-base leading-relaxed mb-4">Hyrox is having a moment, but is it the right training method for long-term fitness? Here's an honest comparison from a gym that's been building real fitness on Auckland's North Shore since 2009.</p>
+          <div class="flex items-center gap-4">
+            <span class="font-mono text-[10px] tracking-[0.1em] uppercase text-text-muted bg-white/5 border border-white/10 px-3 py-1.5 rounded-full">6 min read</span>
+            <span class="font-mono text-[10px] tracking-[0.1em] uppercase text-accent font-bold">Read article &darr;</span>
+          </div>
+        </div>
+      </div>
+      <div class="blog-post-content hidden mt-8 px-2">
+        <div class="blog-article">
+          <p>If you've been anywhere near the Auckland fitness scene lately, you've probably heard people talking about Hyrox. The race series has blown up in New Zealand, and plenty of gyms are now offering "Hyrox prep" classes to cater to the demand. It's fun, it's competitive, and it gives people a goal to train towards.</p>
+
+          <p>But if you're trying to decide between CrossFit and Hyrox as your primary training method (not just a one-off event), there are some important differences worth understanding. And they go a lot deeper than which one looks better on Instagram.</p>
+
+          <h2>What Is Hyrox, Exactly?</h2>
+          <p>Hyrox is a fitness race. Every event follows the same format: eight 1km runs, each followed by a functional workout station (sled push, sled pull, burpee broad jumps, rowing, farmers carry, sandbag lunges, wall balls, and ski erg). The format never changes: the same movements, the same distances, the same order, every single time.</p>
+
+          <p>That predictability is part of the appeal. You know exactly what you're training for, you can benchmark your times, and you can see clear improvement from race to race. If you enjoy endurance-based competition with a simple structure, Hyrox delivers that well.</p>
+
+          <h2>So What's the Problem?</h2>
+          <p>The problem isn't Hyrox itself. It's building your entire training programme around it. Because Hyrox uses the same format every time, your training becomes increasingly narrow. You get very good at running, sled work, and a handful of specific exercises. But you stop developing the broader fitness qualities that actually matter in everyday life.</p>
+
+          <h3>Limited Movement Variety</h3>
+          <p>Hyrox training revolves around eight specific stations. That's it. There's no overhead pressing, no pulling from the floor, no gymnastics, no Olympic lifting, no single-leg work, no coordination-heavy skills like double-unders or handstands. Over time, the movements you don't train become weaknesses, and weaknesses become injury risks.</p>
+
+          <p>CrossFit is built on the opposite philosophy. The programming is constantly varied, drawing from weightlifting, gymnastics, monostructural cardio, and everything in between. One day you're doing heavy deadlifts and pull-ups. The next, you're rowing intervals and practising handstand walks. Your body never adapts to a single pattern, which is exactly how you build genuinely well-rounded fitness.</p>
+
+          <h3>Coaching Depth</h3>
+          <p>Most Hyrox prep classes are conditioning-focused. The emphasis is on pacing, endurance, and getting through the stations efficiently. That's useful for race day, but it doesn't address the fundamentals: movement quality, strength development, mobility, and skill progression.</p>
+
+          <p>At CrossFit Birkenhead, every session is coached by one of our seven experienced coaches. That means someone is watching your movement, correcting your form, helping you scale appropriately, and progressing you over time. You're not just grinding through a workout. You're learning how to move better, which pays dividends for decades.</p>
+
+          <h3>Strength Development</h3>
+          <p>Hyrox is predominantly an endurance event. The loads are moderate, the volume is high, and the goal is to keep moving. That's great for cardiovascular fitness, but it does very little for building real strength, the kind of strength that protects your joints, maintains bone density, and keeps you independent as you age.</p>
+
+          <p>CrossFit programmes heavy lifting as a core component. Back squats, front squats, deadlifts, presses, cleans, snatches. These are the movements that build the strength foundation everything else sits on. You won't find that in a Hyrox prep class.</p>
+
+          <h2>The Community Factor</h2>
+          <p>Hyrox events have a great atmosphere. Race day is genuinely exciting, and the energy is electric. But the event happens a few times a year. The rest of the time, you're training for it, often on your own or in loosely structured prep classes.</p>
+
+          <p>CrossFit Birkenhead is a community that shows up five, six, seven days a week. You train alongside the same people. You know their names, their goals, their struggles. They notice when you're not there. That daily accountability is what keeps people consistent for years, not months, and consistency is the single biggest predictor of long-term results.</p>
+
+          <blockquote><p>An event gives you a goal. A community gives you a reason to keep showing up after the goal is done.</p></blockquote>
+
+          <h2>Can You Do Both?</h2>
+          <p>Absolutely. And that's the real advantage of CrossFit as a training base. Because CrossFit develops broad fitness across all energy systems and movement patterns, CrossFitters tend to perform surprisingly well at Hyrox with minimal specific preparation. The running base, the sled work, the wall balls, the rowing. Those are all movements that show up regularly in CrossFit programming anyway.</p>
+
+          <p>The reverse isn't as true. Training exclusively for Hyrox won't prepare you particularly well for the demands of CrossFit, or for most other sports and physical challenges, because the movement library is so narrow.</p>
+
+          <p>Many of our members at CrossFit Birkenhead have entered Hyrox races and done well, using their CrossFit base fitness and adding a few weeks of race-specific prep. That's the beauty of building general fitness first: it transfers everywhere.</p>
+
+          <h2>The Bottom Line</h2>
+          <p>Hyrox is a solid event and a fun challenge. If you enjoy it, do it. But if you're looking for a training method that builds complete fitness (strength, endurance, mobility, coordination, and resilience) and wraps it in a coaching environment and community that keeps you coming back for years, CrossFit is the better long-term investment.</p>
+
+          <p>We've been doing this at CrossFit Birkenhead since 2009. Our members don't just train for one event. They train for life. And most of them have been with us long enough to prove it works.</p>
+
+          <p>Curious? Book an introductory session and tour and come see for yourself. No pressure, no commitment. Just a conversation and a look around the best gym on Auckland's North Shore.</p>
+
+          <div class="mt-10 text-center">
+            <a href="index.html#contact" class="btn-primary text-base px-10 py-4 cursor-interactive">BOOK YOUR INTRO SESSION &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="py-24 md:py-32 px-6 relative overflow-hidden section-blend-top">
+  <img src="img/dumbbells-rack.jpg" alt="" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
+  <div class="absolute inset-0 bg-gradient-to-b from-bg/85 via-bg/80 to-bg/90"></div>
+  <div class="pulse-glow absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[40rem] h-[40rem] bg-accent/15 rounded-full blur-3xl"></div>
+  <div class="max-w-4xl mx-auto relative z-10 text-center">
+    <p class="sr font-mono text-xs tracking-[0.3em] text-accent uppercase mb-4">Ready?</p>
+    <h2 class="sr heading-fade font-display text-3xl md:text-5xl font-bold uppercase tracking-wider mb-6" style="text-shadow:0 2px 12px rgba(0,0,0,0.4)">
+      YOUR FIRST STEP<br>STARTS HERE
+    </h2>
+    <p class="sr font-body text-text-muted text-lg max-w-xl mx-auto mb-10" data-delay="60">
+      Book an introductory session and tour. View the gym, meet a coach, and find out if CrossFit Birkenhead is for you.
+    </p>
+    <a href="index.html#contact" class="sr btn-primary text-lg px-10 py-4 cursor-interactive" data-delay="100">GET STARTED &rarr;</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="relative py-20 px-6 overflow-hidden">
+  <div class="absolute inset-0 bg-gradient-to-b from-bg via-bg/80 to-bg/95"></div>
+  <div class="relative z-10 max-w-7xl mx-auto">
+    <div class="grid md:grid-cols-3 gap-12 mb-12">
+      <div>
+        <a href="index.html" class="inline-block mb-4"><img src="img/CFB-Logo_REV-B.png" alt="CrossFit Birkenhead" class="h-10 w-auto"></a>
+        <p class="font-body text-text-muted leading-relaxed mb-6 max-w-md">CrossFit Birkenhead. More than just a gym. A supportive community for active people of all skill levels in Birkenhead, Auckland.</p>
+      </div>
+      <div>
+        <h3 class="font-display text-lg uppercase tracking-wider mb-4">Come Say Hi</h3>
+        <p class="font-body text-text-muted text-sm mb-1">22 Mokoia Road, Birkenhead</p>
+        <p class="font-body text-text-muted text-sm mb-4">Auckland 0626, New Zealand</p>
+        <p class="font-mono text-xs text-text-muted/60 uppercase tracking-wider mb-1">Hours</p>
+        <p class="font-body text-text-muted text-sm mb-1">Mon-Fri: 5:30am-7:30pm</p>
+        <p class="font-body text-text-muted text-sm mb-4">Sat: 7:00am-11:00am</p>
+        <a href="tel:021784988" class="font-mono text-sm text-accent hover:underline block mb-2">021 784 988</a>
+        <a href="mailto:info@crossfitbirkenhead.co.nz" class="font-mono text-sm text-accent hover:underline block mb-5">info@crossfitbirkenhead.co.nz</a>
+      </div>
+      <div>
+        <p class="font-mono text-xs text-text-muted uppercase tracking-wider mb-4">Quick Links</p>
+        <div class="flex flex-wrap gap-x-6 gap-y-3 mb-8">
+          <a href="index.html#programs" class="font-body text-sm text-text-muted hover:text-accent transition-colors duration-200">Training</a>
+          <a href="index.html#services" class="font-body text-sm text-text-muted hover:text-accent transition-colors duration-200">Recovery</a>
+          <a href="index.html#schedule" class="font-body text-sm text-text-muted hover:text-accent transition-colors duration-200">Schedule</a>
+          <a href="whats-on.html" class="font-body text-sm text-text-muted hover:text-accent transition-colors duration-200">What's On</a>
+          <a href="blog.html" class="font-body text-sm text-text-muted hover:text-accent transition-colors duration-200">Blog</a>
+          <a href="coaches.html" class="font-body text-sm text-text-muted hover:text-accent transition-colors duration-200">Coaches</a>
+          <a href="index.html#pricing" class="font-body text-sm text-text-muted hover:text-accent transition-colors duration-200">Pricing</a>
+          <a href="index.html#about" class="font-body text-sm text-text-muted hover:text-accent transition-colors duration-200">About</a>
+        </div>
+      </div>
+    </div>
+    <div class="border-t border-white/5 pt-6 flex flex-col md:flex-row items-center justify-between gap-4">
+      <p class="font-mono text-xs text-text-muted/40">&copy; 2025 CrossFit Birkenhead &middot; 22 Mokoia Road, Auckland</p>
+      <div class="flex gap-6">
+        <a href="mailto:info@crossfitbirkenhead.co.nz?subject=Privacy%20Policy%20Request" class="font-mono text-xs text-text-muted/40 hover:text-text-muted transition-colors duration-200">Privacy Policy</a>
+        <a href="mailto:info@crossfitbirkenhead.co.nz?subject=Terms%20Request" class="font-mono text-xs text-text-muted/40 hover:text-text-muted transition-colors duration-200">Terms</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('section:first-of-type .sr, section:first-of-type .sr-scale').forEach(el => el.classList.add('visible'));
+});
+
+
+/* Mobile nav */
+let mobileOpen = false;
+function toggleMobileNav() {
+  mobileOpen = !mobileOpen;
+  document.getElementById('mobileNav').classList.toggle('open', mobileOpen);
+  document.getElementById('bar1').style.transform = mobileOpen ? 'rotate(45deg) translate(4px,4px)' : '';
+  document.getElementById('bar2').style.opacity = mobileOpen ? '0' : '1';
+  document.getElementById('bar3').style.transform = mobileOpen ? 'rotate(-45deg) translate(3px,-3px) scaleX(1.5)' : '';
+  document.getElementById('bar3').style.marginLeft = mobileOpen ? '0' : 'auto';
+  document.body.style.overflow = mobileOpen ? 'hidden' : '';
+}
+function closeMobileNav() { if (mobileOpen) toggleMobileNav(); }
+
+/* Nav background on scroll */
+window.addEventListener('scroll', () => {
+  const nav = document.getElementById('navbar');
+  nav.style.background = window.scrollY > 60 ? 'rgba(0,0,0,0.92)' : 'transparent';
+  nav.style.backdropFilter = window.scrollY > 60 ? 'blur(12px)' : 'none';
+  const prog = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+  document.getElementById('scrollProgress').style.width = prog + '%';
+});
+
+/* Scroll reveal */
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const delay = entry.target.getAttribute('data-delay') || 0;
+      setTimeout(() => entry.target.classList.add('visible'), delay);
+    }
+  });
+}, { threshold: 0.08 });
+document.querySelectorAll('.sr, .sr-scale').forEach(el => observer.observe(el));
+
+/* Heading fade on scroll */
+document.querySelectorAll('.heading-fade').forEach(h => {
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        const rect = e.target.getBoundingClientRect();
+        const pct = Math.min(1, Math.max(0, 1 - (rect.top / (window.innerHeight * 0.6))));
+        e.target.style.opacity = 0.1 + pct * 0.9;
+      }
+    });
+  }, { threshold: Array.from({length:20}, (_, i) => i/19) });
+  io.observe(h);
+});
+window.addEventListener('scroll', () => {
+  document.querySelectorAll('.heading-fade').forEach(h => {
+    const r = h.getBoundingClientRect();
+    const p = Math.min(1, Math.max(0, 1 - (r.top / (window.innerHeight * 0.6))));
+    h.style.opacity = 0.1 + p * 0.9;
+  });
+});
+
+/* Toggle blog post */
+function togglePost(cardEl) {
+  const article = cardEl.closest('article');
+  const content = article.querySelector('.blog-post-content');
+  const isHidden = content.classList.contains('hidden');
+
+  // Close all others
+  document.querySelectorAll('.blog-post-content').forEach(c => c.classList.add('hidden'));
+
+  if (isHidden) {
+    content.classList.remove('hidden');
+    setTimeout(() => {
+      content.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 100);
+  }
+}
+</script>
+</body>
+</html>

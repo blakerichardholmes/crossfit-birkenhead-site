@@ -1,0 +1,21 @@
+.DS_Store
+*.docx
+*.xlsx
+*.zip
+*.webp
+__MACOSX
+New Kids Class Images
+coach-phoebe.jpg
+content.json
+cfb-image-audit.xlsx
+timetable-variation-*.html
+Kansoma.webp
+Revive Osteo.jpeg
+Teens Class.png
+Sensoria-Style-Design-Brief.docx
+StreamFit-API-Request.docx
+CrossFit-Birkenhead-Rebuild-Brief.docx
+New Kids Class Images.zip
+img/*.png
+img/*.webp
+!img/CFB-Logo_REV-B.png

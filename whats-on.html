@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>What's On | CrossFit Birkenhead</title>
+<meta name="description" content="Special programs, workshops, and events at CrossFit Birkenhead. From youth fitness to holiday camps." />
+<meta property="og:title" content="What's On | CrossFit Birkenhead" />
+<meta property="og:description" content="Discover special programs, workshops, and events at CrossFit Birkenhead." />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https: blob:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com; connect-src 'self'; frame-src https://www.google.com; form-action 'self' mailto:; object-src 'none'; base-uri 'self'; upgrade-insecure-requests" />
+
+<link rel="icon" type="image/png" href="img/CFB-Logo_REV-B.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;600;700;800;900&family=Montserrat:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        bg: '#000000',
+        'bg-alt': '#000000',
+        'bg-card': '#141414',
+        text: '#FFFFFF',
+        'text-muted': '#999999',
+        accent: '#e87823',
+        amber: '#e87823',
+        border: '#222222',
+      },
+      fontFamily: {
+        display: ['Kanit', 'sans-serif'],
+        body: ['Montserrat', 'sans-serif'],
+        mono: ['Space Mono', 'monospace'],
+      }
+    }
+  }
+}
+</script>
+<style>
+/* ══════ BASE ══════ */
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+body{background:#000000;color:#FFFFFF;font-family:'Montserrat',sans-serif;overflow-x:hidden}
+body.loading{overflow:hidden}
+::-webkit-scrollbar{width:5px}
+::-webkit-scrollbar-track{background:#000000}
+::-webkit-scrollbar-thumb{background:#222222;border-radius:10px}
+::-webkit-scrollbar-thumb:hover{background:#444}
+
+body::before{content:'';position:fixed;top:0;left:0;width:100%;height:100%;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");pointer-events:none;z-index:9998}
+
+/* Loader */
+#loader{position:fixed;inset:0;z-index:10000;background:#000000;display:flex;align-items:center;justify-content:center}
+#loader .logo-mark{opacity:0;transform:scale(0.9);animation:loaderFadeIn 600ms ease-out 150ms forwards}
+#loader.exit{animation:loaderExit 600ms cubic-bezier(0.76,0,0.24,1) forwards}
+@keyframes loaderFadeIn{to{opacity:1;transform:scale(1)}}
+@keyframes loaderExit{to{opacity:0;transform:translateY(-100vh)}}
+
+
+/* Scroll reveal */
+.sr{opacity:0;transform:translateY(50px);transition:opacity 900ms cubic-bezier(0.16,1,0.3,1),transform 900ms cubic-bezier(0.16,1,0.3,1)}
+.sr.visible{opacity:1;transform:translateY(0) translateX(0)}
+.sr-scale{opacity:0;transform:scale(0.9);transition:opacity 900ms cubic-bezier(0.16,1,0.3,1),transform 900ms cubic-bezier(0.16,1,0.3,1)}
+.sr-scale.visible{opacity:1;transform:scale(1)}
+
+/* Nav */
+.nav-link{position:relative}
+.nav-link::after{content:'';position:absolute;bottom:-2px;left:0;width:0;height:1px;background:#e87823;transition:width .2s ease}
+.nav-link:hover::after{width:100%}
+.nav-link.active{color:#e87823}
+.nav-link.active::after{width:100%}
+
+.mobile-nav{transform:translateX(100%);transition:transform .5s cubic-bezier(0.16,1,0.3,1)}
+.mobile-nav.open{transform:translateX(0)}
+.mobile-nav a{opacity:0;transform:translateX(40px)}
+.mobile-nav.open a{opacity:1;transform:translateX(0);transition:opacity .4s ease,transform .4s ease}
+.mobile-nav.open a:nth-child(1){transition-delay:.06s}
+.mobile-nav.open a:nth-child(2){transition-delay:.12s}
+.mobile-nav.open a:nth-child(3){transition-delay:.18s}
+.mobile-nav.open a:nth-child(4){transition-delay:.24s}
+.mobile-nav.open a:nth-child(5){transition-delay:.30s}
+.mobile-nav.open a:nth-child(6){transition-delay:.36s}
+.mobile-nav.open a:nth-child(7){transition-delay:.42s}
+
+/* Buttons */
+.btn-primary{display:inline-flex;align-items:center;gap:8px;border-radius:100px;padding:14px 32px;background:#e87823;color:#FFFFFF;font-family:'Kanit',sans-serif;font-size:14px;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;cursor:pointer;border:none;transition:transform .2s ease-out,filter .2s ease-out}
+.btn-primary:hover{transform:scale(1.03);filter:brightness(1.1)}
+.btn-ghost{display:inline-flex;align-items:center;gap:8px;border-radius:100px;padding:14px 32px;background:transparent;color:#FFFFFF;font-family:'Kanit',sans-serif;font-size:14px;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;cursor:pointer;border:1px solid rgba(240,237,232,.2);transition:transform .2s ease-out,filter .2s ease-out,border-color .2s ease}
+.btn-ghost:hover{transform:scale(1.03);filter:brightness(1.15);border-color:rgba(232,120,35,.4)}
+
+/* Crosshair */
+.crosshair{position:absolute;font-family:'Space Mono',monospace;font-size:14px;color:rgba(232,120,35,.15);user-select:none;pointer-events:none}
+
+.heading-fade{opacity:.1;transition:opacity .1s linear}
+
+.section-blend-top::before{content:'';position:absolute;top:-1px;left:0;right:0;height:120px;background:linear-gradient(to bottom,#000000,transparent);z-index:2;pointer-events:none}
+.section-blend-bottom::after{content:'';position:absolute;bottom:-1px;left:0;right:0;height:120px;background:linear-gradient(to top,#000000,transparent);z-index:2;pointer-events:none}
+
+#scrollProgress{position:fixed;top:0;left:0;height:2px;background:linear-gradient(90deg,#e87823,#ff9f4a);z-index:10001;transition:width 0.05s linear;width:0}
+
+.pulse-glow{animation:pulseGlow 4s ease-in-out infinite}
+@keyframes pulseGlow{0%,100%{opacity:.03}50%{opacity:.08}}
+
+/* ═════ PROGRAM CARDS ═════ */
+.prog-card{position:relative;display:block;border-radius:20px;overflow:hidden;background:#0a0a0a;border:1px solid rgba(232,120,35,0.15);text-decoration:none;color:inherit;transition:all .4s cubic-bezier(0.16,1,0.3,1);height:100%}
+.prog-card:hover{border-color:rgba(232,120,35,0.45);box-shadow:0 0 40px rgba(232,120,35,0.12),0 0 80px rgba(232,120,35,0.05);transform:translateY(-4px)}
+.prog-card-img{position:relative;aspect-ratio:16/10;overflow:hidden}
+.prog-card-img img{width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(0.16,1,0.3,1);filter:saturate(0.85) brightness(0.85)}
+.prog-card:hover .prog-card-img img{transform:scale(1.06);filter:saturate(1) brightness(0.95)}
+.prog-card-img-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.65) 0%,transparent 50%);z-index:1}
+.prog-card-badge{position:absolute;top:20px;left:20px;z-index:2;background:rgba(232,120,35,0.95);color:#fff;font-family:'Space Mono',monospace;font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;padding:7px 14px;border-radius:100px;font-weight:700}
+.prog-card-status{position:absolute;top:20px;right:20px;z-index:2;background:rgba(0,0,0,0.7);backdrop-filter:blur(8px);color:#fff;font-family:'Space Mono',monospace;font-size:0.6rem;letter-spacing:0.15em;text-transform:uppercase;padding:6px 12px;border-radius:100px;border:1px solid rgba(255,255,255,0.15)}
+.prog-card-status.soon{color:#aaa}
+.prog-card-status.live{color:#4ade80;border-color:rgba(74,222,128,0.3)}
+.prog-card-status.live::before{content:'';display:inline-block;width:6px;height:6px;background:#4ade80;border-radius:50%;margin-right:6px;margin-bottom:1px;box-shadow:0 0 8px rgba(74,222,128,0.6);animation:pulseDot 2s ease-in-out infinite}
+@keyframes pulseDot{0%,100%{opacity:1}50%{opacity:0.4}}
+.prog-card-body{padding:28px 28px 32px}
+.prog-card-tag{font-family:'Space Mono',monospace;font-size:0.65rem;color:#e87823;letter-spacing:0.15em;text-transform:uppercase;margin-bottom:10px;display:block}
+.prog-card-title{font-family:'Kanit',sans-serif;font-size:1.6rem;font-weight:700;color:#fff;text-transform:uppercase;letter-spacing:0.02em;margin-bottom:10px;line-height:1.1;transition:color .3s ease}
+.prog-card:hover .prog-card-title{color:#e87823}
+.prog-card-desc{font-family:'Montserrat',sans-serif;font-size:0.92rem;color:#a8a8a8;line-height:1.6;margin-bottom:18px}
+.prog-card-meta{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:20px}
+.prog-card-chip{font-family:'Space Mono',monospace;font-size:0.62rem;letter-spacing:0.1em;text-transform:uppercase;color:#bbb;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);padding:5px 10px;border-radius:100px}
+.prog-card-cta{display:inline-flex;align-items:center;gap:8px;font-family:'Space Mono',monospace;font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:#e87823;font-weight:700;transition:gap .3s ease}
+.prog-card:hover .prog-card-cta{gap:14px}
+
+/* Placeholder card (coming soon) */
+.prog-card-placeholder{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;border-radius:20px;background:transparent;border:1px dashed rgba(255,255,255,0.1);padding:60px 32px;min-height:340px;transition:all .4s ease}
+.prog-card-placeholder:hover{border-color:rgba(232,120,35,0.25);background:rgba(232,120,35,0.02)}
+.prog-card-placeholder .placeholder-icon{width:48px;height:48px;border-radius:50%;border:1px dashed rgba(255,255,255,0.15);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.3);font-size:1.4rem;margin-bottom:18px}
+
+@media(prefers-reduced-motion:reduce){
+  .sr,.sr-scale{opacity:1!important;transform:none!important;transition:none!important}
+  #loader{display:none!important}
+  .heading-fade{opacity:1!important}
+}
+</style>
+</head>
+<body>
+
+<div id="scrollProgress"></div>
+
+<div id="page">
+
+<!-- NAV -->
+<nav id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-300" style="background:transparent">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <a href="index.html"><img src="img/CFB-Logo_REV-B.png" alt="CrossFit Birkenhead" class="h-8 md:h-10 w-auto"></a>
+    <div class="hidden lg:flex items-center gap-8">
+      <a href="index.html#programs" class="nav-link font-body text-sm font-medium text-white/90 hover:text-accent tracking-wide uppercase transition-colors duration-200">Training</a>
+      <a href="index.html#services" class="nav-link font-body text-sm font-medium text-white/90 hover:text-accent tracking-wide uppercase transition-colors duration-200">Recovery</a>
+      <a href="index.html#schedule" class="nav-link font-body text-sm font-medium text-white/90 hover:text-accent tracking-wide uppercase transition-colors duration-200">Schedule</a>
+      <a href="whats-on.html" class="nav-link active font-body text-sm font-medium text-white/90 hover:text-accent tracking-wide uppercase transition-colors duration-200">What's On</a>
+      <a href="blog.html" class="nav-link font-body text-sm font-medium text-white/90 hover:text-accent tracking-wide uppercase transition-colors duration-200">Blog</a>
+      <a href="coaches.html" class="nav-link font-body text-sm font-medium text-white/90 hover:text-accent tracking-wide uppercase transition-colors duration-200">Coaches</a>
+      <a href="index.html#pricing" class="nav-link font-body text-sm font-medium text-white/90 hover:text-accent tracking-wide uppercase transition-colors duration-200">Pricing</a>
+      <a href="index.html#about" class="nav-link font-body text-sm font-medium text-white/90 hover:text-accent tracking-wide uppercase transition-colors duration-200">About</a>
+      <a href="index.html#contact" class="btn-primary ml-4 text-xs px-6 py-2.5 cursor-interactive">Get Started</a>
+    </div>
+    <button id="menuBtn" class="lg:hidden flex flex-col gap-1.5 z-50 cursor-interactive" onclick="toggleMobileNav()">
+      <span class="block w-6 h-0.5 bg-text transition-all duration-300" id="bar1"></span>
+      <span class="block w-6 h-0.5 bg-text transition-all duration-300" id="bar2"></span>
+      <span class="block w-4 h-0.5 bg-text transition-all duration-300 ml-auto" id="bar3"></span>
+    </button>
+  </div>
+</nav>
+
+<div id="mobileNav" class="mobile-nav fixed inset-0 z-40 bg-bg/98 backdrop-blur-xl flex flex-col items-center justify-center gap-8">
+  <a href="index.html#programs" onclick="closeMobileNav()" class="font-display text-4xl tracking-widest uppercase text-text hover:text-accent transition-colors">Training</a>
+  <a href="index.html#services" onclick="closeMobileNav()" class="font-display text-4xl tracking-widest uppercase text-text hover:text-accent transition-colors">Recovery</a>
+  <a href="index.html#schedule" onclick="closeMobileNav()" class="font-display text-4xl tracking-widest uppercase text-text hover:text-accent transition-colors">Schedule</a>
+  <a href="whats-on.html" onclick="closeMobileNav()" class="font-display text-4xl tracking-widest uppercase text-accent">What's On</a>
+  <a href="blog.html" onclick="closeMobileNav()" class="font-display text-4xl tracking-widest uppercase text-text hover:text-accent transition-colors">Blog</a>
+  <a href="coaches.html" onclick="closeMobileNav()" class="font-display text-4xl tracking-widest uppercase text-text hover:text-accent transition-colors">Coaches</a>
+  <a href="index.html#pricing" onclick="closeMobileNav()" class="font-display text-4xl tracking-widest uppercase text-text hover:text-accent transition-colors">Pricing</a>
+  <a href="index.html#about" onclick="closeMobileNav()" class="font-display text-4xl tracking-widest uppercase text-text hover:text-accent transition-colors">About</a>
+  <a href="index.html#contact" onclick="closeMobileNav()" class="btn-primary mt-4 text-xl px-10 py-4">Get Started</a>
+</div>
+
+<!-- HERO -->
+<section class="relative min-h-[70vh] flex items-center overflow-hidden pt-32 pb-20 section-blend-bottom">
+  <img src="img/barbell-fog.jpg" alt="" class="absolute inset-0 w-full h-full object-cover" loading="eager" onerror="this.style.display='none'">
+  <div class="absolute inset-0 bg-gradient-to-b from-bg/70 via-bg/85 to-bg"></div>
+  <div class="pulse-glow absolute top-1/3 right-1/3 w-96 h-96 bg-accent/25 rounded-full blur-3xl"></div>
+  <span class="crosshair top-24 left-8">+</span>
+  <span class="crosshair bottom-8 right-8">+</span>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-6 w-full">
+    <p class="sr font-mono text-xs tracking-[0.3em] text-accent uppercase mb-6" data-delay="0">Special Programs &amp; Events</p>
+    <h1 class="sr-scale font-display text-6xl md:text-8xl lg:text-[9rem] font-bold uppercase tracking-wider text-white leading-[0.9] mb-8" data-delay="50">
+      WHAT'S<br><span class="text-accent">ON</span>
+    </h1>
+    <p class="sr font-body text-text-muted text-lg md:text-xl max-w-2xl leading-relaxed" data-delay="100">
+      Beyond our regular classes: special programs, workshops, holiday camps, and one-off events. Check back often; we roll out new offerings throughout the year.
+    </p>
+  </div>
+</section>
+
+<!-- PROGRAMS GRID -->
+<section class="py-16 md:py-24 px-6 relative overflow-hidden bg-bg">
+  <span class="crosshair top-8 left-8">+</span>
+  <div class="max-w-6xl mx-auto relative z-10">
+
+    <div class="flex items-center justify-between mb-12">
+      <div>
+        <p class="sr font-mono text-xs tracking-[0.3em] text-accent uppercase mb-3">Currently Running</p>
+        <h2 class="sr font-display text-3xl md:text-5xl font-bold uppercase tracking-wider">Live Programs</h2>
+      </div>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-6 md:gap-8">
+
+      <!-- Kids & Teens Fitness Card -->
+      <a href="kids-teens.html" class="sr prog-card cursor-interactive" data-delay="0">
+        <div class="prog-card-img">
+          <span class="prog-card-badge">New</span>
+          <span class="prog-card-status live">Enrolling</span>
+          <img src="img/kids-pushups-card.jpg" alt="Kids and teens CrossFit class at CFB" loading="lazy" onerror="this.parentElement.style.background='#141414'">
+          <div class="prog-card-img-overlay"></div>
+        </div>
+        <div class="prog-card-body">
+          <span class="prog-card-tag">Youth Program</span>
+          <h3 class="prog-card-title">Kids &amp; Teens Fitness</h3>
+          <p class="prog-card-desc">CrossFit methodology for ages 8–15. Functional movement, games, and skill-building in a safe, high-energy environment.</p>
+          <div class="prog-card-meta">
+            <span class="prog-card-chip">Ages 8–15</span>
+            <span class="prog-card-chip">2 Classes</span>
+            <span class="prog-card-chip">Coach Phoebe</span>
+          </div>
+          <span class="prog-card-cta">Learn more &rarr;</span>
+        </div>
+      </a>
+
+      <!-- Placeholder -invites future programs without feeling empty -->
+      <div class="sr prog-card-placeholder" data-delay="80">
+        <div class="placeholder-icon">+</div>
+        <p class="font-mono text-xs tracking-[0.2em] text-text-muted uppercase mb-3">More Coming Soon</p>
+        <p class="font-body text-text-muted text-sm leading-relaxed max-w-xs">
+          We're planning holiday camps, workshops, and open days. Follow us on social or join our newsletter to hear first.
+        </p>
+        <div class="flex gap-3 mt-6">
+          <a href="https://www.instagram.com/crossfitbirkenhead" target="_blank" rel="noopener noreferrer" aria-label="CrossFit Birkenhead on Instagram" class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-text-muted hover:text-accent hover:border-accent transition-all cursor-interactive">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          </a>
+          <a href="https://www.facebook.com/crossfitbirkenhead" target="_blank" rel="noopener noreferrer" aria-label="CrossFit Birkenhead on Facebook" class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-text-muted hover:text-accent hover:border-accent transition-all cursor-interactive">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA STRIP -->
+<section class="py-24 md:py-32 px-6 relative overflow-hidden bg-bg section-blend-top">
+  <div class="pulse-glow absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[40rem] h-[40rem] bg-accent/15 rounded-full blur-3xl"></div>
+  <div class="max-w-4xl mx-auto relative z-10 text-center">
+    <p class="sr font-mono text-xs tracking-[0.3em] text-accent uppercase mb-4">Got An Idea?</p>
+    <h2 class="sr heading-fade font-display text-3xl md:text-5xl font-bold uppercase tracking-wider mb-6">
+      REQUEST A<br>PROGRAM OR EVENT
+    </h2>
+    <p class="sr font-body text-text-muted text-lg max-w-xl mx-auto mb-10" data-delay="60">
+      Running a team fitness day? Want a workshop for your group? We're always open to putting something special on.
+    </p>
+    <a href="index.html#contact" class="sr btn-primary text-lg px-10 py-4 cursor-interactive" data-delay="100">GET IN TOUCH &rarr;</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="relative py-20 px-6 overflow-hidden">
+  <div class="absolute inset-0 bg-gradient-to-b from-bg via-bg/80 to-bg/95"></div>
+  <div class="relative z-10 max-w-7xl mx-auto">
+    <div class="grid md:grid-cols-3 gap-12 mb-12">
+      <div>
+        <a href="index.html" class="inline-block mb-4"><img src="img/CFB-Logo_REV-B.png" alt="CrossFit Birkenhead" class="h-10 w-auto"></a>
+        <p class="font-body text-text-muted leading-relaxed mb-6 max-w-md">CrossFit Birkenhead. More than just a gym. A supportive community for active people of all skill levels in Birkenhead, Auckland.</p>
+      </div>
+
+      <div>
+        <h3 class="font-display text-lg uppercase tracking-wider mb-4">Come Say Hi</h3>
+        <p class="font-body text-text-muted text-sm mb-1">22 Mokoia Road, Birkenhead</p>
+        <p class="font-body text-text-muted text-sm mb-4">Auckland 0626, New Zealand</p>
+        <p class="font-mono text-xs text-text-muted/60 uppercase tracking-wider mb-1">Hours</p>
+        <p class="font-body text-text-muted text-sm mb-1">Mon-Fri: 5:30am-7:30pm</p>
+        <p class="font-body text-text-muted text-sm mb-4">Sat: 7:00am-11:00am</p>
+        <a href="tel:021784988" class="font-mono text-sm text-accent hover:underline block mb-2">021 784 988</a>
+        <a href="mailto:info@crossfitbirkenhead.co.nz" class="font-mono text-sm text-accent hover:underline block mb-5">info@crossfitbirkenhead.co.nz</a>
+      </div>
+
+      <div>
+        <p class="font-mono text-xs text-text-muted uppercase tracking-wider mb-4">Quick Links</p>
+        <div class="flex flex-wrap gap-x-6 gap-y-3 mb-8">
+          <a href="index.html#programs" class="font-body text-sm text-text-muted hover:text-accent transition-colors duration-200">Training</a>
+          <a href="index.html#services" class="font-body text-sm text-text-muted hover:text-accent transition-colors duration-200">Recovery</a>
+          <a href="index.html#schedule" class="font-body text-sm text-text-muted hover:text-accent transition-colors duration-200">Schedule</a>
+          <a href="whats-on.html" class="font-body text-sm text-text-muted hover:text-accent transition-colors duration-200">What's On</a>
+          <a href="blog.html" class="font-body text-sm text-text-muted hover:text-accent transition-colors duration-200">Blog</a>
+          <a href="coaches.html" class="font-body text-sm text-text-muted hover:text-accent transition-colors duration-200">Coaches</a>
+          <a href="index.html#pricing" class="font-body text-sm text-text-muted hover:text-accent transition-colors duration-200">Pricing</a>
+          <a href="index.html#about" class="font-body text-sm text-text-muted hover:text-accent transition-colors duration-200">About</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="border-t border-white/5 pt-6 flex flex-col md:flex-row items-center justify-between gap-4">
+      <p class="font-mono text-xs text-text-muted/40">&copy; 2025 CrossFit Birkenhead &middot; 22 Mokoia Road, Auckland</p>
+      <div class="flex gap-6">
+        <a href="mailto:info@crossfitbirkenhead.co.nz?subject=Privacy%20Policy%20Request" class="font-mono text-xs text-text-muted/40 hover:text-text-muted transition-colors duration-200">Privacy Policy</a>
+        <a href="mailto:info@crossfitbirkenhead.co.nz?subject=Terms%20Request" class="font-mono text-xs text-text-muted/40 hover:text-text-muted transition-colors duration-200">Terms</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('section:first-of-type .sr, section:first-of-type .sr-scale').forEach(el => el.classList.add('visible'));
+});
+
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const delay = parseInt(entry.target.dataset.delay) || 0;
+      setTimeout(() => entry.target.classList.add('visible'), delay);
+    }
+  });
+}, { threshold: 0.12, rootMargin: '-30px' });
+document.querySelectorAll('.sr, .sr-scale').forEach(el => revealObserver.observe(el));
+
+const progressBar = document.getElementById('scrollProgress');
+window.addEventListener('scroll', () => {
+  const scrollTop = window.scrollY;
+  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+  const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+  progressBar.style.width = progress + '%';
+}, { passive: true });
+
+function updateHeadingFades() {
+  document.querySelectorAll('.heading-fade').forEach(h => {
+    const rect = h.getBoundingClientRect();
+    const vh = window.innerHeight;
+    const progress = Math.max(0, Math.min(1, 1 - (rect.top - vh * 0.3) / (vh * 0.5)));
+    h.style.opacity = 0.1 + progress * 0.9;
+  });
+  requestAnimationFrame(updateHeadingFades);
+}
+requestAnimationFrame(updateHeadingFades);
+
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 80) {
+    navbar.style.background = 'rgba(10,10,10,0.7)';
+    navbar.style.backdropFilter = 'blur(20px)';
+    navbar.style.webkitBackdropFilter = 'blur(20px)';
+  } else {
+    navbar.style.background = 'transparent';
+    navbar.style.backdropFilter = 'none';
+    navbar.style.webkitBackdropFilter = 'none';
+  }
+});
+
+let mobileNavOpen = false;
+function toggleMobileNav() {
+  mobileNavOpen = !mobileNavOpen;
+  const nav = document.getElementById('mobileNav');
+  if (mobileNavOpen) {
+    nav.classList.add('open');
+    document.getElementById('bar1').style.transform = 'rotate(45deg) translate(4px,4px)';
+    document.getElementById('bar2').style.opacity = '0';
+    document.getElementById('bar3').style.transform = 'rotate(-45deg) translate(3px,-3px)';
+    document.getElementById('bar3').style.width = '1.5rem';
+    document.body.style.overflow = 'hidden';
+  } else closeMobileNav();
+}
+function closeMobileNav() {
+  mobileNavOpen = false;
+  document.getElementById('mobileNav').classList.remove('open');
+  document.getElementById('bar1').style.transform = '';
+  document.getElementById('bar2').style.opacity = '1';
+  document.getElementById('bar3').style.transform = '';
+  document.getElementById('bar3').style.width = '';
+  document.body.style.overflow = '';
+}
+</script>
+</body>
+</html>

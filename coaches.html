@@ -9,7 +9,7 @@
 <meta property="og:description" content="Meet the team behind Auckland's best CrossFit community. Expert coaching for all fitness levels." />
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https: blob:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com; connect-src 'self'; frame-src https://www.google.com; form-action 'self' mailto:; object-src 'none'; base-uri 'self'; upgrade-insecure-requests" />
 
-<link rel="icon" type="image/png" href="img/CFB-Logo_REV-B.png">
+<link rel="icon" type="image/svg+xml" href="img/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;600;700;800;900&family=Montserrat:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -128,7 +128,7 @@ body::before{content:'';position:fixed;top:0;left:0;width:100%;height:100%;backg
 <!-- NAV -->
 <nav id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-300" style="background:transparent">
   <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-    <a href="index.html"><img src="img/CFB-Logo_REV-B.png" alt="CrossFit Birkenhead" class="h-8 md:h-10 w-auto"></a>
+    <a href="index.html"><img id="navLogo" src="img/CFB-Logo_REV-B.png" alt="CrossFit Birkenhead" class="h-8 md:h-10 w-auto transition-opacity duration-300"></a>
     <div class="hidden lg:flex items-center gap-8">
       <a href="index.html#programs" class="nav-link font-body text-sm font-medium text-white/90 hover:text-accent tracking-wide uppercase transition-colors duration-200">Training</a>
       <a href="index.html#services" class="nav-link font-body text-sm font-medium text-white/90 hover:text-accent tracking-wide uppercase transition-colors duration-200">Recovery</a>
@@ -412,6 +412,7 @@ function toggleMobileNav() {
   document.getElementById('bar3').style.transform = mobileOpen ? 'rotate(-45deg) translate(3px,-3px) scaleX(1.5)' : '';
   document.getElementById('bar3').style.marginLeft = mobileOpen ? '0' : 'auto';
   document.body.style.overflow = mobileOpen ? 'hidden' : '';
+  document.getElementById('navLogo').style.opacity = mobileOpen ? '0' : '1';
 }
 function closeMobileNav() { if (mobileOpen) toggleMobileNav(); }
 
